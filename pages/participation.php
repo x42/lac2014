@@ -9,8 +9,8 @@
 <h1>Call for Papers</h1>
 <p>
 Papers can be submitted for review via the
-<strong><a href="<?=CANONICALURL?>openconf/">online paper submission</a></strong> system.
-Please use the available <strong><a href="download/LAC2014-templates.tgz">templates</a></strong> for papers. The zip includes templates for LaTeX and OpenOffice/LibreOffice as well as rendered PDFs with information about margins and layout.
+<strong><a href="<?=CANONICALURL?>PaperSubmission/">online paper submission</a></strong> system.
+Please use the available <strong><a href="download/lac2014-templates.tar.gz">templates</a></strong> for papers. The zip includes templates for LaTeX and OpenOffice/LibreOffice as well as rendered PDFs with information about margins and layout.
 </p>
 <p>
 Papers must be written and presented in English, 4&mdash;8 pages, with abstract (50&mdash;200 words) and up to 5 keywords.
@@ -59,7 +59,7 @@ We very much welcome practical papers or software demos that outline artistic cr
 Not all papers need to directly address Linux Audio. There is no limitation for subjects from related fields like audio/visual research and open-content.
 </p>
 
-<p>NB. Papers should be as complete as possible on submission. Until submission closes it is possible to replace/update files in the <a href="<?=CANONICALURL?>openconf/">openconf</a> system. Submissions will be peer-reviewed and after the notification of acceptance there is a small time-window for updates and last-minute changes.
+<p>NB. Papers should be as complete as possible on submission. Until submission closes it is possible to replace/update files in the <a href="<?=CANONICALURL?>PaperSubmission/">openconf</a> system. Submissions will be peer-reviewed and after the notification of acceptance there is a small time-window for updates and last-minute changes.
 </p>
 
 <h1>Call for Music, Installations and Workshops</h1>
