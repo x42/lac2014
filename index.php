@@ -51,13 +51,13 @@
 <div class="braille"><a href="#main-content">Skip to content</a></div>
 <div id="envelope">
  <div id="toprow">
+  <div id="toplogo"></div>
   <div id="titlebar">
     <div id="maintitle">Linux Audio Conference <?=LACY?> </div>
     <div id="subtitle">The Open Source Music and Sound Conference</div>
     <div id="wherewhen"><?=$config['headerlocation']?></div>
     <div>LECTURES / WORKSHOPS / EXHIBITION / CONCERTS / CLUBNIGHTS / RADIO</div>
   </div>
-  <div class="blenddown"> </div>
 </div>
 
 <div id="payload-layout">

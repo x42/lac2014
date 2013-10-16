@@ -23,8 +23,8 @@ li.active:hover    {color:#203080;}
   float:right;
   width:200px;
   margin:1.5em .5em 1em 1em;
-	border:1px solid #506090;
-	background:#DEE3E8;
+	border:1px solid #BF6E30;
+	background:#FFB073;
 	border-radius:10px;
 }
 #lefthead {
@@ -65,8 +65,8 @@ li.active:hover    {color:#203080;}
 #main {
   position:relative;
   margin:0em 1em 0em 1em;
-	border:1px solid #A8B9EA;
-	border-top:2px solid #A8B9EA;
+	border:1px solid #A64800;
+	border-top:2px solid #A64800;
 	border-radius: 4px;
 }
 #envelope {
@@ -74,20 +74,28 @@ li.active:hover    {color:#203080;}
 	margin: 1em auto 0 auto;
 	background:#fff;
 	position:relative;
-	border:1px solid black;
+	border:2px solid #A64800;
 }
 #toprow {
   position:relative;
-  background:#DEE3E8;
+  background: url(../img/zkm_banner.jpg) 0px 0px no-repeat;
+	height:130px;
+}
+#toplogo {
+  position:relative;
+  background: url(../img/lac2014.png) 0px 0px no-repeat;
+	height:130px;
+	width:150px;
+	top:5px;
+	left:700px;
 }
 #titlebar {
-  position:relative;
-  max-width:84.5em;
-  color: #001100;
-  margin:0em auto;
+  position:absolute;
+	top:0px;
+	left:0px;
+  color: #fffff9;
+  margin:0 auto;
   text-align: left;
-  border-bottom: .8em solid #DEE3E8;
-  z-index:10;
 }
 #titlebar div {
   padding-left: 45px;
@@ -95,13 +103,13 @@ li.active:hover    {color:#203080;}
 #maintitle {
   padding-top:1px;
   font-size: 20pt;
-  text-shadow: #fffff9 1px 1px 8px;
+  text-shadow: #FF6F00 1px 1px 8px;
 }
 #subtitle {
   font-size: 12pt;
   font-weight: bold;
   margin-top: .8em;
-  text-shadow: #fffff9 1px 1px 8px;
+  text-shadow: #FF6F00 1px 1px 8px;
 }
 #wherewhen {
   font-weight: bold;
@@ -132,7 +140,7 @@ div.menuitem {
 }
 
 div.tabactive {
-	background:#A8B9EA;
+	background:#FF9340;
 	border-radius:10px 10px 0px 0px;
 }
 .tabactive a, .tabactive a:hover {
@@ -156,8 +164,7 @@ div.tabactive {
 #footerwrap {
 	text-align:center;
 	border:0px;
-	margin:1em auto;
-	border-bottom: 1em #DEE3E8 solid;
+	margin:1em auto 1em auto;
 	font-size:75%;
 }
 
@@ -363,7 +370,7 @@ div.huge {
   text-shadow: #fffff9 0px 0px 5px;
 }
 div.huge a       {text-decoration:none; color:#001100;}
-div.huge a:hover {color:#203080;}
+div.huge a:hover {color:#1D766F;}
 
 table.ptb {
   border-bottom:1px solid #000000;
