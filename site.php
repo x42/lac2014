@@ -41,12 +41,13 @@
   $sponsors = array(
     'http://zkm.de/' => array('img' => 'img/logos/zkm.png', 'title' => 'ZKM'),
     'http://linuxaudio.org/' => array('img' => 'img/logos/lao.png', 'title' => 'linuxaudio.org'),
+    'http://www.zthmusic.com/' => array('img' => 'img/logos/zthmusic.png', 'title' => 'ZTH Music'),
   );
 
   function clustermap() {
 ?>
     <div class="center">
-<a href="http://www4.clustrmaps.com/counter/maps.php?url=http://lac.linuxaudio.org/2014/" id="clustrMapsLink" rel="external"><img src="http://www4.clustrmaps.com/counter/index2.php?url=http://lac.linuxaudio.org/2014/" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" />
+<a href="http://www2.clustrmaps.com/counter/maps.php?url=http://lac.linuxaudio.org/2014/" id="clustrMapsLink" rel="external"><img src="http://www2.clustrmaps.com/counter/index2.php?url=http://lac.linuxaudio.org/2014/" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" />
 </a>
 <script type="text/javascript">
 function cantload() {
