@@ -20,7 +20,8 @@ The Linux Audio Conference brings together musicians, composers, sound artists, 
  <li>Sound Installations</li>
  <li>Live coding sessions</li>
 </ul>
-<p style="clear:both;"/>
+<p style="clear:left;"/>
+
 <h1>Where &amp; When</h1>
 <p>
 May 1-4 2014, <a href="http://zkm.de/" rel="external">ZKM</a>(Zentrum f&uuml;r Kunst &amp; Medien - Center for Art and Media).
