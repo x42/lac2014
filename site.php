@@ -30,6 +30,11 @@
     'adminschedule',
   );
 
+# don't show sidebar on this page
+  $nosidebar = array(
+    'contact',
+  );
+
 #pages that require authentication
   $adminpages = array(
     'upload',

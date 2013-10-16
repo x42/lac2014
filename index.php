@@ -76,6 +76,9 @@
   </div>
 
   <div id="main">
+<?php
+  if (!in_array($page, $nosidebar)) {
+?>
   <div id="leftcolumn">
     <div id="lefthead"> </div>
 <?php 
@@ -90,6 +93,9 @@
     <div class="lbfootl">&nbsp;</div>
     <div class="lbfootr">&nbsp;</div>
   </div>
+<?php
+  }
+?>
 
     <div id="content" class="mainheadl">
     <a name="main-content"></a>
