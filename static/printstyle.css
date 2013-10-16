@@ -1,0 +1,107 @@
+*		{
+		margin:0;
+		padding:0;
+		}
+body		{
+		color: #000000;
+		font-family: Georgia,Times,serif;
+		font-size: 10pt;
+		padding:1em;
+		}
+.menu {
+	position:fixed;
+	top:0px;
+	left:0px;
+	padding:2px 1em 2px 2px;
+	line-height:1.5em;
+  background:#808080;
+}
+.menu a:hover {
+	color:#990000;
+}
+#content h1,
+#content h2,
+#content h3 		{
+			font-style:italic;
+			margin-top:0.5em;
+			margin-bottom:.5em;
+			}
+#content h1 		{font-size: 160%; }
+#content h2 		{font-size: 140%; }
+#content h3 		{font-size: 120%; }
+p.ptitle		{margin:0px 0px 2em 0px !important;}
+h1 			{text-align: center;}
+h2.ptitle		{margin:1em 0px 2px 0px !important;}
+h2.pb 			{page-break-before: always; margin-top:0px !important;}
+h3.ptitle		{margin:1.0em 0px 0em 0px !important; text-align:center;}
+td.center,div.center	{text-align:center;}
+table.ptb		{
+		  width:100%;
+			border-bottom:1px solid #000000;
+			border-left:1px solid #000000;
+			}
+td.ptb, th.ptb		{
+			padding:0px 2px 0px 2px;
+			border-top:1px solid #000000;
+			border-right:1px solid #000000;
+                        vertical-align:top;
+			}
+div.right 		{text-align:right;}
+a			{text-decoration:none; color:#000000;}
+.disclaimer		{
+			color: #808080; 
+			font-size:80%;
+			margin:1em 0em 0em 0em;
+			}
+hr.psep			{margin:.1em auto .1em auto; width:50%; color:#CCDDCC; background-color:#CCDDCC; border-color:#CCDDCC; display:none;}
+td.cancelled 		{text-decoration:line-through;}
+span.cancelled 		{text-decoration:line-through; color:red;}
+span.cancelled b,
+span.cancelled span	{text-decoration:line-through; color:#001100;}
+ul 			{margin-left:2em;}
+
+/*
+table.trl {
+	width:75%;
+	margin: 1em auto;
+	table-layout:fixed;
+	font-size:90%;
+	text-align:center;
+	border-bottom:1px solid black;
+	border-left:1px solid black
+}
+td.trX, td.tr0, td.tr1, td.tr2, td.tr3, td.tr4, td.tr5, td.tr6, td.tr7 {
+	border-top:1px solid black;
+	border-right:1px solid black;
+}
+td.trX	{
+	background:black; color:white; line-height:120%; font-weight:bold;
+}
+td.tr0	{
+	background:#ffbfbf;
+}
+td.tr1	{
+	background:#fff480;
+}
+td.tr2	{
+	background:#dfffbf;
+}
+td.tr3	{
+	background:#80ffaa;
+}
+td.tr4	{
+	background:#bfffff;
+}
+td.tr5	{
+	background:#80a0ff;
+}
+td.tr6	{
+	background:#dfbfff;
+}
+td.tr7	{
+	background:#ff99e6;
+}
+*/
+
+div.flright {display: none;}
+

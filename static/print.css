@@ -1,0 +1,10 @@
+.menu {
+  display: none;
+}
+#leftcolumn, #mainmenu, #footerwrap, #toprow, form {
+  display: none;
+}
+
+#main {
+  width: 100% !important;
+}

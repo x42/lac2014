@@ -1,0 +1,9 @@
+/tmp/
+/regs/
+*.swp
+/.htaccess
+/config.php
+/update-sites.sh
+/compress.sh
+/cscope.*
+/tags

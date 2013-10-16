@@ -1,0 +1,32 @@
+AuthName "LAC 2013"
+## Either use Basic Auth
+#AuthType Basic
+#AuthUserFile /var/cache/www/lac-basic.htpasswd
+
+## prefer Digest Auth 
+AuthType Digest
+AuthUserFile /var/cache/www/lac-digest.htpasswd
+AuthDigestProvider file
+
+<Files "logon.php">
+  Require valid-user
+# Require user admin
+</Files>
+
+<Files ~ "^[\._]ht">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</Files>
+
+#RewriteEngine on
+#RewriteBase /2013/
+#
+#RewriteRule ^video/(.*)               video.php?id=$1  [QSA,L]
+#RewriteRule ^vid/(.*)                 video.php?id=$1  [QSA,L]
+#RewriteRule ^nfo/(.*)                 raw.php?pdb_filterid=$1  [QSA,L]
+#RewriteRule ^program/([0-9]+)         index.php?page=program&pdb_filterid=$1  [R=301,L]
+#RewriteRule ^$                        index.php
+#RewriteCond %{REQUEST_FILENAME}       !-f
+#RewriteCond %{REQUEST_FILENAME}       !-d
+#RewriteRule ^(.*)                     index.php?page=$1  [QSA,L]

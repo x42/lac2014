@@ -1,0 +1,50 @@
+#######################################
+# some handy scripts for live-streaming
+
+dvsink-icecast2.sh
+dvsink-icecast2-enc.sh
+  dvsink-icecast2.sh - reads from dvswitch, pipes though dvsink-icecast2-enc.sh 
+
+screencast_01xserv.sh
+screencast_02capture.sh
+screencast_02dvswitch.sh
+  scripts to create a screencast (slides, overlays, etc) and send the video 
+	to dvswitch.
+
+
+lactranscode.sh:
+  script to transcode create high-quality OGGs (for archiving) from
+	dumped .dv data:
+	It loops over all files in an INCOMING folder,
+	asks to select the title (from conference-program) for each recording,
+	automatically creates proper file-name, meta-tags
+	transcodes the video, uploads to linuxaudio.org and 
+	automatically adds a link to the video to the program
+
+
+program2ff.php:
+  generates "bash" database to be used with 'lactranscode.sh'
+
+
+
+#Notes:
+ the dvsink tools use 'dvpiperespawn' 
+	 git://rg42.org/piperespawn
+   http://rg42.org/gitweb/?p=piperespawn.git;a=summary
+
+ and require a /etc/dvswitchrc , ~/.dvswitchrc 
+ or --host, --port commandline arguments
+
+example ~/.dvswitchrc:
+ MIXER_HOST=localhost
+ MIXER_PORT=1234
+
+#####################
+# site administration
+update-sites.sh:
+  script to git push/pull to various mirrors. It compresses the javascript
+  and CSS and validates PHP before doing so.
+	Run from top-level folder of the site. Requires yui-compressor, git and php.
+
+oc2lac.php:
+  tool to import OpenConf database to LAC program-db

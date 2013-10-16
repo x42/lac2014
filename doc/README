@@ -1,0 +1,121 @@
+-----  LAC 2011/2012/2013 website ----
+
+--- Setup ---
+Step 0)
+  go to top-level directory of website this website 
+
+Step 1) create 'config.php' with the following:
+
+---------8<---------
+<?php
+  define('REGLOGDIR',dirname($_SERVER['SCRIPT_FILENAME']).'/regs/');
+  define('TMPDIR',dirname($_SERVER['SCRIPT_FILENAME']).'/tmp/');
+  define('DOCROOTDIR',dirname($_SERVER['SCRIPT_FILENAME']).'/');
+
+  define('LACY','2013');  
+  define('CANONICALURL', 'http://lac.linuxaudio.org/'.LACY.'/'); # used in sitemap
+  define('SHORTTITLE', 'LAC '.LACY);
+
+  define('PDOREGDB','sqlite:tmp/reg".LACY.".db');  
+  define('PDOPRGDB','sqlite:tmp/lac'.LACY.'.db');  
+
+  define('BASEURL',''); # '/2013/' - same as RewriteBase incl. trailing '/'
+  $config['userewrite']=false; # set to true if RewriteEngine is enabled
+
+  $config['organizaion'] = 'linuxaudio.org'; # used as URI for calendar and CC-license
+  $config['headerlocation'] = 'April 12-15 @ CCRMA, Stanford University, Ca, USA';
+  $config['txtemail'] = 'lac -AT- linuxaudio -DOT- org'; 
+
+  $config['regclosed']=false;
+  $config['hidepapers']=false; # don't include links to papers (yet)
+
+  $config['regmail']=true; # if set users will receive a confirmation email
+  $config['mailfrom']='lac@linuxaudio.org'; # emails from address
+  $config['mailto']='robin@linuxaudio.org, marcg@dinkum.nl'; # admin email
+  $config['mailto']=''; # if empty no email will be sent to admins.
+  $config['mailfooter']=''; 
+
+---------8<---------
+
+Step 2+)
+  mkdir regs/      # or whatever you spefied as REGLOGDIR
+                   # this dir will be used to store registration information
+
+  chmod 1777 regs  # or `sudo chown www-data regs`
+  echo "Deny from all" > regs/.htaccess
+                   # ensure that your webserver honors .htaccess AllowOverrides
+                   # by visiting the URL
+
+  mkdir tmp/
+  chmod 1777 tmp/  # or `sudo chown www-data tmp`
+                   # tmp folder is used to create PDF for the badges
+                   # you need to have 'pdflatex' installed 
+                   #
+                   # it's also used to store aggregated information
+                   # eg. pages/concerts.php
+  echo "Deny from all" > tmp/.htaccess
+
+  #prepare upload folder.
+  chmod 1777 download/  # or `sudo chown www-data download`
+
+Step 3) OPTIONAL
+  set up HTTP AUTH and apcahe URL rewriting
+  copy .htaccess-dist to .htaccess and edit it. edit apache config
+  to permit .htaccess Rewrite and allow auth overrides
+  use `htdigest [-c] <file> <realm> <username>` to create the password file.
+
+Step 4+)
+  create sqlite database in tmp/lac2012.db and make it writable for
+  the HTTP-user..
+
+    sqlite3 tmp/lac2012.db < doc/schema_pdb.sql
+    sudo chown www-data.www-data tmp/lac2012.db
+
+  create sqlite database in tmp/reg2012.db and make it writable for
+  the HTTP-user..
+
+    sqlite3 tmp/reg2012.db < doc/schema_reg.sql
+    sudo chown www-data.www-data tmp/reg2012.db
+
+--- Notes ---
+
+The 'admin' interface is very rudimentary and can be reached at
+  http://base-url/index.php?page=admin
+after setting up HTTP auth. 
+
+Note: It won't work with Safari Browser (which use HTDigest auth
+      not to for a whole namespace but only per file). Use Firefox or Chrome
+      to access the admin interface
+
+to add/edit 'tabs':
+  create the corresponding page in pages/
+  edit the $pages array in site.php
+
+--- Sourcecode ---
+
+Is available at
+
+  * git://rg42.org/lac2011
+  * http://rg42.org/gitweb/?p=lac2011.git;a=snapshot;sf=tgz
+
+--- Copyright ---
+
+   Copyright (C) 2012 Robin Gareus <robin@linuxaudio.org>
+   Copyright (C) 2011 Robin Gareus <robin@linuxaudio.org>
+   Copyright (C) 2009, 2010 Robin Gareus <robin@gareus.org>
+   Copyright (C) 2009 Marc Groenewegen <marcg@dinkum.nl>
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2, or (at your option)
+   any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software Foundation,
+   Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.  
+
