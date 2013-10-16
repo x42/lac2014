@@ -30,7 +30,7 @@ See the <a href="<?=local_url('contact')?>">Contact</a> and <a href="<?=local_ur
 <img src="img/zkm_kubus.jpg" alt="ZKM"/><br/>
 </div>
 <p>
-Founded in 19XX  the ZKM is..
+Founded in 1997 the ZKM is a cultural institution which...
 </p>
 <p>
 The ZKM hosted the first 4 LAC conferences 2003..2006...
@@ -66,10 +66,10 @@ The ZKM hosted the first 4 LAC conferences 2003..2006...
 
 <h1>Links to prior Linux Audio Conferences</h1>
 <ul class="multicolumn">
-	<li><a href="http://lac.linuxaudio.org/2013/files">Archive 2013</a></li>
+  <li><a href="http://lac.linuxaudio.org/2013/files">Archive 2013</a></li>
   <li><a href="http://lac.linuxaudio.org/2009/cdm/">Slides &amp; Papers 2009</a></li>
   <li><a href="http://lac.linuxaudio.org/2005/lac2005_proceedings.pdf">Proceedings 2005</a></li>
-	<li><a href="http://lac.linuxaudio.org/2012/files">Archive 2012</a></li>
+  <li><a href="http://lac.linuxaudio.org/2012/files">Archive 2012</a></li>
   <li><a href="http://lac.linuxaudio.org/2008/download/papers/">Papers 2008</a></li>
   <li><a href="http://lac.linuxaudio.org/2004/lac2004_proceedings.pdf">Proceedings 2004</a></li>
   <li><a href="http://lac.linuxaudio.org/2011/?page=download">Archive 2011</a></li>

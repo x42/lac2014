@@ -19,15 +19,15 @@ Please see the <a href="http://reiseauskunft.bahn.de/" rel="external">Deutsche B
 
 <h2>By Car</h2>
 <p>
-    From the North: Highway A5, exit »KA-Mitte«,<br/>
-    take the »Südtangente« direction Landau,<br/>
-    follow the »ZKM« sign.<br/>
+    From the North: Highway A5, exit &laquo;KA-Mitte&raquo;,<br/>
+    take the &laquo;S&uuml;dtangente&raquo; direction Landau,<br/>
+    follow the &laquo;ZKM&raquo; sign.<br/>
 <br/>
-    From the South: Highway A5, exit »KA-Süd«,<br/>
-    follow the »ZKM« sign.<br/>
+    From the South: Highway A5, exit &laquo;KA-S&uuml;d&raquo;,<br/>
+    follow the &laquo;ZKM&raquo; sign.<br/>
 <br/>
     Parking space for 700 cars available below ZKM,<br/>
-		access at Südendstraße.<br/>
+    access at S&uuml;dendstra&szlig;e.<br/>
 </p>
 
 <div class="center"><img src="img/zkm_anfahrt.png" alt="car directions" /></div>
@@ -38,7 +38,7 @@ Due to construction work in Karlsruhe we kindly ask you to check the current sit
 </p>
 <p>
 From the train station, take line 2E<br/>
-direction »Siemensallee«, get off at »ZKM«<br/>
+direction &laquo;Siemensallee&raquo;, get off at &laquo;ZKM&raquo;<br/>
 <em>[approximately 200 m from ZKM]</em>
 </p>
 
@@ -46,14 +46,14 @@ direction »Siemensallee«, get off at »ZKM«<br/>
 <h2>By Bus</h2>
 <p>
 From the train station, take bus number 55<br/>
-direction »ZKM/Kühler Krug«, get off at »Lorenzstraße«<br/>
+direction &laquo;ZKM/K&uuml;hler Krug&raquo;, get off at &laquo;Lorenzstra&szlig;e&raquo;<br/>
 <em>[approximately 400 m from ZKM]</em>
 </p>
 
 <h1>Getting around in Karlsruhe</h1>
 <p>
 The best way to get around in Karlsruhe is by ..
-<p>
+</p>
 
 <h2>Useful Links</h2>
 <ul>
@@ -65,7 +65,7 @@ The best way to get around in Karlsruhe is by ..
 
 <h1>Staying in Karlsruhe</h1>
 
-<h3>Hotel XXX</h3>
+<h3>Hotels</h3>
 
 <h3>Youth hostels</h3>
 <p>
