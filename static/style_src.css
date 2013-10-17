@@ -80,6 +80,7 @@ li.active:hover    {color:#203080;}
   position:relative;
   background: url(../img/zkm_banner.jpg) 0px 0px no-repeat;
   height:130px;
+	width:100%;
   overflow:hidden;
 }
 #toplogo {
