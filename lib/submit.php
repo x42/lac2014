@@ -60,8 +60,6 @@ function format_registration($a) {
   )).'
   Proceedings : '
   .(rawurldecode($a['reg_proceedings'])?'yes':'no')     .'
-  Excursion   : '
-  .(rawurldecode($a['reg_burschenschank'])?'yes':'no')     .'
   T-Shirt     : '
   .(rawurldecode($a['reg_teeshirt'])?'yes':'no')     .'
   Public List : '
@@ -116,7 +114,7 @@ function savereg() {
   $datafields=array(
     'reg_name', 'reg_prename', 'reg_tagline', 'reg_email', 'reg_agegroup', 
     'reg_country', 'reg_useathome', 'reg_useatwork', 'reg_audiopro',
-    'reg_profession', 'reg_about', 'reg_burschenschank',
+    'reg_profession', 'reg_about',
     'reg_proceedings', 'reg_whoelselist', 'reg_notes' , 'reg_teeshirt'
   );
 

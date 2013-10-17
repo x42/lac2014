@@ -199,6 +199,7 @@ lac_exec('insert into activity (title, type, abstract, notes, url_paper, duratio
     .',1,'.$db->quote('11:15') # day, time
 		.');');
 
+/*
 lac_exec('insert into activity (title, type, abstract, notes, url_paper, duration, location_id'
 		.', day, starttime'
 		.') VALUES('
@@ -210,4 +211,5 @@ lac_exec('insert into activity (title, type, abstract, notes, url_paper, duratio
     .'300, 1' # duration, location
     .',4,'.$db->quote('11:15') # day, time
 		.');');
+ */
 echo "OK\n";

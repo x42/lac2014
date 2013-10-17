@@ -61,12 +61,6 @@ switch ($mode) {
     echo '<p>Got '.$v.' requests for proceedings out of '.count($r).' total registrations.</p>';
     show_fields($r,'reg_proceedings');
     break;
-  case 'excursion':
-    $r=scan_registrations();
-    $v=count_fields($r,'reg_burschenschank');
-    echo '<p>Got '.$v.' participants joining the excusrion out of '.count($r).' total registrations.</p>';
-    show_fields($r,'reg_burschenschank');
-    break;
   case 'teeshirts':
     $r=scan_registrations();
     $v=count_fields($r,'reg_teeshirt');
@@ -235,7 +229,6 @@ function export_sv($sep="\t") {
   $rv.= '"Interests"'.$sep;
   $rv.= '"Profession"'.$sep;
   $rv.= '"Proceedings"'.$sep;
-  $rv.= '"Burschenschank"'.$sep;
   $rv.= '"T-Shirt"'.$sep;
   $rv.= '"Public reg."'.$sep;
   $rv.= '"VIP"'.$sep;
@@ -276,7 +269,6 @@ function export_sv($sep="\t") {
     $rv.= '"'.$sep;
     $rv.= '"'.$v['reg_profession'].'"'.$sep;
     $rv.= '"'.($v['reg_proceedings']?'yes':'no').'"'.$sep;
-    $rv.= '"'.($v['reg_burschenschank']?'yes':'no').'"'.$sep;
     $rv.= '"'.($v['reg_teeshirt']?'yes':'no').'"'.$sep;
     $rv.= '"'.($v['reg_whoelselist']?'yes':'no').'"'.$sep;
     if (isset($v['reg_vip'])) {

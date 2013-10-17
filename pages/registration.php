@@ -406,22 +406,13 @@ Personal data provided by you in the registration form will be kept confidential
     <label><input type="radio" name="reg_proceedings" value="1"<?php _ck('reg_proceedings',1);?>/>Yes</label>
   </div>
   <br/>
-	<label>There will be an <a href="<?=local_url('excursion')?>" rel="external">excursion on Sunday</a>.</label><br/>
-  <div class="la"><label class="la"><span class="error">*</span>Are you interested in joining?</label></div>
-  <div class="ra">
-    <label><input type="radio" name="reg_burschenschank" value="0"<?php _ck('reg_burschenschank',0);?>/>No</label> &nbsp; &nbsp;
-    <label><input type="radio" name="reg_burschenschank" value="1"<?php _ck('reg_burschenschank',1);?>/>Yes</label>
-  </div>
-  <br/>
-  <label>There will be conference T-Shirts
-  available for a fee of about &euro;15 (various sizes and colours will be available).</label><br/>
+  <label>There will be conference T-Shirts available for about &euro;15.</label><br/>
   <div class="la"><label class="la"><span class="error">*</span>Are you interested in buying a one?</label></div>
   <div class="ra">
     <label><input type="radio" name="reg_teeshirt" value="0"<?php _ck('reg_teeshirt',0);?>/>No</label> &nbsp; &nbsp;
     <label><input type="radio" name="reg_teeshirt" value="1"<?php _ck('reg_teeshirt',1);?>/>Yes</label>
   </div>
-  <label class="ls">Note: Neither proceedings nor t-shirts and excussion-participation are binding orders; we just like an estimated count.</label>
-  <label class="ls">Another note: Selecting "Yes" does not guarantee you a T-shirt (in your favourite colour and size) nor a seat in the bus. Please check back at the registration desk.</label>
+  <label class="ls">Note: Neither proceedings nor t-shirts are binding orders; we just like an estimated count.</label>
   <br/>
   <br/>
   <label>Allow public listing of your name and affiliation in the "Who else is coming" list.</label><br/>

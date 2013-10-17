@@ -56,10 +56,6 @@
         echo '<a href="'.local_url('program', 'mode=table&amp;day=0').'">Concerts&amp;Installations</a>&nbsp;&nbsp;';
         echo '</div>';
         $a_days = fetch_selectlist(0, 'days');
-        echo '<h2 class="ptitle pb">Day '.$a_days[$day].'</h2>';
-        echo '<br/><hr/><br/>';
-
-        require_once('pages/excursion.php');
       } else {
         program_header($mode,$details);
         table_program($db,$day);
