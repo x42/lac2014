@@ -14,13 +14,13 @@ function externalLinks() {
       anchor.target = "_blank";
     if (anchor.getAttribute("href") &&
         anchor.getAttribute("rel") == "wiki")
-      anchor.target = "lac2011-wiki";
+      anchor.target = "lac-wiki";
     if (anchor.getAttribute("href") &&
         anchor.getAttribute("rel") == "supporter")
-      anchor.target = "lac2011-sponsor";
+      anchor.target = "lac-sponsor";
     if (anchor.getAttribute("href") &&
         anchor.getAttribute("rel") == "registration")
-      anchor.target = "lac2011-registration";
+      anchor.target = "lac-registration";
   }
 }
 window.onload = externalLinks;
