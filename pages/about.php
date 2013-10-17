@@ -31,15 +31,20 @@ See the <a href="<?=local_url('contact')?>">Contact</a> and <a href="<?=local_ur
 <img src="img/zkm_kubus.jpg" alt="ZKM"/><br/>
 </div>
 <p>
-Founded in 1997 the ZKM is a cultural institution which...
+Founded in 1997 the ZKM is a cultural institution located in a historical industrial building in Karlsruhe, Germany.
+The ZKM houses two museums under one roof, organizes special exhibitions and thematic events, carries out research projects and produces works in the field of New Media Art. In addition, the ZKM is associated with Karlsruhe University of Arts and Design and offers public as well as individualized communications and educational programs.
 </p>
 <p>
-The ZKM hosted the first 4 LAC conferences 2003..2006...
+The ZKM Institute for Music and Acoustics carries out research and development in the field of electro-acoustic and experimental music, as well as in the spheres of digital sound systems and algorithmic composition.
+Located in the interior of the &laquo;Blue Cube&raquo; there is a sound studio for artistic productions and performances.
+</p>
+<p>
+The first four Linux Audio Conferences 2003 to 2006 were hosted at the ZKM. It is the place where it all started. In a manner of speaking &laquo;LAC is coming home&raquo;.
 </p>
 
 <h1>Who?</h1>
 <p>Check out the <a href="<?=local_url('participants')?>">list of participants</a> to see who else is coming.</p>
-<p>LAC is organized by a community of GNU/Linux free/libre software users and developers that communicate through the <a href="http://lists.linuxaudio.org/">Linux-Audio-Users and Linux-Audio-Developers</a> mailing lists. LAC2014 is under the auspices of <a href="http://zkm.de/" rel="external">ZKM</a>, organized by <a href="http://example.org" rel="external">Götz Dipper</a> with assistance of Frank Neumann and <a href="http://gareus.org" rel="external"> Robin Gareus</a>.</p>
+<p>LAC is organized by a community of GNU/Linux free/libre software users and developers that communicate through the <a href="http://lists.linuxaudio.org/">Linux-Audio-Users and Linux-Audio-Developers</a> mailing lists. LAC2014 is under the auspices of <a href="http://zkm.de/" rel="external">ZKM</a>, organized by <a href="http://www02.zkm.de/car-culture/index.php/de/werke/59-goetz-dipper" rel="external">Götz Dipper</a> with assistance of Frank Neumann and <a href="http://gareus.org" rel="external"> Robin Gareus</a>.</p>
 
 <?php
 /*

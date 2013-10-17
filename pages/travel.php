@@ -7,7 +7,7 @@
 <h3>By Air</h3>
 
 <p>
-TODO: Frankfurt Airport + train = easy :)
+TODO: Frankfurt Airport + train = easy
 </p>
 
 <h3>By Train</h3>
@@ -26,7 +26,7 @@ Please see the <a href="http://reiseauskunft.bahn.de/" rel="external">Deutsche B
     From south: Highway A5, exit &laquo;KA-S&uuml;d&raquo;,<br/>
     follow the &laquo;ZKM&raquo; sign.<br/>
 <br/>
-    Parking space for 700 cars available below ZKM,<br/>
+    Parking space for 700 cars is available below ZKM,<br/>
     access at S&uuml;dendstra&szlig;e.<br/>
 </p>
 
@@ -38,7 +38,7 @@ Due to construction work in Karlsruhe we kindly ask you to check the current sit
 </p>
 <p>
 From the train station, take line 2E<br/>
-direction &laquo;Siemensallee&raquo;, get off at &laquo;ZKM&raquo;<br/>
+direction &laquo;Siemensallee&raquo;, alight at &laquo;ZKM&raquo;<br/>
 <em>[approximately 200 m from ZKM]</em>
 </p>
 

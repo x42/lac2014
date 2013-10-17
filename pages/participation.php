@@ -1,7 +1,7 @@
 <h1>Call for papers, music, installations and workshops</h1>
 <ul>
 <li>Deadline for paper-submissions: <strong>January 27th, 2014</strong> (23:59 HAST)</li>
-<li>Deadline for music/sound-installation submissions: <strong>Januray 27th, 2014</strong> (23:59 HAST)<p></li>
+<li>Deadline for music/sound-installation submissions: <strong>Januray 27th, 2014</strong> (23:59 HAST)</li>
 <li>Notification of acceptance: <strong>Februrary 24th, 2014</strong></li>
 <li>Deadline for camera-ready paper: <strong>March 24th, 2014</strong></li>
 </ul>
@@ -13,11 +13,11 @@ Papers can be submitted for review via the
 Please use the available <strong><a href="download/lac2014-templates.tar.gz">templates</a></strong> for papers. The zip includes templates for LaTeX and OpenOffice/LibreOffice as well as rendered PDFs with information about margins and layout.
 </p>
 <p>
-Papers must be written and presented in English, 4&mdash;8 pages, with abstract (50&mdash;200 words) and up to 5 keywords.
+Papers must be written and presented in English, 4&mdash;8 pages, with abstract (50&mdash;250 words) and up to 5 keywords.
 In general a presentation should take 25&mdash;30 minutes followed by 5 minutes discussion.
 </p>
 <p>
-The copyright of the paper remains with the author, but we reserve the right to create printed proceedings from all submitted (and accepted) papers.
+The copyright of the paper remains with the author, but we reserve the right to create and sell printed proceedings from all submitted (and accepted) papers.
 </p>
 <p>
 Below is a list of possible subjects for papers and presentations. This list is
@@ -59,7 +59,7 @@ We very much welcome practical papers or software demos that outline artistic cr
 Not all papers need to directly address Linux Audio. There is no limitation for subjects from related fields like audio/visual research and open-content.
 </p>
 
-<p>NB. Papers should be as complete as possible on submission. Until submission closes it is possible to replace/update files in the <a href="<?=CANONICALURL?>PaperSubmission/">openconf</a> system. Submissions will be peer-reviewed and after the notification of acceptance there is a small time-window for updates and last-minute changes.
+<p>NB. Papers should be as complete as possible on submission. Until submission closes it is possible to replace/update files in the <a href="<?=CANONICALURL?>PaperSubmission/">openconf</a> system. Submissions will be peer-reviewed and after the notification of acceptance there is a time-window for updates and last-minute changes.
 </p>
 
 <h1>Call for Music, Installations and Workshops</h1>
@@ -69,9 +69,7 @@ Music, Installations and Workshops can be submitted for review via the
 </p>
 <ul>
   <li>The Electroacoustic Music Concerts (fixed media or live performance works)</li>
-  <li>The Linux Sound Night</li>
-  <li>The Radio Listening Lounge (fixed media (stereo) only)</li>
-  <li>Radio Miniatures</li>
+  <li>The Linux Sound Night (danceable, live performance preferred)</li>
   <li>Audio/visual installations</li>
   <li>Workshops</li>
 </ul>
