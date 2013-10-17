@@ -5,9 +5,22 @@
 <p class="red"> Don't forget to check right now the validity of your passport and any visa requirements you might have to enter the European Union</p>
 
 <h3>By Air</h3>
+<ul>
+  <li><a href="http://www.frankfurt-airport.com" rel="external">Frankfurt International Airport (FRA)</a></li>
+  <li><a href="http://www.airport-baden-baden.com/" rel="external">Airport Karlsruhe / Baden-Baden (FKB)</a></li>
+</ul>
+
+<div style="height:2em;"></div>
+<p>
+Frankfurt Airport and Karlsruhe are connected by the German high-speed train (ICE) network. The journey to Karlsruhe is about one hour. Search for &laquo;Frankfurt(M) Flughafen&raquo; to &laquo;Karlsruhe Hbf&raquo; at the <a href="http://reiseauskunft.bahn.de/" rel="external">Deutsche Bahn travel information service</a>.
+</p>
 
 <p>
-TODO: Frankfurt Airport + train = easy
+From FKB Baden-Airpark, the journey by Bus and or regional train takes an hour as well. The terminals are &laquo;FKB Baden-Airpark&raquo; and &laquo;Karlsruhe Hbf&raquo; respectively.
+</p>
+
+<p>
+If in doubt, ask your local travel-agency.
 </p>
 
 <h3>By Train</h3>
@@ -60,6 +73,7 @@ The best way to get around in Karlsruhe is by .. (TODO)
   <li><a href="http://stadtplan.karlsruhe.de/" rel="external">City Map Karlsruhe</a></li>
   <li>Local Public Transport: <a href="http://http//www.kvv.de" rel="external">KVV Karlsruher Verkehrsverbund</a></li>
   <li><a href="http://www.taxi-zentrale-karlsruhe.de/" rel="external">Taxi-Service Karlsruhe</a></li>
+  <li>Map and stree-adress can be found on the <a href="<?=local_url('contact')?>">Contact</a> page</li>
 </ul>
 
 <div style="height:4em;"></div>

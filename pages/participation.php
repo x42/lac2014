@@ -10,7 +10,7 @@
 <p>
 Papers can be submitted for review via the
 <strong><a href="<?=CANONICALURL?>PaperSubmission/">online paper submission</a></strong> system.
-Please use the available <strong><a href="download/lac2014-templates.tar.gz">templates</a></strong> for papers. The zip includes templates for LaTeX and OpenOffice/LibreOffice as well as rendered PDFs with information about margins and layout.
+Please use the available <strong><a href="download/lac2014-templates.tar.gz">templates</a></strong> for papers. The zip includes templates for LaTeX and OpenOffice/LibreOffice including information about margins and layout.
 </p>
 <p>
 Papers must be written and presented in English, 4&mdash;8 pages, with abstract (50&mdash;250 words) and up to 5 keywords.
