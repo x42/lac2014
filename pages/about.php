@@ -25,7 +25,7 @@ The Linux Audio Conference brings together musicians, composers, sound artists, 
 <h1>Where &amp; When</h1>
 <p>
 May 1-4 2014, <a href="http://zkm.de/" rel="external">ZKM</a>(Zentrum f&uuml;r Kunst &amp; Medien - Center for Art and Media).
-See the <a href="<?=local_url('contact')?>">Contact</a> and <a href="<?=local_url('travel')?>">Travel</a> pages for details. The conference main track will be streamed live and interaction will be possible via <acronym title="Internet Relay Chat">IRC</acronym> for participants who can not attend locally. Information about live coverage will be made available before the conference.
+See the <a href="<?=local_url('contact')?>">Contact</a> and <a href="<?=local_url('travel')?>">Travel</a> pages for details. The conference main track will be streamed live and interaction will be possible via <abbr title="Internet Relay Chat">IRC</abbr> for participants who can not attend locally. Information about live coverage will be made available before the conference.
 </p>
 <div class="ptitle">
 <img src="img/zkm_kubus.jpg" alt="ZKM"/><br/>
