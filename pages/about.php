@@ -20,7 +20,7 @@ The Linux Audio Conference brings together musicians, composers, sound artists, 
  <li>Sound Installations</li>
  <li>Live coding sessions</li>
 </ul>
-<p style="clear:left;"/>
+<p style="clear:left;"></p>
 
 <h1>Where &amp; When</h1>
 <p>
