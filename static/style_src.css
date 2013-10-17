@@ -109,11 +109,15 @@ li.active:hover    {color:#203080;}
   font-size: 12pt;
   font-weight: bold;
   margin-top: .8em;
-  text-shadow: #FF6F00 1px 1px 8px;
+  text-shadow: #FF6F00 1px 1px 1px;
 }
 #wherewhen {
   font-weight: bold;
   margin-top: 1em;
+  text-shadow: #000000 0px 0px 1px;
+}
+#andwhat {
+  text-shadow: #000000 0px 0px 1px;
 }
 #mainmenu {
   position:relative;
@@ -142,9 +146,9 @@ div.menuitem {
 }
 
 div.tabactive {
-	background:#FF9340;
-	border:2px solid #A64800;
-	border-bottom:0px solid #FF9340;
+	background:#ff7640;
+	border:2px solid #a64800;
+	border-bottom:0px solid #ff7640;
 	margin:0em .25em;
   padding: .75em .75em;
 }
