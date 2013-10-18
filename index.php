@@ -84,20 +84,6 @@
   </div>
 
   <div id="main">
-<?php
-  if (!in_array($page, $nosidebar) && !($page=='admin' || $page=='adminschedule')) {
-?>
-  <div id="leftcolumn"><p>&nbsp;</p>
-<?php
-  leftbar();
-  if (function_exists('clustermap')) clustermap();
-?>
-    <p>&nbsp;</p>
-  </div>
-<?php
-  }
-?>
-
     <div id="content" class="mainheadl">
     <a name="main-content"></a>
 
@@ -150,7 +136,9 @@
 </div>
 
 <div id="footerwrap">
-
+<?php
+  if (function_exists('clustermap')) { clustermap(); echo '<p>&nbsp;</p>';}
+?>
   <a href="http://validator.w3.org/check?uri=referer" rel="external"><img
       src="img/button-xhtml.png"
       alt="Valid XHTML 1.0 Strict"/></a>
