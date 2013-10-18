@@ -39,7 +39,7 @@
   <meta name="keywords" content="LAC<?=LACY?>, LAC, Linux Audio Conference <?=LACY?>,Linux, Music, Audio, Developer Meeting, CCRMA, Computer Research in Music and Acoustics, Stanford, Stanford University" />
   <link rel="shortcut icon" href="<?=BASEURL?>favicon.ico" type="image/x-icon" />
   <link rel="icon" href="<?=BASEURL?>favicon.ico" type="image/x-icon" />
-  <meta name="viewport" content="initial-scale=1.0"/>
+  <meta name="viewport" content="width=560, initial-scale=.7"/>
   <style type="text/css">
 @media all {
   div.braille {display:none;}
