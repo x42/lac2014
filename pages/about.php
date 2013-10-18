@@ -24,13 +24,13 @@ The Linux Audio Conference brings together musicians, composers, sound artists, 
 
 <h1>Where &amp; When</h1>
 <p>
-May 1-4 2014, <a href="http://zkm.de/" rel="external">ZKM</a> (Zentrum f&uuml;r Kunst &amp; Medientechnologie - Center for Art and Media), Karlsruhe, Germany.
+May 1-4 2014, <a href="http://zkm.de/" rel="external">ZKM</a> (<span lang="de" xml:lang="de">Zentrum f&uuml;r Kunst &amp; Medientechnologie</span> - Centre for Art and Media), Karlsruhe, Germany.
 </p>
 <p>
 Please see the <a href="<?=local_url('contact')?>">Contact</a> and <a href="<?=local_url('travel')?>">Travel</a> pages for details. The conference main track will be streamed live and interaction will be possible via <abbr title="Internet Relay Chat">IRC</abbr> for participants who can not attend locally. Information about live coverage will be made available before the conference.
 </p>
 <div class="ptitle">
-<img src="img/zkm_kubus.jpg" alt="ZKM"/><br/>
+<img src="img/zkm_kubus.jpg" alt="ZKM Cube"/><br/>
 </div>
 <p>
 Founded in 1997 the ZKM is a cultural institution located in a historical industrial building in Karlsruhe, Germany.

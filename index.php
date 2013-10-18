@@ -156,7 +156,7 @@
       alt="Valid XHTML 1.0 Strict"/></a>
   <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" rel="external"><img
       src="img/button-css.png"
-      alt="Valid XHTML 1.0 Strict"/></a>
+      alt="Valid CSS3"/></a>
   <a href="http://www.mozilla.com/en-US/firefox/firefox.html" rel="external"><img
       src="img/button-firefox.png"
       alt="Get Firefox"/></a><br/>

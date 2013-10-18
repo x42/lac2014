@@ -12,11 +12,11 @@
 
 <div style="height:2em;"></div>
 <p>
-Frankfurt Airport and Karlsruhe are connected by the German high-speed train (ICE) network. The journey to Karlsruhe is about one hour. Search for &laquo;Frankfurt(M) Flughafen&raquo; to &laquo;Karlsruhe Hbf&raquo; at the <a href="http://reiseauskunft.bahn.de/" rel="external">Deutsche Bahn travel information service</a>.
+Frankfurt Airport and Karlsruhe are connected by the German high-speed train (ICE) network. The journey to Karlsruhe is about one hour. Search for &laquo;<span lang="de" xml:lang="de">Frankfurt(M) Flughafen</span>&raquo; to &laquo;<span lang="de" xml:lang="de">Karlsruhe Hbf</span>&raquo; at the <a href="http://reiseauskunft.bahn.de/" rel="external"><span lang="de" xml:lang="de">Deutsche Bahn</span> travel information service</a>.
 </p>
 
 <p>
-From FKB Baden-Airpark, the journey by Bus and or regional train takes an hour as well. The terminals are &laquo;FKB Baden-Airpark&raquo; and &laquo;Karlsruhe Hbf&raquo; respectively.
+From Baden-Airpark, the journey by Bus and or regional train takes an hour as well. The terminals are &laquo;<span lang="de" xml:lang="de">FKB Baden-Airpark</span>&raquo; and &laquo;<span lang="de" xml:lang="de">Karlsruhe Hbf</span>&raquo; respectively.
 </p>
 
 <p>
@@ -26,32 +26,33 @@ If in doubt, ask your local travel-agency.
 <h3>By Train</h3>
 
 <p>
-Please see the <a href="http://reiseauskunft.bahn.de/" rel="external">Deutsche Bahn travel information service</a>.
+Please see the <a href="http://reiseauskunft.bahn.de/" rel="external"><span lang="de" xml:lang="de">Deutsche Bahn</span> travel information service</a>.
 </p>
 
 
 <h3>By Car</h3>
 <p>
-    From north: Highway A5, exit &laquo;KA-Mitte&raquo;,<br/>
-    take the &laquo;S&uuml;dtangente&raquo; direction Landau,<br/>
+    From north: Highway A5, exit &laquo;<span lang="de" xml:lang="de">KA-Mitte</span>&raquo;,<br/>
+    take the &laquo;<span lang="de" xml:lang="de">S&uuml;dtangente</span>&raquo; direction <span lang="de" xml:lang="de">Landau</span>,<br/>
     follow the &laquo;ZKM&raquo; sign.<br/>
 <br/>
     From south: Highway A5, exit &laquo;KA-S&uuml;d&raquo;,<br/>
     follow the &laquo;ZKM&raquo; sign.<br/>
 <br/>
     Parking space for 700 cars is available below ZKM,<br/>
-    access at S&uuml;dendstra&szlig;e.<br/>
+		access at <span lang="de" xml:lang="de">S&uuml;dendstra&szlig;e</span>.
+<br/>
 </p>
 
 <div class="center"><img src="img/zkm_anfahrt.png" alt="car directions" /></div>
 
 <h3>By Tramway</h3>
 <p class="red">
-Due to construction work in Karlsruhe we kindly ask you to check the current situation for trams and busses on the website KVV Karlsruher Verkehrsverbund (see below).
+Due to construction work in Karlsruhe we kindly ask you to check the current situation for trams and busses on the website KVV <span lang="de" xml:lang="de">Karlsruher Verkehrsverbund</span> (see below).
 </p>
 <p>
 From the train station, take line 2E<br/>
-direction &laquo;Siemensallee&raquo;, alight at &laquo;ZKM&raquo;<br/>
+direction &laquo;<span lang="de" xml:lang="de">Siemensallee</span>&raquo;, alight at &laquo;ZKM&raquo;<br/>
 <em>[approximately 200 m from ZKM]</em>
 </p>
 
@@ -59,7 +60,7 @@ direction &laquo;Siemensallee&raquo;, alight at &laquo;ZKM&raquo;<br/>
 <h3>By Bus</h3>
 <p>
 From the train station, take bus number 55<br/>
-direction &laquo;ZKM/K&uuml;hler Krug&raquo;, get off at &laquo;Lorenzstra&szlig;e&raquo;<br/>
+direction &laquo;<span lang="de" xml:lang="de">ZKM/K&uuml;hler Krug</span>&raquo;, get off at &laquo;<span lang="de" xml:lang="de">Lorenzstra&szlig;e</span>&raquo;<br/>
 <em>[approximately 400 m from ZKM]</em>
 </p>
 
@@ -71,7 +72,7 @@ The best way to get around in Karlsruhe is by .. (TODO)
 <h3>Useful Links</h3>
 <ul>
   <li><a href="http://stadtplan.karlsruhe.de/" rel="external">City Map Karlsruhe</a></li>
-  <li>Local Public Transport: <a href="http://http//www.kvv.de" rel="external">KVV Karlsruher Verkehrsverbund</a></li>
+  <li>Local Public Transport: <a href="http://http//www.kvv.de" rel="external"><span lang="de" xml:lang="de">KVV Karlsruher Verkehrsverbund</span></a></li>
   <li><a href="http://www.taxi-zentrale-karlsruhe.de/" rel="external">Taxi-Service Karlsruhe</a></li>
   <li>Map and stree-adress can be found on the <a href="<?=local_url('contact')?>">Contact</a> page</li>
 </ul>
@@ -92,6 +93,6 @@ For those who prefer a cheap option,...
 </p>
 
 <ul>
-  <li><a href="http://www.aohostels.com/en/karlsruhe/karlsruhe-hauptbahnhof/" rel="external">A&O</a></li>
-  <li><a href="http://karlsruhe.jugendherberge-bw.de/" rel="external">Youth Hostel - Jugendherberge Karlsruhe</a></li>
+  <li><a href="http://www.aohostels.com/en/karlsruhe/karlsruhe-hauptbahnhof/" rel="external">A&amp;O</a></li>
+  <li><a href="http://karlsruhe.jugendherberge-bw.de/" rel="external">Youth Hostel - <span lang="de" xml:lang="de">Jugendherberge Karlsruhe</span></a></li>
 </ul>
