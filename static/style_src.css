@@ -89,7 +89,7 @@ li.active:hover    {color:#203080;}
   height:130px;
   width:150px;
   top:5px;
-  left:700px;
+  left:734px;
 }
 #titlebar {
   position:absolute;
@@ -101,7 +101,7 @@ li.active:hover    {color:#203080;}
   width:700px;
 }
 #titlebar div {
-  padding-left: 45px;
+  padding-left: 35px;
   width:655px;
 }
 #maintitle {
