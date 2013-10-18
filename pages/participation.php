@@ -8,9 +8,9 @@
 
 <h1>Call for Papers</h1>
 <p>
-Papers can be submitted for review via the
-<strong><a href="<?=CANONICALURL?>PaperSubmission/">online paper submission</a></strong> system.
-Please use the available <strong><a href="download/lac2014-templates.tar.gz">templates</a></strong> for papers. The zip includes templates for LaTeX and OpenOffice/LibreOffice including information about margins and layout.
+Papers can be submitted for review via the online
+<strong><a href="<?=CANONICALURL?>PaperSubmission/">paper submission system</a></strong>.
+Please use the available <strong><a href="download/lac2014-templates.tar.gz">templates for papers</a></strong>. The zip includes templates for LaTeX and OpenOffice/LibreOffice including information about margins and layout.
 </p>
 <p>
 Papers must be written and presented in English, 4&mdash;8 pages, with abstract (50&mdash;250 words) and up to 5 keywords.
@@ -65,11 +65,11 @@ Not all papers need to directly address Linux Audio. There is no limitation for 
 <h1>Call for Music, Installations and Workshops</h1>
 <p>
 Music, Installations and Workshops can be submitted for review via the
-<strong><a href="<?=CANONICALURL?>MusicSoundArtMisc/">online music/installations/workshops submission</a></strong> system. Please download the complete <strong><a href="download/lac2014-call-for-miw.pdf">Call for Music, Installations and Workshops</a></strong> document with all the details before trying to submit. In short, we are looking for music and sound art that has been produced or composed entirely or mostly using GNU/Linux music software for:
+<strong><a href="<?=CANONICALURL?>MusicSoundArtMisc/">online music/installations/workshops submission system</a></strong>. Please download the complete <strong><a href="download/lac2014-call-for-miw.pdf">Call for Music, Installations and Workshops</a></strong> document (PDF) with all the details before trying to submit. In short, we are looking for music and sound art that has been produced or composed entirely or mostly using GNU/Linux music software for:
 </p>
 <ul>
   <li>The Electroacoustic Music Concerts (fixed media or live performance works)</li>
-  <li>The Linux Sound Night (danceable, live performance preferred)</li>
-  <li>Audio/visual installations</li>
+  <li>The Linux Sound Night (danceable, live performances preferred)</li>
+  <li>Audio/Visual installations</li>
   <li>Workshops</li>
 </ul>

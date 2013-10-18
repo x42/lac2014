@@ -6,7 +6,7 @@
 #pages listed as 'tabs' on the site
   $pages = array(
     'about' => 'About',
-    'participation' => 'Participate',
+    'participation' => 'CFP',
     'registration' => 'Registration',
     'participants' => 'Attendees',
     'travel' => 'Travel &amp; Stay',

@@ -1,4 +1,4 @@
-<p>Collecting information for this page is work in progres, please stay tuned.</p>
+<p>Collecting information for this page is work in progress, please stay tuned.</p>
 
 <h1>Traveling to Karlsruhe</h1>
 

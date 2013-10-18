@@ -3,7 +3,7 @@
 The Linux Audio Conference is the international conference about
 Open Source Software for music, sound and other media with Linux as the main
 platform.
-The 2014 edition (the twelvth installment of the conference) will take place at the <em>ZKM</em>, Karlsruhe, Germany, the place where it all started.
+The 2014 edition (the twelfth installment of the conference) will take place at the <em>ZKM</em>, Karlsruhe, Germany, the place where it all started.
 </p>
 
 <h1>Target audience</h1>
@@ -24,27 +24,33 @@ The Linux Audio Conference brings together musicians, composers, sound artists, 
 
 <h1>Where &amp; When</h1>
 <p>
-May 1-4 2014, <a href="http://zkm.de/" rel="external">ZKM</a>(Zentrum f&uuml;r Kunst &amp; Medien - Center for Art and Media).
-See the <a href="<?=local_url('contact')?>">Contact</a> and <a href="<?=local_url('travel')?>">Travel</a> pages for details. The conference main track will be streamed live and interaction will be possible via <abbr title="Internet Relay Chat">IRC</abbr> for participants who can not attend locally. Information about live coverage will be made available before the conference.
+May 1-4 2014, <a href="http://zkm.de/" rel="external">ZKM</a> (Zentrum f&uuml;r Kunst &amp; Medientechnologie - Center for Art and Media), Karlsruhe, Germany.
+</p>
+<p>
+Please see the <a href="<?=local_url('contact')?>">Contact</a> and <a href="<?=local_url('travel')?>">Travel</a> pages for details. The conference main track will be streamed live and interaction will be possible via <abbr title="Internet Relay Chat">IRC</abbr> for participants who can not attend locally. Information about live coverage will be made available before the conference.
 </p>
 <div class="ptitle">
 <img src="img/zkm_kubus.jpg" alt="ZKM"/><br/>
 </div>
 <p>
 Founded in 1997 the ZKM is a cultural institution located in a historical industrial building in Karlsruhe, Germany.
-The ZKM houses two museums under one roof, organizes special exhibitions and thematic events, carries out research projects and produces works in the field of New Media Art. In addition, the ZKM is associated with Karlsruhe University of Arts and Design and offers public as well as individualized communications and educational programs.
+The ZKM houses two museums under one roof, organizes exhibitions and thematic events, carries out research projects and produces works in the field of New Media Art. In addition, the ZKM is associated with Karlsruhe University of Arts and Design and offers public as well as individualized communications and educational programs.
 </p>
 <p>
-The ZKM Institute for Music and Acoustics carries out research and development in the field of electro-acoustic and experimental music, as well as in the spheres of digital sound systems and algorithmic composition.
+The ZKM Institute for Music and Acoustics focuses on research and development in the field of electro-acoustic and experimental music, as well as in the spheres of digital sound systems and algorithmic composition.
 Located in the interior of the &laquo;Blue Cube&raquo; there is a sound studio for artistic productions and performances.
 </p>
 <p>
-The first four Linux Audio Conferences 2003 to 2006 were hosted at the ZKM. It is the place where it all started. In a manner of speaking &laquo;LAC is coming home&raquo;.
+The first four Linux Audio Conferences 2003 to 2006 were hosted at the ZKM, it is the place where it all started. In a manner of speaking &laquo;LAC is coming home&raquo;.
 </p>
 
 <h1>Who?</h1>
 <p>Check out the <a href="<?=local_url('participants')?>">list of participants</a> to see who else is coming.</p>
-<p>LAC is organized by a community of GNU/Linux free/libre software users and developers that communicate through the <a href="http://lists.linuxaudio.org/">Linux-Audio-Users and Linux-Audio-Developers</a> mailing lists. LAC2014 is under the auspices of <a href="http://zkm.de/" rel="external">ZKM</a>, organized by <a href="http://www02.zkm.de/car-culture/index.php/de/werke/59-goetz-dipper" rel="external">Götz Dipper</a> with assistance of Frank Neumann and <a href="http://gareus.org" rel="external"> Robin Gareus</a>.</p>
+<p>LAC is organized by a community of GNU/Linux free/libre software users and developers that communicate through the <a href="http://lists.linuxaudio.org/">Linux-Audio-Users and Linux-Audio-Developers</a> mailing lists.
+LAC2014 is under the auspices of <a href="http://zkm.de/" rel="external">ZKM</a>,
+organized by <a href="http://www02.zkm.de/car-culture/index.php/de/werke/59-goetz-dipper" rel="external">G&ouml;tz Dipper</a>,
+<a href="http://icem-www.folkwang-hochschule.de/~ludi/" rel="external">Ludger Br&uuml;mmer</a>,
+Frank Neumann and <a href="http://gareus.org" rel="external"> Robin Gareus</a>.</p>
 
 <?php
 /*
@@ -87,8 +93,8 @@ The first four Linux Audio Conferences 2003 to 2006 were hosted at the ZKM. It i
 <br style="clear:both;"/>
 <p><br/></p>
 
-<?php /*
-<p>
+<hr/>
+<p><br/></p>
+<p><small style="line-height:1.2em">
 The Linux Audio Conference is dedicated to providing an inclusive and harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form. Sexist language and imagery is not appropriate for any conference venue, including talks. If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate to remedy the issue. 
-</p>
- */?>
+</small></p>
