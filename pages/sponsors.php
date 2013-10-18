@@ -1,4 +1,32 @@
 <h1>Sponsors</h1>
+<?php /*
+<p>
+As admittance to the conference was free, several things required sponsoring which was made possible by the following partners:
+</p>
+ */ ?>
+<table border="0" width="100%" id="supporter">
+<tr>
+<?php
+  $cnt=0;
+  foreach ($sponsors as $sl => $si) {
+    if ($cnt>0 && ($cnt%4 ==0)) {
+      echo "</tr>\n<tr>\n";
+    }
+    echo "  <td>\n";
+    echo '    <a href="'.$sl.'"'."\n";
+    echo '     rel="supporter"><img src="'.$si['img'].'" title="'.$si['title'].'" alt="'.$si['title'].'"/><br/>';
+    echo $si['title']."</a>\n  </td>\n";
+    $cnt++;
+  }
+  while ($cnt++%4 !=0) {
+    echo '  <td></td>';
+  }
+
+?>
+</tr>
+</table>
+
+<h2>Supporting the LAC</h2>
 <p>
 As admittance to the conference is free, several things need sponsoring.
 If you want to contribute to the conference and want to know what you
@@ -42,30 +70,6 @@ conference organisation: <?=$config['txtemail']?>
   In summary: LAC is the place for companies looking to interface with the non-proprietary pro-AV community,
   researchers, developers, artists and users.
 </p>
-<?php /*
-<p>
-As admittance to the conference was free, several things required sponsoring which was made possible by the following partners:
-</p>
- */ ?>
-<h2>Supporters</h2>
-<table border="0" width="100%" id="supporter">
-<tr>
-<?php
-  $cnt=0;
-  foreach ($sponsors as $sl => $si) {
-    if ($cnt>0 && ($cnt%4 ==0)) {
-      echo "</tr>\n<tr>\n";
-    }
-    echo "  <td>\n";
-    echo '    <a href="'.$sl.'"'."\n";
-    echo '     rel="supporter"><img src="'.$si['img'].'" title="'.$si['title'].'" alt="'.$si['title'].'"/><br/>';
-    echo $si['title']."</a>\n  </td>\n";
-    $cnt++;
-  }
-  while ($cnt++%4 !=0) {
-    echo '  <td></td>';
-  }
 
-?>
-</tr>
-</table>
+
+

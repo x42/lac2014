@@ -84,7 +84,7 @@
   </div>
 
   <div id="main">
-    <div id="content" class="mainheadl">
+    <div id="content">
     <a name="main-content"></a>
 
 <?php

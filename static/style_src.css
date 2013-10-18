@@ -65,8 +65,8 @@ li.active:hover    {color:#203080;}
 #main {
   position:relative;
   margin:0em 1em 0em 1em;
-  border:1px solid #6B9B00;
-  border-top:2px solid #6B9B00;
+  border:1px solid #5a806c;
+  border-top:2px solid #5a806c;
   border-radius: 5px;
 }
 #envelope {
@@ -150,23 +150,20 @@ div.menuitem {
 }
 
 div.tabactive {
-  background:#A5EF00;
-  border:2px solid #6B9B00;
-  border-bottom:0px solid #A5EF00;
+  background:#89c7a6;
+  border:2px solid #5a806c;
+  border-bottom:0px solid #89c7a6;
   margin:0em .25em;
   padding: .75em .75em;
 }
 .tabactive a, .tabactive a:hover {
   color:#fffff9;
-  text-shadow: #0000ff 0px 0px 5px;
+  text-shadow: #000000 0px 0px 5px;
 }
 .disclaimer {
   color: #808080; 
   font-size:80%;
   margin:1em 0em 0em 0em;
-}
-.mainheadl {
-  margin:1.0em 0 0 0;
 }
 #createdby {
   color: #808080; 
@@ -189,6 +186,8 @@ div.tabactive {
   line-height: 16pt;
   padding:0.5em 1.5em 1.5em 1.5em;
   border: 0;
+  margin:1.0em 0 0 0;
+	min-height:25em;
 }
 #supporterbar {
   width:180px;
@@ -348,8 +347,8 @@ fieldset legend {text-align:left;}
 #adminmenu {
   margin:1.5em .5em 1em 1em;
 	padding:1em;
-  border:1px solid #BF6E30;
-  background:#FFB073;
+  border:1px solid #aaa;
+  background:#ccc;
   border-radius:10px;
 	text-align:center;
 }
