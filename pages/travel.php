@@ -48,7 +48,7 @@ Please see the <a href="http://reiseauskunft.bahn.de/" rel="external"><span lang
 
 <h3>By Tramway</h3>
 <p class="red">
-Due to construction work in Karlsruhe we kindly ask you to check the current situation for trams and busses on the website KVV <span lang="de" xml:lang="de">Karlsruher Verkehrsverbund</span> (see below).
+Due to construction work in Karlsruhe we kindly ask you to check the current situation for trams and busses on the website of the KVV <span lang="de" xml:lang="de">Karlsruher Verkehrsverbund</span> (see below).
 </p>
 <p>
 From the train station, take line 2E<br/>
