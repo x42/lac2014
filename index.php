@@ -136,7 +136,29 @@
 </div>
 
 <div id="footerwrap">
+<table border="0" width="100%" id="supporter" style="table-layout: fixed;">
+<tr>
 <?php
+
+  $cnt=0;
+  foreach ($sponsors as $sl => $si) {
+    if ($cnt>0 && ($cnt%5 ==0)) {
+      echo "</tr>\n<tr>\n";
+    }
+    echo "  <td>\n";
+    echo '    <a href="'.$sl.'"'."\n";
+    echo '     rel="supporter"><img src="'.$si['img'].'" title="'.$si['title'].'" alt="'.$si['title'].'"/>';
+    echo "  </td>\n";
+    $cnt++;
+  }
+  while ($cnt++%5 !=0) {
+    echo '  <td></td>';
+  }
+?>
+</tr>
+</table>
+<?php
+
   if (function_exists('clustermap')) { clustermap(); echo '<p>&nbsp;</p>';}
 ?>
   <a href="http://validator.w3.org/check?uri=referer" rel="external"><img
