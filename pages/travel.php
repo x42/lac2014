@@ -87,6 +87,12 @@ The best way to get around in Karlsruhe is by .. (TODO)
 TODO. for now, <a href="http://lmgtfy.com/?q=hotels+near+zkm+karlsruhe" rel="external">see here</a>.
 </p>
 
+<ul>
+  <li><a href="http://www.acora.de/">Hotel Acora</a>, Sophienstra&szlig;e 69-71</li>
+  <li><a href="www.bed-and-breakfast.de">Bed and Breakfast</a></li>
+</ul>
+
+
 <h3>Hostels</h3>
 <p>
 For those who prefer a cheap option,...
