@@ -13,7 +13,7 @@
   if (!empty($preq) && in_array($preq, array_merge(array_keys($pages), array_keys($hidden))))
     $page=$preq;
 
-  if (!empty($preq) && in_array($preq, $adminpages)) { 
+  if (!empty($preq) && in_array($preq, $adminpages)) {
     if (authenticate()) {
       require_once('lib/submit.php');
       $page=$preq;
@@ -27,14 +27,14 @@
     require_once('lib/programdb.php');
   }
 
-  if (  !empty($preq) && $preq=='registration' 
+  if (  !empty($preq) && $preq=='registration'
       && isset($config['regclosed']) && $config['regclosed']) {
     $page='regclosed';
   }
 
   if (!empty($preq) && $preq=='registration') {
     require_once('lib/submit.php');
-    if (checkreg()) 
+    if (checkreg())
       if (savereg())
         $page='regcomplete';
   }
@@ -60,6 +60,14 @@
   </div>
 </div>
 
+<?php
+  if ($page=='admin' || $page=='adminschedule') {
+    echo '<div id="adminmenu">';
+    admin_fieldset(-3);
+    echo '</div>'."\n";
+  }
+?>
+
 <div id="payload-layout">
   <div id="mainmenu">
 <?php
@@ -77,21 +85,14 @@
 
   <div id="main">
 <?php
-  if (!in_array($page, $nosidebar)) {
+  if (!in_array($page, $nosidebar) && !($page=='admin' || $page=='adminschedule')) {
 ?>
-  <div id="leftcolumn">
-    <div id="lefthead"> </div>
-<?php 
-  if ($page=='admin' || $page=='adminschedule') {
-    admin_fieldset(-3);
-  } else {
-    leftbar(); 
-    if (function_exists('clustermap')) clustermap(); 
-  }
+  <div id="leftcolumn"><p>&nbsp;</p>
+<?php
+  leftbar();
+  if (function_exists('clustermap')) clustermap();
 ?>
     <p>&nbsp;</p>
-    <div class="lbfootl">&nbsp;</div>
-    <div class="lbfootr">&nbsp;</div>
   </div>
 <?php
   }
@@ -143,7 +144,7 @@
 <?php
   if (!$mtime_skip)
     echo '<div id="createdby">Last modified: '.$mdate.' - G&ouml;tz Dipper &amp; Robin Gareus</div>';
-  else 
+  else
     echo '<div id="createdby"><br/></div>';
 ?>
 </div>
@@ -160,6 +161,6 @@
       src="img/button-firefox.png"
       alt="Get Firefox"/></a><br/>
   <p>LINUX<sup>&reg;</sup> is a <a href="http://www.linuxmark.org/" rel="external">registered trademark</a> of Linus Torvalds in the USA and other countries.<br />Hosting provided by the <a href="http://www.music.vt.edu" rel="external">Virginia Tech Department of Music</a> and <a href="http://disis.music.vt.edu" rel="external">DISIS</a>.<br/>Design and implementation by <a href="http://gareus.org/" rel="external">RSS</a>.</p>
-</div> 
+</div>
 </body>
 </html>

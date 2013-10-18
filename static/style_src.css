@@ -345,6 +345,14 @@ fieldset legend {text-align:left;}
 
 .fm input  {width:202px;}
 
+#adminmenu {
+  margin:1.5em .5em 1em 1em;
+	padding:1em;
+  border:1px solid #BF6E30;
+  background:#FFB073;
+  border-radius:10px;
+	text-align:center;
+}
 table.adminlist {width:99%;}
 .adminlist  {font-size:90%;}
 .abstract   {font-size:75%;text-align:justify;}
