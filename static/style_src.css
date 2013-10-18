@@ -98,10 +98,11 @@ li.active:hover    {color:#203080;}
   color: #fffff9;
   margin:0 auto;
   text-align: left;
-	width:700px;
+  width:700px;
 }
 #titlebar div {
   padding-left: 45px;
+  width:655px;
 }
 #maintitle {
   padding-top:1px;
