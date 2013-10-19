@@ -10,9 +10,9 @@ body {
 img {border: 0px;}
 #content p   {text-align:justify; padding-bottom:.5em;}
 a            {outline: none; color:#001100;}
-a:hover      {color:#203080;}
-li.active:hover    {color:#203080;}
-.menuitem a:hover  {color:#203080;}
+a:hover      {color:#4282D3;}
+li.active:hover    {color:#4282D3;}
+.menuitem a:hover  {color:#4282D3;}
 
 #payload-layout {
   position:relative;
