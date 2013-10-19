@@ -10,9 +10,9 @@ body {
 img {border: 0px;}
 #content p   {text-align:justify; padding-bottom:.5em;}
 a            {outline: none; color:#001100;}
-a:hover      {color:#4282D3;}
-li.active:hover    {color:#4282D3;}
-.menuitem a:hover  {color:#4282D3;}
+a:hover      {color:#3276d2;}
+li.active:hover    {color:#3276d2;}
+.menuitem a:hover  {color:#3276d2;}
 
 #payload-layout {
   position:relative;
@@ -150,9 +150,9 @@ div.menuitem {
 }
 
 div.tabactive {
-  background:#4282D3;
+  background:#3276d2;
   border:2px solid #05326D;
-  border-bottom:0px solid #4282D3;
+  border-bottom:0px solid #3276d2;
   margin:0em .25em;
   padding: .75em .75em;
 }
