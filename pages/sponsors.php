@@ -4,7 +4,7 @@
 As admittance to the conference was free, several things required sponsoring which was made possible by the following partners:
 </p>
  */ ?>
-<table border="0" width="100%" id="supporter">
+<table border="0" width="100%" id="supporter" style="table-layout: fixed;">
 <tr>
 <?php
   $cnt=0;

@@ -3,7 +3,7 @@
   padding:0;
 }
 body {
-  background:#ccc;
+  background:#aaa;
   font-family: Verdana,sans-serif;
   font-size:10pt;
 }
@@ -65,8 +65,8 @@ li.active:hover    {color:#203080;}
 #main {
   position:relative;
   margin:0em 1em 0em 1em;
-  border:1px solid #5a806c;
-  border-top:2px solid #5a806c;
+  border:1px solid #05326D;
+  border-top:2px solid #05326D;
   border-radius: 5px;
 }
 #envelope {
@@ -74,7 +74,7 @@ li.active:hover    {color:#203080;}
   margin: 1em auto 0 auto;
   background:#fff;
   position:relative;
-  border:1px solid #aaa;
+  border:1px solid #888;
 }
 #toprow {
   position:relative;
@@ -150,9 +150,9 @@ div.menuitem {
 }
 
 div.tabactive {
-  background:#89c7a6;
-  border:2px solid #5a806c;
-  border-bottom:0px solid #89c7a6;
+  background:#4282D3;
+  border:2px solid #05326D;
+  border-bottom:0px solid #4282D3;
   margin:0em .25em;
   padding: .75em .75em;
 }
