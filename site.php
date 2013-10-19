@@ -22,19 +22,6 @@
     #'profile' => 'Profile',
   );
 
-# don't list sponsors on these pages
-  $nosponsors = array(
-    'upload',
-    'sponsors',
-    'admin',
-    'adminschedule',
-  );
-
-# don't show sidebar on this page
-  $nosidebar = array(
-    'contact',
-  );
-
 #pages that require authentication
   $adminpages = array(
     'upload',

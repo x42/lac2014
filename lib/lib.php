@@ -148,25 +148,6 @@
     echo '</div>';
   }
 
-  function leftbar() {
-    global $page, $nosponsors, $config, $sponsors;
-    if (!in_array($page, $nosponsors)&& !$config['regclosed'] && $page != 'registration') {
-      echo '    <div class="center huge"><a href="'.local_url('registration').'">Register Now</a></div>'."\n";
-      echo '    <hr class="psep"/>'."\n";
-    }
-    if (!in_array($page, $nosponsors)) {
-      echo '    <div id="supporterbar">'.SHORTTITLE.' is<br/>supported by<br/><br/>'."\n";
-      foreach ($sponsors as $sl => $si) {
-        echo '    <div><a href="'.$sl.'"'."\n";
-        echo '     rel="supporter"><img src="'.BASEURL.$si['img'].'" title="'.$si['title'].'" alt="'.$si['title'].'"/>';
-        #echo '<br/><span>'.$si['title'].'</span>';
-        echo '</a></div>'."\n";
-      }
-      echo '    </div>'."\n";
-      echo '    <hr class="psep"/>'."\n";
-    }
-  }
-
 $adminfs=array(
   array( 'title' => 'List all registrations', 'value' => 'List Participants',
          'page'  => 'admin', 'mode'  => 'list', 'param' => ''),
