@@ -46,8 +46,12 @@
 
 ### BEGIN OUTPUT ###
   xhtmlhead();
+  if (defined("TESTANDDEVEL")) {
+    echo '<body style="background:url(img/testanddevel.jpg) repeat">'."\n";
+  } else {
+    echo "<body>\n";
+  }
 ?>
-<body>
 <div class="braille"><a href="#main-content">Skip to content</a></div>
 <div id="envelope">
  <div id="toprow">

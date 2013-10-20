@@ -9,8 +9,8 @@ body {
 }
 img {border: 0px;}
 a            {outline: none; color:#001100;}
-a:hover      {color:#3276d2;}
-li.active:hover    {color:#3276d2;}
+a:hover      {color:#05326d;}
+li.active:hover    {color:#05326d;}
 
 #payload-layout {
   position:relative;
@@ -19,8 +19,8 @@ li.active:hover    {color:#3276d2;}
 #main {
   position:relative;
   margin:0em 1em 0em 1em;
-  border:1px solid #05326D;
-  border-top:2px solid #05326D;
+  border:1px solid #05326d;
+  border-top:2px solid #05326d;
   border-radius: 5px;
 }
 #envelope {
@@ -90,7 +90,7 @@ li.active:hover    {color:#3276d2;}
   color:#223322;
 }
 
-#mainmenu a:hover {color:#3276d2;}
+#mainmenu a:hover {color:#05326d;}
 
 div.menuitem {
   float:left;
@@ -111,7 +111,7 @@ div.menuitem {
 div.tabactive {
   background:#fff;
   color:#001100;
-  border:2px solid #05326D;
+  border:2px solid #05326d;
   border-bottom:0px solid #fff;
   margin:0em .25em;
   padding: 9px .75em;
@@ -119,7 +119,7 @@ div.tabactive {
 
 div.tabactive a, .tabactive a:hover {
   color:#001100 !important;
-  /*text-shadow: #05326D 0px 0px 10px;*/
+  /*text-shadow: #05326d 0px 0px 10px;*/
 }
 
 .disclaimer {
