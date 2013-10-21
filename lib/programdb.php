@@ -191,16 +191,16 @@
   }
 
   function conference_dayend($day) {
-    return strtotime((8+intval($day)).' May 2014 23:00:00 CEST'); # TODO -> config start-date and dates
+    return strtotime((0+intval($day)).' May 2014 23:00:00 CEST'); # TODO -> config start-date and dates
   }
 
   function fetch_selectlist($db, $table='user', $order='ORDER BY id') {
     if ($table=='days')
-      return array('0' => '0 - Wednesday, May/8', '1' => '1 - Thursday, May/9', '2' => '2 - Friday, May/10', '3' => '3 - Saturday, May/11', '4' => '4 - Sunday, May/12');
+      return array('1' => '1 - Thursday, May/1', '2' => '2 - Friday, May/2', '3' => '3 - Saturday, May/3', '4' => '4 - Sunday, May/4');
     if ($table=='daysx')
-      return array('0' => '0 - Wednesday, May/8', '1' => '1 - Thursday, May/9', '2' => '2 - Friday, May/10', '3' => '3 - Saturday, May/11', '4' => '4 - Sunday, May/12', '5' => '-every day-');
+      return array('1' => '1 - Thursday, May/1', '2' => '2 - Friday, May/2', '3' => '3 - Saturday, May/3', '4' => '4 - Sunday, May/4', '5' => '-every day-');
     if ($table=='daylist') # TODO derive from 'days' - note: start at '1'.
-      return array(0=> 'Wednesday, May/8', 1=> 'Thursday, May/9', 2=> 'Friday, May/10', 3=> 'Saturday, May/11', 4=> 'Sunday, May/12');
+      return array(1=> 'Thursday, May/1', 2=> 'Friday, May/2', 3=> 'Saturday, May/3', 4=> 'Sunday, May/4');
 
     if ($table=='types')
       return array('p' => 'Paper Presentation', 'w' => 'Workshop', 'c' => 'Concert', 'i' => 'Installation', 'o' => 'Other');
