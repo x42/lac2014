@@ -44,8 +44,14 @@
     $page='404';
   }
 
+  $title='';
+  if ($page=='program' && isset($_REQUEST['pdb_filterid'])) {
+    $pdbid = intval(rawurldecode($_REQUEST['pdb_filterid']));
+    $title=pdb_html_title($db, $pdbid);
+  }
+
 ### BEGIN OUTPUT ###
-  xhtmlhead();
+  if (empty($title)) { xhtmlhead(); } else { xhtmlhead($title); }
   if (defined("TESTANDDEVEL")) {
     echo '<body style="background:url(img/testanddevel.jpg) repeat">'."\n";
   } else {

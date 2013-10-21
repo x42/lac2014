@@ -1714,6 +1714,17 @@ will broadcast the following pieces at irregular intervals.</p><br>
     return $rv;
   }
 
+  function pdb_html_title($db, $id) {
+    $q='SELECT activity.* FROM activity WHERE activity.id='.$db->quote($pdbid).';';
+    $res=$db->query($q);
+    if (!$res) { return ''; }
+    $result=$res->fetchAll();
+    if (count($result) != 1 ) { return ''; }
+    $title=SHORTTITLE .' -- "'.xhtmlify($result[0]['title']).'"';
+    #$i=0; foreach (fetch_authorids($db, $rresult[0]['id']) as $user_id) {if ($i++>0) $title.=', '; else $title.=' -- '; $title.=xhtmlify($a_users[$user_id]); }
+    return $title;
+  }
+
   function export_progam_sv($db, $sep="\t") {
     # Table Header
     $rv='';
