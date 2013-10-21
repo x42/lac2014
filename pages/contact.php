@@ -1,10 +1,19 @@
 <h1>Contact</h1>
+
 <h3>Email</h3>
 <p style="margin-left:2em;">
 <?=$config['txtemail']?></p>
 
+<h3>IRC</h3>
+<p style="margin-left:2em;">
+<tt>#lac2014</tt> on freenode.net.</p>
+<p>If you do not have an <abbr title="Internet Relay Chat">IRC</abbr> client at hand, you can use the
+<a href="http://webchat.freenode.net/?channels=lac2014" rel="external">Web-chat</a> provided by freenode.net.
+</p>
+
 <h3>Street and Mailing address:</h3>
 <p style="margin-left:2em;">
+Linux Audio Conference<br/>
 ZKM<br/>
 Lorenzstraße 19<br/>
 76135 Karlsruhe<br/>
