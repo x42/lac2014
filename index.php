@@ -138,7 +138,7 @@
 
 <?php
   if (!$mtime_skip)
-    echo '<div id="createdby">Last modified: '.$mdate.' - G&ouml;tz Dipper &amp; Robin Gareus</div>';
+    echo '<div id="createdby">This page wass last modified: '.$mdate.' - G&ouml;tz Dipper &amp; Robin Gareus</div>';
   else
     echo '<div id="createdby"><br/></div>';
 ?>
