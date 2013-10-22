@@ -157,7 +157,7 @@
     echo "  <td>\n";
     echo '    <a href="'.$sl.'"'."\n";
     echo '     rel="supporter"><img src="'.$si['img'].'" title="'.$si['title'].'" alt="'.$si['title'].'"/>';
-    echo "  </td>\n";
+    echo "  </a></td>\n";
     $cnt++;
   }
   while ($cnt++%5 !=0) {
