@@ -15,11 +15,10 @@
 <p style="margin-left:2em;">
 Linux Audio Conference<br/>
 ZKM<br/>
-Lorenzstraße 19<br/>
-76135 Karlsruhe<br/>
+<span lang="de" xml:lang="de">Lorenzstra&szlig;e</span>19<br/>
+76135 <span lang="de" xml:lang="de">Karlsruhe</span><br/>
 Germany<br/>
 </p>
-
 
 <h1>Museum</h1>
 <p>
@@ -29,13 +28,12 @@ for further information.
 </p>
 
 <h1>Map</h1>
-<object id="map" type="text/html" style="width:100%;height:400px;"
-data="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=ZKM,+Lorenzstra%C3%9Fe+19,+76135,+Karlsruhe,+Germany&amp;aq=&amp;sll=49.003463,8.384242&amp;sspn=0.013133,0.0330237&amp;ie=UTF8&amp;ll=49.00252,8.383083&amp;spn=0.027027,0.054932&amp;t=m&amp;output=embed">
+<object id="map" type="text/html" style="width:100%;height:400px; border: 1px solid black;"
+data="http://www.openstreetmap.org/export/embed.html?bbox=8.368299007415771%2C48.994438876926%2C8.400163650512695%2C49.00761514468197&amp;layer=mapnik&amp;marker=49.00102744654142%2C8.384242057800293">
 </object>
 <p>
-<small><a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=ZKM,+Lorenzstra%C3%9Fe+19,+76135,+Karlsruhe,+Germany&amp;aq=&amp;sll=49.003463,8.384242&amp;sspn=0.013133,0.033023&amp;ie=UTF8&amp;ll=49.00252,8.383083&amp;spn=0.027027,0.054932&amp;t=m" style="color:#0000FF;text-align:left;" rel="external">View Larger Map</a></small>
+<small><a href="http://www.openstreetmap.org/?mlat=49.0010&amp;mlon=8.3842#map=16/49.0010/8.3842" rel="external">View Larger Map (OSM)</a></small>
 </p>
-<!--[if lte IE 8]><script type="text/javascript">(function(){var o=document.
-getElementById('map');var i=document.createElement('iframe');i.setAttribute
-('src',o.getAttribute('data'));i.style.width=o.style.width;i.style.height=o.style.
-height;o.parentNode.replaceChild(i,o);})();</script><![endif]-->
+<p>
+<small><a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=ZKM,+Lorenzstra%C3%9Fe+19,+76135,+Karlsruhe,+Germany&amp;aq=&amp;sll=49.003463,8.384242&amp;sspn=0.013133,0.033023&amp;ie=UTF8&amp;ll=49.00252,8.383083&amp;spn=0.027027,0.054932&amp;t=m" style="color:#0000FF;text-align:left;" rel="external">View Larger Map on Google Maps</a></small>
+</p>
