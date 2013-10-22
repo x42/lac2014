@@ -39,8 +39,7 @@ Please see the <a href="http://reiseauskunft.bahn.de/" rel="external"><span lang
     From south: Highway A5, exit &laquo;KA-S&uuml;d&raquo;,<br/>
     follow the &laquo;ZKM&raquo; sign.<br/>
 <br/>
-    Parking space for 700 cars is available below ZKM,<br/>
-		access at <span lang="de" xml:lang="de">S&uuml;dendstra&szlig;e</span>.
+    Parking space for 700 cars is available below ZKM, access at <span lang="de" xml:lang="de">S&uuml;dendstra&szlig;e</span>.
 <br/>
 </p>
 
@@ -51,16 +50,14 @@ Please see the <a href="http://reiseauskunft.bahn.de/" rel="external"><span lang
 Due to construction work in Karlsruhe we kindly ask you to check the current situation for trams and busses on the website of the KVV <span lang="de" xml:lang="de">Karlsruher Verkehrsverbund</span> (see below).
 </p>
 <p>
-From the train station, take line 2E<br/>
-direction &laquo;<span lang="de" xml:lang="de">Siemensallee</span>&raquo;, alight at &laquo;ZKM&raquo;<br/>
+From the train station, take line 2E, direction &laquo;<span lang="de" xml:lang="de">Siemensallee</span>&raquo;, alight at &laquo;ZKM&raquo;.<br/>
 <em>[approximately 200 m from ZKM]</em>
 </p>
 
 
 <h3>By Bus</h3>
 <p>
-From the train station, take bus number 55<br/>
-direction &laquo;<span lang="de" xml:lang="de">ZKM/K&uuml;hler Krug</span>&raquo;, get off at &laquo;<span lang="de" xml:lang="de">Lorenzstra&szlig;e</span>&raquo;<br/>
+From the train station, take bus number 55, direction &laquo;<span lang="de" xml:lang="de">ZKM/K&uuml;hler Krug</span>&raquo;, get off at &laquo;<span lang="de" xml:lang="de">Lorenzstra&szlig;e</span>&raquo;.<br/>
 <em>[approximately 400 m from ZKM]</em>
 </p>
 
@@ -84,7 +81,7 @@ The best way to get around in Karlsruhe is by .. (TODO)
 <h3>Hotels</h3>
 
 <p>
-TODO. for now, <a href="http://lmgtfy.com/?q=hotels+near+zkm+karlsruhe" rel="external">see here</a>.
+(TODO) For now, <a href="http://google.com/?q=hotels+near+zkm+karlsruhe" rel="external">see here</a>.
 </p>
 
 <ul>
