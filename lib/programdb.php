@@ -208,7 +208,7 @@
     if ($table=='durations')
       return array('' => '-unset-', '10' => '10 mins', '20' => '20 mins', '40' => '40 mins', '60' => '1 hour', '80' => '80 mins', '120' => '2 hours', '160' => '2 3/4 hours', '180' => '3 hours');
     if ($table=='status')
-      return array('1' => 'confirmed', '0' => 'cancelled');
+      return array('2' => 'hidden', '1' => 'confirmed', '0' => 'cancelled');
 
     $rv = array('0' => '-unset-');
     $q='SELECT id, name from '.$table.' '.$order.';';
@@ -811,6 +811,7 @@
 
     foreach ($result as $r) {
       if (substr($r['title'],0,7) == 'COFFEE ') continue; # XXX
+      if ($r['status'] == 2) continue; # hide hidden entries
       if ($day) {
         if ($r['day'] == 5) { ## every day
           if (!$print) {echo 'every day - all day &nbsp;';}
@@ -1526,7 +1527,7 @@ will broadcast the following pieces at irregular intervals.</p><br>
       $stmt=$res->fetchAll();
       foreach ($stmt as $r) {
         if (empty($r['starttime'])) continue;
-        if ($r['status']==0) continue; # skip cancelled
+        if ($r['status']!=1) continue; # skip cancelled and hidden
         $table[$i][$r['starttime']]=$r;
       }
       $i++;
@@ -1753,7 +1754,7 @@ will broadcast the following pieces at irregular intervals.</p><br>
       $rv.= '"'.iso8601($r).'"'.$sep;
       $rv.= '"'.iso8601($r,false).'"'.$sep;
       $rv.= '"'.($a_types[$r['type']]).'"'.$sep;
-      $rv.= '"'.($r['status']&1?'confirmed':'cancelled').'"'.$sep;
+      $rv.= '"'.($r['status']==1?'confirmed':($r['status']==2?'hidden':'cancelled')).'"'.$sep;
       $rv.= '"'.($a_locations[$r['location_id']]).'"'.$sep;
       $rv.= '"'.trim($r['title']).'"'.$sep;
       $rv.= '"'.
@@ -1834,7 +1835,7 @@ will broadcast the following pieces at irregular intervals.</p><br>
     foreach ($result as $r) {
       if (empty($r['starttime'])) continue;
       if (empty($r['duration']) || $r['duration'] == 0 || strstr($r['duration'], ':')) continue;
-      if ($r['status']==0) continue; // XXX cancelled
+      if ($r['status']!=1) continue; // XXX cancelled, hidden
 
       echo 'BEGIN:VEVENT'."\r\n";
       echo 'UID:lac'.LACY.'-'.$r['id'].'@'.$config['organizaion']."\r\n";
