@@ -51,7 +51,9 @@
   }
 
 ### BEGIN OUTPUT ###
-  if (empty($title)) { xhtmlhead(); } else { xhtmlhead($title); }
+  if (empty($title)) { $title = $pages[$page]; }
+  $title.=' [Linux Audio Conference]';
+  xhtmlhead($title);
   if (defined("TESTANDDEVEL")) {
     echo '<body style="background:url(img/testanddevel.jpg) repeat">'."\n";
   } else {
