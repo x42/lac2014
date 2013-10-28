@@ -6,19 +6,22 @@
 <li>Deadline for camera-ready paper: <strong>March 24th, 2014</strong></li>
 </ul>
 
-<h1>Call for Papers</h1>
+<h1>Call for Papers Posters and Presentations</h1>
 <p>
-Papers can be submitted for review via the online
+<strong>Papers</strong> can be submitted for review via the online
 <strong><a href="<?=CANONICALURL?>PaperSubmission/">paper submission system</a></strong>.
 Please use the available <strong><a href="download/lac2014-templates.tar.gz">templates for papers</a></strong>. The zip includes templates for LaTeX and OpenOffice/LibreOffice including information about margins and layout.
 </p>
 <p>
 Papers must be written and presented in English, 4&mdash;8 pages, with abstract (50&mdash;250 words) and up to 5 keywords.
-In general a presentation should take 25&mdash;30 minutes followed by 5 minutes discussion.
+In general a presentation should take about half an hour.
 </p>
 <p>
 The copyright of the paper remains with the author, but we reserve the right to create and sell printed proceedings from all submitted (and accepted) papers.
 </p>
+<p>
+For <strong>poster</strong> submissions as well as <strong>lightning-talks</strong> please submit an abstract and at least one page written documentation about the subject. Except for the duration and submission-length the same rules as for papers apply.
+Please highlight the presentation format (Topic: &laquo;poster&raquo;, &laquo;lightning-talk&raquo; in the submission system).</p>
 <p>
 Below is a list of possible subjects for papers and presentations. This list is
 meant as a starting point, not to restrict you.
