@@ -61,12 +61,6 @@ switch ($mode) {
     echo '<p>Got '.$v.' requests for proceedings out of '.count($r).' total registrations.</p>';
     show_fields($r,'reg_proceedings');
     break;
-  case 'teeshirts':
-    $r=scan_registrations();
-    $v=count_fields($r,'reg_teeshirt');
-    echo '<p>Got '.$v.' requests for T-shirts out of '.count($r).' total registrations.</p>';
-    show_fields($r,'reg_teeshirt');
-    break;
   case 'food':
     $r=scan_registrations();
     show_fields($r,'reg_food');
@@ -229,7 +223,6 @@ function export_sv($sep="\t") {
   $rv.= '"Interests"'.$sep;
   $rv.= '"Profession"'.$sep;
   $rv.= '"Proceedings"'.$sep;
-  $rv.= '"T-Shirt"'.$sep;
   $rv.= '"Public reg."'.$sep;
   $rv.= '"VIP"'.$sep;
   $rv.= '"Notes"'."\n";
@@ -269,7 +262,6 @@ function export_sv($sep="\t") {
     $rv.= '"'.$sep;
     $rv.= '"'.$v['reg_profession'].'"'.$sep;
     $rv.= '"'.($v['reg_proceedings']?'yes':'no').'"'.$sep;
-    $rv.= '"'.($v['reg_teeshirt']?'yes':'no').'"'.$sep;
     $rv.= '"'.($v['reg_whoelselist']?'yes':'no').'"'.$sep;
     if (isset($v['reg_vip'])) {
       $rv.= '"'.exes($v['reg_vip']).'"'.$sep;

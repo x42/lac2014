@@ -157,8 +157,6 @@ $adminfs=array(
          'page'  => 'admin', 'mode'  => 'email', 'param' => ''),
   array( 'title' => 'Count Ordered Proceedings', 'value' => 'List Ordered Proceedings',
          'page'  => 'admin', 'mode'  => 'proceedings', 'param' => ''),
-  array( 'title' => 'Count Ordered T-Shirts', 'value' => 'List Ordered T-Shirts',
-         'page'  => 'admin', 'mode'  => 'teeshirts', 'param' => ''),
   #array('title' => 'Show Badges TeX', 'value' => 'Show Badges TeX',
   #      'page'  => 'admin', 'mode'  => 'badgestex', 'param' => ''),
   array( 'title' => 'Generate badges PDF', 'value' => 'Generate Badges PDF',

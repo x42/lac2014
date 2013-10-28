@@ -405,14 +405,7 @@ Personal data provided by you in the registration form will be kept confidential
     <label><input type="radio" name="reg_proceedings" value="0"<?php _ck('reg_proceedings',0);?>/>No</label> &nbsp; &nbsp;
     <label><input type="radio" name="reg_proceedings" value="1"<?php _ck('reg_proceedings',1);?>/>Yes</label>
   </div>
-  <br/>
-  <label>There will be conference T-Shirts available for about &euro;15.</label><br/>
-  <div class="la"><label class="la"><span class="error">*</span>Are you interested in buying a one?</label></div>
-  <div class="ra">
-    <label><input type="radio" name="reg_teeshirt" value="0"<?php _ck('reg_teeshirt',0);?>/>No</label> &nbsp; &nbsp;
-    <label><input type="radio" name="reg_teeshirt" value="1"<?php _ck('reg_teeshirt',1);?>/>Yes</label>
-  </div>
-  <label class="ls">Note: Neither proceedings nor t-shirts are binding orders; we just like an estimated count.</label>
+  <label class="ls">Note: This is not a binding order; we just like an estimated count.</label>
   <br/>
   <br/>
   <label>Allow public listing of your name and affiliation in the "Who else is coming" list.</label><br/>

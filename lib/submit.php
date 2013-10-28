@@ -60,8 +60,6 @@ function format_registration($a) {
   )).'
   Proceedings : '
   .(rawurldecode($a['reg_proceedings'])?'yes':'no')     .'
-  T-Shirt     : '
-  .(rawurldecode($a['reg_teeshirt'])?'yes':'no')     .'
   Public List : '
   .(rawurldecode($a['reg_whoelselist'])?'yes':'no')     .'
   Uses Linux  : '
@@ -115,7 +113,7 @@ function savereg() {
     'reg_name', 'reg_prename', 'reg_tagline', 'reg_email', 'reg_agegroup', 
     'reg_country', 'reg_useathome', 'reg_useatwork', 'reg_audiopro',
     'reg_profession', 'reg_about',
-    'reg_proceedings', 'reg_whoelselist', 'reg_notes' , 'reg_teeshirt'
+    'reg_proceedings', 'reg_whoelselist', 'reg_notes'
   );
 
   #store in .ini file format -> human readable and 
