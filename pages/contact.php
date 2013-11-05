@@ -14,17 +14,10 @@
 <h3>Street and Mailing address:</h3>
 <p style="margin-left:2em;">
 Linux Audio Conference<br/>
-ZKM<br/>
-<span lang="de" xml:lang="de">Lorenzstra&szlig;e</span>19<br/>
+ZKM | Institute for Music and Acoustics<br/>
+<span lang="de" xml:lang="de">Lorenzstra&szlig;e</span> 19<br/>
 76135 <span lang="de" xml:lang="de">Karlsruhe</span><br/>
 Germany<br/>
-</p>
-
-<h1>Museum</h1>
-<p>
-Please see
-<a href="http://on1.zkm.de/zkm/e/besucherinfo" rel="external">Media Museum, Museum of Contemporary Art</a>
-for further information.
 </p>
 
 <h1>Map</h1>

@@ -33,8 +33,11 @@ Please see the <a href="<?=local_url('contact')?>">Contact</a> and <a href="<?=l
 <img src="img/zkm_kubus.jpg" alt="ZKM Cube"/><br/>
 </div>
 <p>
-Founded in 1997 the ZKM is a cultural institution located in a historical industrial building in Karlsruhe, Germany.
-The ZKM houses two museums under one roof, organizes exhibitions and thematic events, carries out research projects and produces works in the field of New Media Art. In addition, the ZKM is associated with Karlsruhe University of Arts and Design and offers public as well as individualized communications and educational programs.
+It is not solely the multiplicity of the museums and research institutes combined under its roof that makes the ZKM | Center for Art and Media a unique culture institution worldwide.
+With the presentation of art and its production on-site by guest artists, the ZKM takes up the interaction of production and research, exhibiting, education and documentation in a fascinating manner.
+Art and media art are presented in thematic exhibitions with a global focus.
+The Media Museum and the Museum of Contemporary Art show contemporary developments in art and society across an exhibition space covering almost 15.000 m<sup>2</sup> and, in doing so, encompass all media forms and processes – from oil painting through App, from classic composition through to sampling.
+Each year, the interactive installations inviting visitors to participate attract a great number of especially young visitors.
 </p>
 <p>
 The ZKM Institute for Music and Acoustics focuses on research and development in the field of electro-acoustic and experimental music, as well as in the spheres of digital sound systems and algorithmic composition.
