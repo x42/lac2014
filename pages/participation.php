@@ -12,16 +12,29 @@
 <strong><a href="<?=CANONICALURL?>PaperSubmission/">paper submission system</a></strong>.
 Please use the available <strong><a href="download/lac2014-templates.tar.gz">templates for papers</a></strong>. The zip includes templates for LaTeX and OpenOffice/LibreOffice including information about margins and layout.
 </p>
+
 <p>
 Papers must be written and presented in English, 4&mdash;8 pages, with abstract (50&mdash;250 words) and up to 5 keywords.
 In general a presentation should take about half an hour.
 </p>
+
 <p>
 The copyright of the paper remains with the author, but we reserve the right to create and sell printed proceedings from all submitted (and accepted) papers.
 </p>
+
 <p>
-For <strong>poster</strong> submissions as well as <strong>lightning-talks</strong> please submit an abstract and at least two pages written documentation about the subject to be included in the conference-proceedings. Except for the duration and submission-length the same rules as for papers apply.
-Please highlight the presentation format (Topic: &laquo;poster&raquo;, &laquo;lightning-talk&raquo; in the submission system).</p>
+For <strong>poster</strong> submissions please submit an abstract and at least two pages written documentation about the subject which can be included in the conference-proceedings (please use one of the templates).
+</p>
+
+<p>
+For <strong>lightning-talks</strong> we only require an abstract (50&mdash;250 words), the presentation will be about 5 minutes. You may optionally provide written documentation for inclusion in the printed proceedings (please use one of the templates, minimum two pages).
+</p>
+
+<p>
+Please highlight the presentation format (Topic: &laquo;poster&raquo;, &laquo;lightning-talk&raquo; in the submission system).
+With exception of submission-length and presentation duration, the same rules as for papers also apply to poster submissions and lightning-talks.
+</p>
+
 <p>
 Below is a list of possible subjects for papers and presentations. This list is
 meant as a starting point, not to restrict you.
