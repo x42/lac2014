@@ -23,16 +23,13 @@ The copyright of the paper remains with the author, but we reserve the right to 
 </p>
 
 <p>
-For <strong>poster</strong> submissions please submit an abstract and at least two pages written documentation about the subject which can be included in the conference-proceedings (please use one of the templates).
-</p>
-
-<p>
-For <strong>lightning-talks</strong> we only require an abstract (50&mdash;250 words), the presentation will be about 5 minutes. You may optionally provide written documentation for inclusion in the printed proceedings (please use one of the templates, minimum two pages).
+For <strong>poster-presentations</strong> or <strong>lightning-talks</strong> we only require an abstract (50&mdash;250 words).
+You may optionally provide written documentation for inclusion in the printed proceedings (if you chose to do so, please use one of the templates, minimum two pages). The duration of a lightning-talk will be about 5 minutes, posters will be presented in a separate poster session.
 </p>
 
 <p>
 Please highlight the presentation format (Topic: &laquo;poster&raquo;, &laquo;lightning-talk&raquo; in the submission system).
-With exception of submission-length and presentation duration, the same rules as for papers also apply to poster submissions and lightning-talks.
+With exception of submission-length and presentation duration, the same rules as for papers also apply to poster presentations and lightning-talks.
 </p>
 
 <p>
