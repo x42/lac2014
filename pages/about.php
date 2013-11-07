@@ -51,9 +51,11 @@ The first four Linux Audio Conferences 2003 to 2006 were hosted at the ZKM, it i
 <p>Check out the <a href="<?=local_url('participants')?>">list of participants</a> to see who else is coming.</p>
 <p>LAC is organized by a community of GNU/Linux free/libre software users and developers that communicate through the <a href="http://lists.linuxaudio.org/">Linux-Audio-Users and Linux-Audio-Developers</a> mailing lists.
 LAC2014 is under the auspices of <a href="http://zkm.de/" rel="external">ZKM</a>,
-organized by <a href="http://www02.zkm.de/car-culture/index.php/de/werke/59-goetz-dipper" rel="external">G&ouml;tz Dipper</a>,
+organized by
 <a href="http://icem-www.folkwang-hochschule.de/~ludi/" rel="external">Ludger Br&uuml;mmer</a>,
-Frank Neumann and <a href="http://gareus.org" rel="external"> Robin Gareus</a>.</p>
+<a href="http://www02.zkm.de/car-culture/index.php/de/werke/59-goetz-dipper" rel="external">G&ouml;tz Dipper</a>,
+<a href="http://gareus.org" rel="external"> Robin Gareus</a>,
+Michael Hohendorf, Yana Il, Till Kniola, Frank Neumann and Jochen Arne Otto.</p>
 
 <?php
 /*
