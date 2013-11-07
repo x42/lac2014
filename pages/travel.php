@@ -74,25 +74,26 @@ The best way to get around in Karlsruhe is by .. (TODO)
   <li>Map and stree-adress can be found on the <a href="<?=local_url('contact')?>">Contact</a> page</li>
 </ul>
 
-<div style="height:4em;"></div>
+<div style="height:3em;"></div>
 
 <h1>Staying in Karlsruhe</h1>
 
 <h3>Hotels</h3>
 
-<p>
-(TODO) For now, <a href="http://google.com/?q=hotels+near+zkm+karlsruhe" rel="external">see here</a>.
-</p>
-
 <ul>
-  <li><a href="http://www.acora.de/">Hotel Acora</a>, Sophienstra&szlig;e 69-71</li>
+  <li><a href="http://www.acora.de/">Hotel Acora</a>, <span lang="de" xml:lang="de">Sophienstra&szlig;e</span> 69-71</li>
+  <li><a href="http://www.hotelelite-ka.de/">Hotel Elite</a>, <span lang="de" xml:lang="de">Sachsenstra&szlig;e</span> 17-19</li>
+  <li><a href="http://www.hotelastoria-karlsruhe.de/">Hotel Astoria</a>, <span lang="de" xml:lang="de">Mathystra&szlig;e</span> 22</li>
   <li><a href="www.bed-and-breakfast.de">Bed and Breakfast</a></li>
 </ul>
 
+<p>
+	Also <a href="http://google.com/?q=hotels+near+zkm+karlsruhe" rel="external">see here</a> (google).
+</p>
 
 <h3>Hostels</h3>
 <p>
-For those who prefer a cheap option,...
+For those who prefer a cheaper option,...
 </p>
 
 <ul>
