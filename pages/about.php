@@ -31,7 +31,7 @@ Please see the <a href="<?=local_url('contact')?>">Contact</a> and <a href="<?=l
 </p>
 <div class="ptitle">
 <img src="img/zkm_kubus.jpg" alt="ZKM Cube"/><br/>
-<small>ZKM Cube, Photo &copy; 2008 Matthias Dietrich</small>
+<small>ZKM Cube, <a href="http://www.fotocommunity.de/pc/pc/mypics/3087/display/15245418">Photo</a> &copy; 2008 Matthias Dietrich</small>
 </div>
 <p>
 It is not solely the multiplicity of the museums and research institutes combined under its roof that makes the ZKM | Center for Art and Media a unique culture institution worldwide.
