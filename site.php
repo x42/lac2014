@@ -31,8 +31,7 @@
 
 #define sponsors/supportes
   $sponsors = array(
-    'http://zkm.de/' => array('img' => 'img/logos/zkm.png', 'title' => 'ZKM'),
-    'http://zkm.de' => array('img' => 'img/logos/zkm_logo_website.png', 'title' => 'ZKM'),
+    'http://zkm.de/' => array('img' => 'img/logos/zkm_logo_website.png', 'title' => 'ZKM'),
     'http://linuxaudio.org/' => array('img' => 'img/logos/lao.png', 'title' => 'linuxaudio.org'),
     'http://www.zthmusic.com/' => array('img' => 'img/logos/zthmusic.png', 'title' => 'ZTH Music'),
     'http://www.univ-paris8.fr/en/' => array('img' => 'img/logos/citu.png', 'title' => 'CiTu/Univ Paris 8'),
