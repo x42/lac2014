@@ -162,9 +162,11 @@
     echo "  </a></td>\n";
     $cnt++;
   }
+  /*
   while ($cnt++%5 !=0) {
     echo '  <td></td>';
   }
+   */
 ?>
 </tr>
 </table>
