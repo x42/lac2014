@@ -30,8 +30,8 @@ May 1-4 2014, <a href="http://zkm.de/" rel="external">ZKM</a> (<span lang="de" x
 Please see the <a href="<?=local_url('contact')?>">Contact</a> and <a href="<?=local_url('travel')?>">Travel</a> pages for details. The conference main track will be streamed live and interaction will be possible via <abbr title="Internet Relay Chat">IRC</abbr> for participants who can not attend locally. Information about live coverage will be made available before the conference.
 </p>
 <div class="ptitle">
-<img src="img/zkm_kubus.jpg" alt="ZKM Cube"/><br/>
-<small>ZKM Cube, <a href="http://www.fotocommunity.de/pc/pc/mypics/3087/display/15245418">Photo</a> &copy; 2008 Matthias Dietrich</small>
+<img src="img/zkm_kubus_nacht.jpg" alt="ZKM Cube"/><br/>
+<small>The ZKM_Cube (&copy; ZKM, photo: Uli Deck)</small>
 </div>
 <p>
 It is not solely the multiplicity of the museums and research institutes combined under its roof that makes the ZKM | Center for Art and Media a unique culture institution worldwide.
