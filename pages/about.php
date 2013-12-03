@@ -8,7 +8,7 @@ The 2014 edition (the twelfth installment of the conference) will take place at 
 
 <h1>Target audience</h1>
 <p>
-The Linux Audio Conference brings together musicians, composers, sound artists, software developers, researchers and engineers working with Linux as an open, stable, professional platform for audio and media research and music production. 
+The Linux Audio Conference brings together musicians, composers, sound artists, software developers, researchers and engineers working with GNU/Linux as an open, stable, professional platform for audio and media research and music production.
 </p>
 
 <h1>What to expect</h1>
@@ -102,5 +102,5 @@ Michael Hohendorf, Yana Il, Till Kniola, Frank Neumann and Jochen Arne Otto.</p>
 <hr/>
 <p><br/></p>
 <p><small style="line-height:1.2em">
-The Linux Audio Conference is dedicated to providing an inclusive and harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form. Sexist language and imagery is not appropriate for any conference venue, including talks. If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate to remedy the issue. 
+The Linux Audio Conference is dedicated to providing an inclusive and harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form. Sexist language and imagery is not appropriate for any conference venue, including talks. If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate to remedy the issue.
 </small></p>

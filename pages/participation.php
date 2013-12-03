@@ -53,7 +53,7 @@ meant as a starting point, not to restrict you.
   <li>Linux Kernel</li>
   <li>Physical Computing</li>
   <li>Interface Design</li>
-  <li>Linux Distributions</li>
+  <li>GNU/Linux Distributions</li>
   <li>Networked Audio</li>
   <li>Video</li>
   <li>Mobile Audio</li>
