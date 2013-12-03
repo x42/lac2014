@@ -1,8 +1,7 @@
 <h1>About</h1>
 <p>
 The Linux Audio Conference is the international conference about
-Open Source Software for music, sound and other media with Linux as the main
-platform.
+Free/Open-Source Software for music, sound and other media with GNU/Linux as the main platform.
 The 2014 edition (the twelfth installment of the conference) will take place at the <em>ZKM</em>, Karlsruhe, Germany, the place where it all started.
 </p>
 
