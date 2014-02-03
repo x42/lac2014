@@ -84,7 +84,7 @@ The best way to get around in Karlsruhe is by .. (TODO)
   <li><a href="http://www.acora.de/">Hotel Acora</a>, <span lang="de" xml:lang="de">Sophienstra&szlig;e</span> 69-71</li>
   <li><a href="http://www.hotelelite-ka.de/">Hotel Elite</a>, <span lang="de" xml:lang="de">Sachsenstra&szlig;e</span> 17-19</li>
   <li><a href="http://www.hotelastoria-karlsruhe.de/">Hotel Astoria</a>, <span lang="de" xml:lang="de">Mathystra&szlig;e</span> 22</li>
-  <li><a href="www.bed-and-breakfast.de">Bed and Breakfast</a></li>
+  <li><a href="http://www.bed-and-breakfast.de">Bed and Breakfast</a></li>
 </ul>
 
 <p>
