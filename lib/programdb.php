@@ -31,6 +31,8 @@
   function typesort($t) {
     switch ($t) {
       case 'p': return 0;
+      case 'l': return 0;
+      case 'v': return 0;
       case 'w': return 1;
       case 'i': return 2;
       case 'c': return 3;
@@ -103,6 +105,8 @@
   function translate_type($t) {
     switch ($t) {
       case 'p': return 'Paper Presentation';
+      case 'l': return 'Lightning Talk';
+      case 'v': return 'Poster Presentation';
       case 'w': return 'Workshop';
       case 'i': return 'Installation/Loop';
       case 'c': return 'Concert';
@@ -1480,19 +1484,35 @@ will broadcast the following pieces at irregular intervals.</p><br>
     $a_days = fetch_selectlist(0, 'days');
     $a_locations = fetch_selectlist($db, 'location');
     $a_users = fetch_selectlist($db);
-    # TODO unify w/ translate_time - strip unused timeslots for table.
-    $a_times = array(
-                      '9:00'  =>  '9:00'
-                    , '10:00' => '10:00' , '10:20' => '10:20', '10:40' => '10:40'
-                    , '11:00' => '11:00' , '11:20' => '11:20' , '11:40' => '11:40'
-                    , '12:00' => '12:00' , '12:20' => '12:20', '12:40' => '12:40'
-                    , '13:00' => '13:00'
-                    , '14:00' => '14:00' , '14:30' => '14:30', '14:50' => '14:50'
-                    , '15:10' => '15:10' , '15:30' => '15:30' , '15:50' => '15:50'
-                    , '16:10' => '16:10' , '16:30' => '16:30' , '16:50' => '16:50'
-                    , '17:10' => '17:10' , '17:30' => '17:30'
+    if ($day == 2) {
+      $a_times = array(
+                      '9:00' => '9:00', '9:30' => '9:30'
+                    , '10:00' => '10:00' , '10:15' => '10:15', '10:30' => '10:30', '10:45' => '10:45'
+                    , '11:00' => '11:00' , '11:15' => '11:15', '11:30' => '11:30'
+                    , '11:40' => '11:40' , '11:50' => '11:50'
+                    , '12:00' => '12:00' , '12:10' => '12:10' , '12:20' => '12:20'
+                    , '12:30' => '12:30'
+                    , '13:00' => '13:00' , '13:30' => '13:30'
+                    , '14:00' => '14:00' , '14:15' => '14:15', '14:30' => '14:30', '14:45' => '14:45'
+                    , '15:00' => '15:00' , '15:15' => '15:15', '15:30' => '15:30', '15:45' => '15:45'
+                    , '16:00' => '16:00' , '16:15' => '16:15', '16:30' => '16:30', '16:45' => '16:45'
+                    , '17:00' => '17:00' , '17:15' => '17:15', '17:30' => '17:30', '17:45' => '17:45'
                     , '18:00' => '18:00'
                   );
+    } else {
+      $a_times = array(
+                      '9:00' => '9:00', '9:30' => '9:30'
+                    , '10:00' => '10:00' , '10:15' => '10:15', '10:30' => '10:30', '10:45' => '10:45'
+                    , '11:00' => '11:00' , '11:15' => '11:15', '11:30' => '11:30', '11:45' => '11:45'
+                    , '12:00' => '12:00' , '12:15' => '12:15' , '12:30' => '12:30'
+                    , '13:00' => '13:00' , '13:30' => '13:30'
+                    , '14:00' => '14:00' , '14:15' => '14:15', '14:30' => '14:30', '14:45' => '14:45'
+                    , '15:00' => '15:00' , '15:15' => '15:15', '15:30' => '15:30', '15:45' => '15:45'
+                    , '16:00' => '16:00' , '16:15' => '16:15', '16:30' => '16:30', '16:45' => '16:45'
+                    , '17:00' => '17:00' , '17:15' => '17:15', '17:30' => '17:30', '17:45' => '17:45'
+                    , '18:00' => '18:00'
+                  );
+    }
     # XXX 2011: Friday
     #if ($day!=1) $a_times[]='18:00';
 
@@ -1508,7 +1528,7 @@ will broadcast the following pieces at irregular intervals.</p><br>
 
     echo '<h2 class="ptitle'.(($print && $day>1)?' pb':'').'">Day '.$a_days[$day].'</h2>';
     $q='SELECT DISTINCT location_id FROM activity WHERE day='.$day.'
-        AND (type=\'p\' OR type=\'o\' OR type=\'w\' OR location_id=\'1\')
+        AND (type=\'p\' OR type=\'l\' OR type=\'o\' OR type=\'w\' OR location_id=\'1\')
         ORDER BY location_id;';
 
     $res=$db->query($q);
@@ -1519,7 +1539,7 @@ will broadcast the following pieces at irregular intervals.</p><br>
       $table[$i]['loc']=$a_locations[$c['location_id']];
       $table[$i]['cskip']=0;
       $q='SELECT * FROM activity WHERE day='.$day.'
-          AND (type=\'p\' OR type=\'o\' OR type=\'w\')
+          AND (type=\'p\' OR type=\'l\' OR type=\'o\' OR type=\'w\')
           AND location_id='.$c['location_id'].'
           ORDER BY strftime(\'%H:%M\',starttime);';
       $res=$db->query($q);
@@ -1546,10 +1566,12 @@ will broadcast the following pieces at irregular intervals.</p><br>
         if (isset($c[$t]) && is_array($c[$t])) {
           $d=$c[$t];
           #if ($c['cskip'] > 0) echo 'TIME CONFLICT!! '.$t.' @'.$c['loc'].'<br/>'; // XXX really list that here in plain view for users?
+          # TODO Lightning talks...
           if ($d['starttime'] == '9:00')
-      $c['cskip']=1;
-    else
-      $c['cskip']=$d['duration']/20;
+            $c['cskip']=1;
+          else
+            $c['cskip']=ceil($d['duration']/15);
+
           $track=track_color($d); # tr0 - tr5
           echo '<td class="ptb'.($print?'':' active').' '.$track.'" rowspan="'.$c['cskip'].'"';
           if (!$print) echo ' onclick="showInfoBox('.$d['id'].');"';
