@@ -308,7 +308,7 @@ fieldset legend {text-align:left;}
 }
 table.adminlist {width:99%;}
 .adminlist  {font-size:90%;}
-.abstract   {font-size:75%;text-align:justify;}
+.abstract   {font-size:75%;text-align:justify; margin-top:.75em;}
 p.ptitle    {margin:0px 0px 2em 0px !important;}
 h2.ptitle   {margin:1em 0px 2px 0px !important;}
 h3.ptitle   {margin:1.0em 0px 0em 0px !important; text-align:center;}
@@ -346,6 +346,12 @@ td.ptb, th.ptb {
   padding:0px 2px 0px 2px;
   vertical-align:top;
 }
+
+/*** program track ***/
+
+.trl {background-color: #eeee00;}
+.tr0 {background-color: #ccffcc;}
+.tro {background-color: #cccccc;}
 
 /*** misc ***/
 div.right   {text-align:right;}

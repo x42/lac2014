@@ -87,18 +87,11 @@
   }
   function track_color($d) {
     # XXX - hardcoded session/track XXX
-    if ($d['day'] == 1 && $d['starttime'] < '13:00') return 'tr1';
-    if ($d['type'] != 'p') return 'tr0';
-
-    if ($d['day'] == 1 && $d['starttime'] < '16:00') return 'tr4';
-    if ($d['day'] == 1) return 'tr5';
-
-    if ($d['day'] == 2 && $d['starttime'] < '13:00') return 'tr2';
-    if ($d['day'] == 2 && $d['starttime'] < '16:00') return 'tr3';
-    if ($d['day'] == 2) return 'tr5';
-
-    if ($d['day'] == 3 && $d['starttime'] < '13:00') return 'tr6';
-    if ($d['day'] == 3 && $d['starttime'] > '13:00') return 'tr7';
+    if (substr($d['title'],0,7) == 'COFFEE ') return 'trc';
+    if (substr($d['title'],0,6) == 'LUNCH ') return 'trc';
+    if ($d['title'] == 'Poster Session') return 'trl';
+    if ($d['day'] == 2 && $d['type'] == 'l') return 'trl';
+    if ($d['type'] != 'p') return 'tro';
     return 'tr0';
   }
 
@@ -207,8 +200,7 @@
       return array(1=> 'Thursday, May/1', 2=> 'Friday, May/2', 3=> 'Saturday, May/3', 4=> 'Sunday, May/4');
 
     if ($table=='types')
-      return array('p' => 'Paper Presentation', 'w' => 'Workshop', 'c' => 'Concert', 'i' => 'Installation', 'o' => 'Other');
-      #return array('p' => 'Paper Presentation', 'w' => 'Workshop', 'c' => 'Concert', 'o' => 'Other');
+      return array('p' => 'Paper Presentation', 'l' => 'Lightning', 'v' => 'Poster', 'c' => 'Concert', 'i' => 'Installation', 'o' => 'Other');
     if ($table=='durations')
       return array('' => '-unset-', '10' => '10 mins', '20' => '20 mins', '40' => '40 mins', '60' => '1 hour', '80' => '80 mins', '120' => '2 hours', '160' => '2 3/4 hours', '180' => '3 hours');
     if ($table=='status')
@@ -480,15 +472,17 @@
     # TODO unify w/ translate_time
     $a_times = array(
                     '' => '-unset-'
-                    , '9:00' => '9:00'
-                    , '10:00' => '10:00' , '10:20' => '10:20', '10:40' => '10:40'
-                    , '11:00' => '11:00' , '11:20' => '11:20' , '11:40' => '11:40'
-                    , '12:00' => '12:00' , '12:20' => '12:20', '12:40' => '12:40'
-                    , '13:00' => '13:00'
-                    , '14:00' => '14:00' , '14:30' => '14:30', '14:50' => '14:50'
-                    , '15:10' => '15:10' , '15:30' => '15:30' , '15:50' => '15:50'
-                    , '16:10' => '16:10' , '16:30' => '16:30' , '16:50' => '16:50'
-                    , '17:10' => '17:10' , '17:30' => '17:30'
+                    , '9:00' => '9:00', '9:30' => '9:30'
+                    , '10:00' => '10:00' , '10:15' => '10:15', '10:30' => '10:30', '10:45' => '10:45'
+                    , '11:00' => '11:00' , '11:15' => '11:15', '11:30' => '11:30'
+                    , '11:40' => '11:40' , '11:45' => '11:45', '11:50' => '11:50'
+                    , '12:00' => '12:00' , '12:10' => '12:10', '12:15' => '12:15'
+                    , '12:20' => '12:20' , '12:30' => '12:30'
+                    , '13:00' => '13:00' , '13:30' => '13:30'
+                    , '14:00' => '14:00' , '14:15' => '14:15', '14:30' => '14:30', '14:45' => '14:45'
+                    , '15:00' => '15:00' , '15:15' => '15:15', '15:30' => '15:30', '15:45' => '15:45'
+                    , '16:00' => '16:00' , '16:15' => '16:15', '16:30' => '16:30', '16:45' => '16:45'
+                    , '17:00' => '17:00' , '17:15' => '17:15', '17:30' => '17:30', '17:45' => '17:45'
 
                     , '18:00' => '18:00' , '18:30' => '18:30'
                     , '19:00' => '19:00' , '19:30' => '19:30'
@@ -1257,11 +1251,11 @@
 
   function print_day($db, $num, $name, $details=true) {
     echo '<h2 class="ptitle">Day '.$num.' - '.$name.'</h2>';
-    if (count_out($db, 
+    if (count_out($db,
           'SELECT count(*) FROM activity
            WHERE day='.$num.'
            AND ( type=\'p\' OR location_id=\'1\')') > 0) {
-           
+
         echo '<h3 class="ptitle">Main Track<br/>(Hall i7)</h3>';
         query_out($db,
          'SELECT * FROM activity
@@ -1270,16 +1264,31 @@
           ORDER BY strftime(\'%H:%M\',starttime), serial', $details, false, false
         );
     }
-    if (count_out($db, 
+
+    if (count_out($db,
           'SELECT count(*) FROM activity
            WHERE day='.$num.'
-           AND NOT ( type=\'p\' OR location_id=\'1\')') > 0) {
+           AND type=\'v\'') > 0) {
+        echo '<h3 class="ptitle">Poster Presentations</h3>';
+        echo '<div class="ptitle"></div>';
+        query_out($db,
+         'SELECT * FROM activity
+          WHERE day='.$num.'
+          AND type=\'v\'
+          ORDER BY typesort(type), strftime(\'%H:%M\',starttime), location_id, serial', $details, true, true
+        );
+    }
+
+    if (count_out($db,
+          'SELECT count(*) FROM activity
+           WHERE day='.$num.'
+           AND NOT (location_id=\'1\' OR location_id=\'2\')') > 0) {
         echo '<h3 class="ptitle">Workshops &amp; Events</h3>';
         echo '<div class="ptitle"></div>';
         query_out($db,
          'SELECT * FROM activity
           WHERE day='.$num.'
-          AND NOT (type=\'p\' OR location_id=\'1\')
+          AND NOT (location_id=\'1\'  OR location_id=\'2\')
           ORDER BY typesort(type), strftime(\'%H:%M\',starttime), location_id, serial', $details, true, true
         );
     }
@@ -1447,9 +1456,7 @@ one of the central places of independent contemporary art in Graz.
 ?>
 <h3>Installations</h3>
 <p>
-Art installations are exhibited at the media art space
-<a href="http://esc.mur.at">ESC im LABOR</a>, which is in the center of the city
-(from the main conference venue it takes about 15 minutes by public transport and 25 minutes on foot).
+Art installations are exhibited at the media art space...
 </p>
 <p>
 The exhibition will be open from 14:00 to 19:00 (and on demand).
@@ -1460,13 +1467,11 @@ The exhibition will be open from 14:00 to 19:00 (and on demand).
     $q.=' ORDER BY day, strftime(\'%H:%M\',starttime), typesort(type), location_id, serial;';
     query_out($db, $q, $details, false,  true, true, true);
 ?>
-<h3>On-the-air Listening Room</h3>
+<h3>The Morning Line</h3>
 <p>
-During the LAC, the local independent radio station
-<a href="http://helsinki.mur.at">Radio Helsinki</a> 
-will broadcast the following pieces at irregular intervals.</p><br>
+During the LAC, ...
 <?php
-    $q='SELECT activity.* FROM activity WHERE location_id=2';
+    $q='SELECT activity.* FROM activity WHERE location_id=8';
     $q.=' ORDER BY day, strftime(\'%H:%M\',starttime), typesort(type), location_id, serial;';
     query_out($db, $q, $details, false,  true, true, true);
     echo '</div>'."\n";
@@ -1568,7 +1573,11 @@ will broadcast the following pieces at irregular intervals.</p><br>
           #if ($c['cskip'] > 0) echo 'TIME CONFLICT!! '.$t.' @'.$c['loc'].'<br/>'; // XXX really list that here in plain view for users?
           # TODO Lightning talks...
           if ($d['starttime'] == '9:00')
+            $c['cskip']=2;
+          if ($d['starttime'] == '9:30')
             $c['cskip']=1;
+          else if (substr($d['title'],0,6) == 'LUNCH ')
+            $c['cskip']=3;
           else
             $c['cskip']=ceil($d['duration']/15);
 
