@@ -2,7 +2,7 @@
 
 ##mysqldump --opt --user lac2013 -p openconf2013
 
-define('YEAR','2013');
+define('YEAR','2014');
 define('BASEDIR','/home/sites/lac.linuxaudio.org/'.YEAR);
 
 ### INPUT DATABASE (openconf)
@@ -45,25 +45,56 @@ function ch($s) {
     "@  +@" => ' ',
   );
 	$s=preg_replace(array_keys($qu),array_values($qu), $s);
+	$s=str_replace("\r", '', $s);
+	$s=str_replace("\n\n", "\n", $s);
+	$s=str_replace("\n\n", "\n", $s);
+	$s=str_replace("\n\n", "\n", $s);
+	$s=str_replace("\n", '\n'."\n", $s);
 	return $s;
 }
 
 function cday($num) {
-	return 1+floor($num / 9);
+	return 1 + floor($num / 7);
 }
 function ctime($num, $type) {
 	if ($type !='p') return '';
-	switch ($num%9) {
-		case 0: return '11:15';
-		case 1: return '11:45';
-		case 2: return '12:15';
-		case 3: return '14:00';
-		case 4: return '14:30';
-		case 5: return '15:00';
-		case 6: return '16:00';
-		case 7: return '16:30';
-		case 8: return '17:00';
+	if($num < 7) { // day 1
+		switch ($num) {
+			case 0: return '10:00';
+			case 1: return '11:45';
+			case 2: return '14:00';
+			case 3: return '14:45';
+			case 4: return '15:30';
+			case 5: return '16:30';
+			case 6: return '17:15';
+		}
+	} else {
+		switch ($num%7) {
+			case 0: return '10:00';
+			case 1: return '10:45';
+			case 2: return '14:00';
+			case 3: return '14:45';
+			case 4: return '15:30';
+			case 5: return '16:30';
+			case 6: return '17:15';
+		}
 	}
+	printf("TIME ERROR\n");
+	exit;
+}
+
+function check_lightning($topics) {
+	foreach ($topics as $t) {
+		if ($t['topicid'] == 25) return true;
+	}
+	return false;
+}
+
+function check_poster($topics) {
+	foreach ($topics as $t) {
+		if ($t['topicid'] == 24) return true;
+	}
+	return false;
 }
 
 ### All systems go
@@ -115,7 +146,8 @@ foreach (oc_query('SELECT DISTINCT * from author join paper on paper.paperid=aut
 		echo "inert user:". $a['name_first'].' '.$a['name_last']."\n";
   $rv=lac_exec('insert into user (name, bio, tagline, email, flags) VALUES('
     .$db->quote(ch($a['name_first'].' '.$a['name_last'])).','
-    .$db->quote(ch($a['city'].','.$a['country'])).','
+    .$db->quote('').','
+    #.$db->quote(ch($a['city'].','.$a['country'])).','
     .$db->quote(ch($a['organization'])).','
     .$db->quote(ch($a['email'])).', 1'
     .');');
@@ -131,12 +163,39 @@ foreach (oc_query('SELECT DISTINCT * from author join paper on paper.paperid=aut
 echo "-----\n";
 
 $num=1; # skip 1st slot on first day.
+$lgt=1; 
 foreach ($papers as $p) {
-	if ($DEBUG)
+	if ($DEBUG) {
 		echo "paper :".$p['title']."\n";
+	}
 	$type='p';
 	$location=1;
-	$duration=30;
+	$duration=45;
+	$cday = cday($num);
+	$ctime = ctime($num, $type);
+
+	if ($p['paperid'] == 2 || check_poster($p['mytopics'])) {
+		$type='v';
+		$location=2;
+		$duration=60;
+		$ctime = '11:30';
+		$cday = 3;
+	} else
+	if (check_lightning($p['mytopics'])) {
+		$type='l';
+		$location=1;
+		$duration=10;
+		switch($lgt++) {
+			case 1: $ctime = '11:30'; break;
+			case 2: $ctime = '11:40'; break;
+			case 3: $ctime = '11:50'; break;
+			case 4: $ctime = '12:00'; break;
+			case 5: $ctime = '12:10'; break;
+			case 6: $ctime = '12:20'; break;
+			default: $ctime = '12:30'; break;
+		}
+		$cday = 2;
+	}
 
 	if (!empty($p['format'])) {
 		$paperurl='http://lac.linuxaudio.org/'.YEAR.'/papers/'.$p['paperid'].'.'.$p['format'];
@@ -152,7 +211,7 @@ foreach ($papers as $p) {
     .$db->quote(ch($p['keywords']."\n".$p['pcnotes']."\n".$p['comments'])).','
     .$db->quote($paperurl)
     .','.$duration.','.$location # duration, location
-    .','.cday($num).','.$db->quote(ctime($num, $type))
+    .','.$cday.','.$db->quote($ctime)
 		.');');
 
 	if ($type=='p') $num++;
@@ -169,7 +228,7 @@ foreach ($papers as $p) {
     # loopup lac-authorid
     $lacaid = lac_query('SELECT id from user where email='.$db->quote($a['email']).';');
     if ($lacaid===false) {
-      echo " !!! ERROR LOOKING UP user : ".$a['email']."\n";
+      echo " !!! ERROR LOOKING UP user : ".$a['email']." for paper:".$p['title']."\n";
       continue;
     }
     $rv=lac_exec('insert into usermap (activity_id, user_id, position) VALUES('
@@ -185,20 +244,36 @@ foreach ($papers as $p) {
   }
 }
 $actid=lac_exec('insert into location (name) VALUES ("Main venue");');
+$actid=lac_exec('insert into location (name) VALUES ("Foyer");');
 
-# special
-lac_exec('insert into activity (title, type, abstract, notes, url_paper, duration, location_id'
+function add_special($title, $type, $duration, $location, $day, $time) {
+	global $db;
+	lac_exec('insert into activity (title, type, abstract, notes, url_paper, duration, location_id'
 		.', day, starttime'
 		.') VALUES('
-    .$db->quote('Conference Welcome').','
-    .$db->quote('o').','
+    .$db->quote($title).','
+    .$db->quote($type).','
     .$db->quote('').','  # abstract
     .$db->quote('').','  # notes
     .$db->quote('').','  # URL
-    .'30, 1' # duration, location
-    .',1,'.$db->quote('11:15') # day, time
+    .$duration.','
+    .$location.','
+    .$day.','
+    .$db->quote($time)
 		.');');
+}
 
+add_special("Conference Welcome", 'o', 15, 1, 1, "10:00");
+add_special("Keynote", 'o', 90, 1, 1, "10:15");
+add_special("Poster Session", 'o', 60, 2, 3, "11:30");
+
+add_special("COFFEE BREAK",   'o', 15, 1, 1, "16:15");
+add_special("COFFEE BREAK ",  'o', 15, 1, 2, "16:15");
+add_special("COFFEE BREAK  ", 'o', 15, 1, 3, "16:15");
+
+add_special("LUNCH BREAK",   'o', 90, 1, 1, "12:30");
+add_special("LUNCH BREAK ",  'o', 90, 1, 2, "12:30");
+add_special("LUNCH BREAK  ", 'o', 90, 1, 3, "12:30");
 /*
 lac_exec('insert into activity (title, type, abstract, notes, url_paper, duration, location_id'
 		.', day, starttime'
@@ -212,4 +287,4 @@ lac_exec('insert into activity (title, type, abstract, notes, url_paper, duratio
     .',4,'.$db->quote('11:15') # day, time
 		.');');
  */
-echo "OK\n";
+echo "OK $num added\n";
