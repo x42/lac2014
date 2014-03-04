@@ -1430,27 +1430,14 @@ if (1) {
 <h2 class="ptitle pb">Concerts &amp; Installations</h2>
 <h3>Concerts</h3>
 <p>
-There are two electro-acoustic concerts and two club-nights.
-For directions on how to get to the venues, check the map at the <a href="travel">Travel &amp; Stay</a> page (Concert venues are marked in green).
-<h4>IEM CUBE</h4>
-<p>The IEM's own concert room will host the first electro-acoustic concert on Thursday evening.
-It's in the building opposite of the main conference venue.</p>
-<h4>postgarage</h4>
-<p>One of the city's en-vogue clubs, the <a href="http://postgarage.at">postgarage</a> will host the
-first club night (on Thursday night) on it's second floor.</p>
-<h4>MUMUTH</h4>
-<p>The second electro-acoustic concert on Friday, will take place at the
-<a href="http://www.kug.ac.at/en/studies-further-education/studies/infrastructure/the-mumuth.html">MUMUTH</a>
-the newly build central concert venue of the University of Music and Performing Arts.</p>
-<h4>FORUM STADTPARK</h4>
-<p>
-The last concert, the <em>Linux Sound Night</em> will take place at the <a href="http://forum.mur.at">FORUM STADTPARK</a>,
-one of the central places of independent contemporary art in Graz.
+At LAC'14, there are three electro-acoustic concerts a 'listening session' and a club-night.
+The electro-acoustic concerts take place in the ZKM Kubus, the listening session and club-night on the Balcony in the ZKM.
 </p>
 <div style="padding:.5em 1em; 0em 1em">
 <?php
     $q='SELECT activity.* FROM activity WHERE type='.$db->quote('c');
-    $q.=' AND NOT location_id=2'; ## XXX skip radio shows here
+    $q.=' AND NOT location_id=8'; ## XXX skip morning line
+    $q.=' AND NOT location_id=9'; ## XXX skip radio shows here
     $q.=' ORDER BY day, strftime(\'%H:%M\',starttime), typesort(type), location_id, serial;';
     query_out($db, $q, $details, false,  true, true, false);
 ?>
@@ -1461,7 +1448,7 @@ Art installations are exhibited at the media art space...
 <p>
 The exhibition will be open from 14:00 to 19:00 (and on demand).
 </p>
-<br>
+<br/>
 <?php
     $q='SELECT activity.* FROM activity WHERE type='.$db->quote('i');
     $q.=' ORDER BY day, strftime(\'%H:%M\',starttime), typesort(type), location_id, serial;';
@@ -1469,7 +1456,16 @@ The exhibition will be open from 14:00 to 19:00 (and on demand).
 ?>
 <h3>The Morning Line</h3>
 <p>
-During the LAC, ...
+The Morning Line is a large outdoor mixed media art work, sculpture, pavilion, and audiovisual performance system by Matthew Ritchie, Aranda
+\ Lasch and Arup AGU (Advanced Geometry Unit), commissioned by Thyssen-Bornemisza Art Contemporary TBA21.
+</p>
+<p>
+Since 2013 it is located at the ZKM Forecourt. A central aspect of The Morning Line is the more than 30 specifically commissioned compositions by artists such as Lee Ranaldo, Carl Michael von Hausswol, Christian Fennesz, Florian Hecker, Chris Watson, and Batuhan Bozkurt.
+</p>
+<p>
+During the LAC it has been made available to Linux-sound artists to exhibit their works:
+</p>
+<br/>
 <?php
     $q='SELECT activity.* FROM activity WHERE location_id=8';
     $q.=' ORDER BY day, strftime(\'%H:%M\',starttime), typesort(type), location_id, serial;';
