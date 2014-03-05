@@ -86,7 +86,7 @@ The best way to get around in Karlsruhe is by .. (TODO)
 	<li><a href="http://www.hotelastoria-karlsruhe.de/">Hotel Astoria</a>, <span lang="de" xml:lang="de">Mathystra&szlig;e</span> 22. <em>Single: 49 €, breakfast incl. ; Double: 66 €, breakfast incl.</em></li>
 </ul>
 <p>
-If you book one of these three hotels directly and mention the ZKM and the conference, you can get a small discount on your single or double room. The quotas mentioned are for conference participants (per day, per person) available until about three weeks before the conference.
+If you book one of these three hotels directly and mention the ZKM and the conference, you can get a small discount on your single or double room. The quotas mentioned are for conference participants available until about three weeks before the conference.
 </p>
 
 <h3>Misc Hotels and B&amp;B</h3>
