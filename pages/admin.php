@@ -318,6 +318,7 @@ function mytimesort($a,$b) {
 
 function read_wifi_keys() {
 	$wlankeys = array();
+	return $wlankeys;
 	$wk=fopen(TMPDIR.'LAC13-wlan.csv', 'r');
 	if (!$wk) return $wlankeys;
 
