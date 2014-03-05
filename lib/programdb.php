@@ -54,19 +54,21 @@
   function track_legend() {
     # XXX - hardcoded session/track XXX
     $rv='<div style="width:100%; margin:.5em;">';
-    $rv.='<table cellspacing="0" class="trl">';
+    $rv.='<table cellspacing="0" class="legend">';
     $rv.='<tr>';
-    $rv.='<td class="trX" colspan="4">Legend</td>';
+    $rv.='<td class="trX" colspan="3">Legend</td>';
     $rv.='</tr><tr>';
     $rv.='<td class="tr1">'.track_name('tr1').'</td>';
-    $rv.='<td class="tr3">'.track_name('tr3').'</td>';
-    $rv.='<td class="tr5">'.track_name('tr5').'</td>';
-    $rv.='<td class="tr7">'.track_name('tr7').'</td>';
-    $rv.='</tr><tr>';
     $rv.='<td class="tr2">'.track_name('tr2').'</td>';
-    $rv.='<td class="tr4">'.track_name('tr4').'</td>';
     $rv.='<td class="tr6">'.track_name('tr6').'</td>';
-    $rv.='<td class="tr0">Ilghnéitheach</td>';
+    $rv.='</tr><tr>';
+    $rv.='<td class="tr4">'.track_name('tr4').'</td>';
+    $rv.='<td class="tr5">'.track_name('tr5').'</td>';
+    $rv.='<td class="trl">Lightning Talk</td>';
+    $rv.='</tr><tr>';
+    $rv.='<td class="tr7">'.track_name('tr7').'</td>';
+    $rv.='<td class="tr3">'.track_name('tr3').'</td>';
+    $rv.='<td class="trp">Poster Session</td>';
     $rv.='</tr>';
     $rv.='</table></div>';
     return $rv;
@@ -75,13 +77,15 @@
   function track_name($tr) {
     # XXX - hardcoded session/track XXX
     switch ($tr) {
-      case 'tr1': return 'Music Programming Languages';
-      case 'tr2': return 'Audio Infrastructure and Broadcast';
-      case 'tr3': return 'Interfaces for Music Instruments';
-      case 'tr4': return 'Sound Synthesis';
-      case 'tr5': return 'Systems and Language';
-      case 'tr6': return 'Audio Programming';
-      case 'tr7': return 'Environments and Composition';
+      case 'tr1': return 'Audio and Web';
+      case 'tr2': return 'Tools to make Tools';
+      case 'tr3': return 'SurSound and Ambisonics';
+      case 'tr4': return 'Music Programming';
+      case 'tr5': return 'Interfaces and Hardware';
+      case 'tr6': return 'Live Coding';
+      case 'tr7': return 'Licensing';
+      case 'trp': return 'Poster Session';
+      case 'trl': return 'Lightning Talk';
       default: return '';
     }
   }
@@ -89,9 +93,18 @@
     # XXX - hardcoded session/track XXX
     if (substr($d['title'],0,7) == 'COFFEE ') return 'trc';
     if (substr($d['title'],0,6) == 'LUNCH ') return 'trc';
-    if ($d['title'] == 'Poster Session') return 'trl';
+    if ($d['title'] == 'Poster Session') return 'trp';
     if ($d['day'] == 2 && $d['type'] == 'l') return 'trl';
     if ($d['type'] != 'p') return 'tro';
+    switch ($d['track']) {
+      case 1: return 'tr1';
+      case 2: return 'tr2';
+      case 3: return 'tr3';
+      case 4: return 'tr4';
+      case 5: return 'tr5';
+      case 6: return 'tr6';
+      case 7: return 'tr7';
+    }
     return 'tr0';
   }
 
@@ -817,7 +830,7 @@
           echo 'Day '.$a_days[$r['day']].'&nbsp;';
       }
       echo '<div class="righttr '.track_color($r).'">';
-      #echo track_name(track_color($r));
+      echo track_name(track_color($r));
       echo '</div>';
       if ($r['day'] != 5) ## every day
         echo '<span class="tme">'.translate_time($r['starttime']).'</span>&nbsp;';
@@ -976,6 +989,7 @@
         }
         if (count(fetch_authorids($db, $r['id'])) == 0) {
           if (substr($r['title'],0,12) == 'COFFEE BREAK') continue; # XXX
+          if (substr($r['title'],0,6) == 'LUNCH ') continue; # XXX
           echo 'Event ('.$r['id'].') has no assigned Author(s).<br/>';
           $err++;
         }
@@ -1173,7 +1187,7 @@
     if ($grrr==0) echo '&nbsp;*&nbsp;<span class="green">All OK.</span><br/>'."\n";
     else echo '&nbsp;*&nbsp;<span class="red"><b>'.$grrr.' incomplete entries found.</b></span><br/>'."\n";
 
-    echo "<b>Pass 2: Locations Date/Time (Concerts are ignored)</b><br/>";
+    echo "<b>Pass 2: Locations Date/Time (Concerts and Posters are ignored)</b><br/>";
     $err=0;
 
     $q='SELECT * FROM activity ORDER BY day,strftime(\'%H:%M\',starttime)';
@@ -1184,6 +1198,7 @@
         foreach ($result as $b) {
           if ($a['id'] == $b['id']) continue;
           if ($a['day'] != $b['day']) continue;
+          if ($a['type'] == 'v' || $b['type']=='v') continue;
           if ($a['type'] == 'c' || $b['type']=='c') continue;
           if ($a['type'] == 'i' || $b['type']=='i') continue;
           if ($a['location_id'] != $b['location_id']) continue;
@@ -1605,7 +1620,7 @@ During the LAC it has been made available to Linux-sound artists to exhibit thei
 
     echo '</table>';
 
-    #echo track_legend();
+    echo track_legend();
 
     if (!$print) {
       programlightbox();
@@ -1853,11 +1868,11 @@ During the LAC it has been made available to Linux-sound artists to exhibit thei
     echo 'PRODID:-//'.$config['organizaion'].'/LAC'.LACY.'//NONSGML v1.0//EN'."\r\n";
 
 # XXX hardcoded concerts
-    $result[] = array('id'=> 1000, 'day' => '1', 'starttime' => '18:00', 'duration' => '60',  'type' => 'c', 'title' => 'Opening Concert', 'abstract' => '', 'location_id' => 5, 'status' => '1');
-    $result[] = array('id'=> 1001, 'day' => '1', 'starttime' => '21:00', 'duration' => '90',  'type' => 'c', 'title' => 'Concert Postgarage', 'abstract' => '', 'location_id' => 6, 'status' => '1');
-    $result[] = array('id'=> 1002, 'day' => '2', 'starttime' => '19:30', 'duration' => '30',  'type' => 'i', 'title' => 'Exhibition/vernisage', 'abstract' => '', 'location_id' => 9, 'status' => '1');
-    $result[] = array('id'=> 1003, 'day' => '2', 'starttime' => '20;00', 'duration' => '120', 'type' => 'c', 'title' => 'Concert', 'abstract' => '', 'location_id' => 9, 'status' => '7');
-    $result[] = array('id'=> 1004, 'day' => '3', 'starttime' => '20:00', 'duration' => '120',  'type' => 'c', 'title' => 'Sound Night', 'abstract' => '', 'location_id' => 8, 'status' => '1');
+    $result[] = array('id'=> 1000, 'day' => '1', 'starttime' => '20:00', 'duration' => '90',  'type' => 'c', 'title' => 'Opening Concert', 'abstract' => '', 'location_id' => 3, 'status' => '1');
+    $result[] = array('id'=> 1001, 'day' => '2', 'starttime' => '20:00', 'duration' => '90',  'type' => 'c', 'title' => 'IMA Concert', 'abstract' => '', 'location_id' => 3, 'status' => '1');
+    $result[] = array('id'=> 1001, 'day' => '2', 'starttime' => '22:00', 'duration' => '90',  'type' => 'c', 'title' => 'Launge / Playnight', 'abstract' => '', 'location_id' => 4, 'status' => '1');
+    $result[] = array('id'=> 1003, 'day' => '2', 'starttime' => '20;00', 'duration' => '90', 'type' => 'c', 'title' => 'LAC Concert', 'abstract' => '', 'location_id' => 3, 'status' => '1');
+    $result[] = array('id'=> 1004, 'day' => '3', 'starttime' => '22:00', 'duration' => '180',  'type' => 'c', 'title' => 'Sound Night', 'abstract' => '', 'location_id' => 4, 'status' => '1');
 
     foreach ($result as $r) {
       if (empty($r['starttime'])) continue;

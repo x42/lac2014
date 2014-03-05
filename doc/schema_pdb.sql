@@ -2,6 +2,7 @@ CREATE TABLE activity (
    id INTEGER PRIMARY KEY AUTOINCREMENT,
    title varchar(200) NOT NULL,
    type char DEFAULT 'p',
+   track tinyint DEFAULT '0',
    abstract text,
    user_id INT unsigned DEFAULT NULL,
    duration time default NULL,

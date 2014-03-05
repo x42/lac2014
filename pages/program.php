@@ -1,10 +1,11 @@
 <?php
 
   function program_header($mode,$details) {
-    echo '<h1>Conference Schedule / Archive</h1>'."\n";
+    echo '<h1>Conference Schedule</h1>'."\n";
 ### Note during conference about streaming and IRC ###
 #    echo '<div class="center" style="margin-top:.5em; margin-bottom:.-5em;"><p>During the conference, live A/V streams are available for the main track: <a href="'.local_url('stream').'">Stream Page</a></p><p>Remote participants are invited to join <a href="http://webchat.freenode.net/?channels=lac2013" rel="external">#lac2013 on irc.freenode.net</a>, to be able to take part in the discussions, ask questions, and get technical assistance in case of stream problems.</p><p>Conference Material can be found on the <a href="'.local_url('files').'">Download Page</a>.</p><br/></div>';
-#    echo '<hr/><br/>'."\n";
+    echo '<div class="center red" style="margin-top:.5em; margin-bottom:.-5em; font-size:110%; font-weight: bold;">The schedule is still being worked on. The information below is not yet valid.<br/></div>';
+    echo '<hr/><br/>'."\n";
 
     echo '<p class="ptitle">Timetable Format: ';
     if ($mode!='list' || $details)

@@ -16,8 +16,8 @@
 
 # other available pages - not shown as 'tabs'
   $hidden = array(
-    #'program'  => 'Archive',
-    #'speakers'  => 'Delegates',
+    'program'  => 'Schedule',
+    'speakers'  => 'Delegates',
     #'files' => 'Download',
     #'profile' => 'Profile',
   );

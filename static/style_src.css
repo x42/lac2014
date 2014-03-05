@@ -350,8 +350,36 @@ td.ptb, th.ptb {
 /*** program track ***/
 
 .trl {background-color: #eeee00;}
-.tr0 {background-color: #ccffcc;}
+.trp {background-color: #eebb11;}
 .tro {background-color: #cccccc;}
+.tr0 {background-color: transparent;}
+
+.tr1 {background-color: #0044ff;}
+.tr2 {background-color: #66ff00;}
+.tr3 {background-color: #ff0066;}
+.tr4 {background-color: #5599bb;}
+.tr5 {background-color: #9944cc;}
+.tr6 {background-color: #bb8844;}
+.tr7 {background-color: #aa8899;}
+td.trX	{
+	background:black; color:white; line-height:120%; font-weight:bold;
+}
+
+table.legend td{
+	border-top:1px solid black;
+	border-right:1px solid black;
+}
+
+table.legend {
+	width:75%;
+	margin: 1em auto;
+	table-layout:fixed;
+	font-size:90%;
+	line-height:130%;
+	text-align:center;
+	border-bottom:1px solid black;
+	border-left:1px solid black
+}
 
 /*** misc ***/
 div.right   {text-align:right;}
