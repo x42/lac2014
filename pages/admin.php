@@ -278,7 +278,7 @@ function gen_badges_pdf($f) {
   $handle = fopen(TMPDIR.'lac2014badges.tex', "w");
   fwrite($handle, gen_badges_source($f));
   fclose($handle);
-  @copy (DOCROOTDIR.'img/lac2014medium.png', TMPDIR.'badge_iem.png');
+  @copy (DOCROOTDIR.'img/lac2014.png', TMPDIR.'badge_zkm.png');
   @copy (DOCROOTDIR.'img/badgelogo.png', TMPDIR.'badgelogo.png');
   @copy (DOCROOTDIR.'img/fonts/ttfonts.map', TMPDIR.'ttfonts.map'); 
   @copy (DOCROOTDIR.'img/fonts/T1-WGL4x.enc', TMPDIR.'T1-WGL4x.enc'); 
@@ -524,10 +524,10 @@ function badge_tex_header() {
     \vspace*{-3.0cm}
     \hspace*{2.40cm}\image{height=1.25cm,width=5.50cm}{badgelogo}
   }
-  \hspace*{-9.8cm}\\\\
+  \hspace*{-9.0cm}\\\\
   \parbox[c][4.5cm]{8.8cm}{
     \vspace*{-2.8cm}
-    \hspace*{0.8cm}\image{height=1.5cm,width=3.15cm}{badge_iem}
+    \hspace*{0.8cm}\image{height=1.70cm,width=2.15cm}{badge_zkm}
   }
   \hspace*{-8.8cm}\\\\
   \parbox[c][1.5cm]{9.8cm}{
@@ -559,7 +559,7 @@ function badge_tex_header() {
   \parbox[c][4.5cm]{9.8cm}{\Large
   \vspace*{3.3cm}
   \hspace{3.5cm}\begin{tabular*}{9cm}{rl}
-   ESSID:& {\tt tug}\\\\
+   ESSID:& {\tt zkm}\\\\
    Username:& {\tt #1}\\\\
    Password:& {\tt #2}\\\\
   \end{tabular*}%
