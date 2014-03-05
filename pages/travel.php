@@ -81,15 +81,19 @@ The best way to get around in Karlsruhe is by .. (TODO)
 <h3>Hotels</h3>
 
 <ul>
-  <li><a href="http://www.acora.de/">Hotel Acora</a>, <span lang="de" xml:lang="de">Sophienstra&szlig;e</span> 69-71</li>
-  <li><a href="http://www.hotelelite-ka.de/">Hotel Elite</a>, <span lang="de" xml:lang="de">Sachsenstra&szlig;e</span> 17-19</li>
-  <li><a href="http://www.hotelastoria-karlsruhe.de/">Hotel Astoria</a>, <span lang="de" xml:lang="de">Mathystra&szlig;e</span> 22</li>
-  <li><a href="http://www.bed-and-breakfast.de">Bed and Breakfast</a></li>
+  <li><a href="http://www.acora.de/">Hotel Acora</a>, <span lang="de" xml:lang="de">Sophienstra&szlig;e</span> 69-71. <em>Single: 68 €, breakfast incl. ; Double: 90 € breakfast incl.</em></li>
+  <li><a href="http://www.hotelelite-ka.de/">Hotel Elite</a>, <span lang="de" xml:lang="de">Sachsenstra&szlig;e</span> 17-19. <em>Single: 58 €, breakfast incl. ; Double: 76 €, breakfast incl.</em></li>
+	<li><a href="http://www.hotelastoria-karlsruhe.de/">Hotel Astoria</a>, <span lang="de" xml:lang="de">Mathystra&szlig;e</span> 22. <em>Single: 49 €, breakfast incl. ; Double: 66 €, breakfast incl.</em></li>
 </ul>
-
 <p>
-	Also <a href="http://google.com/?q=hotels+near+zkm+karlsruhe" rel="external">see here</a> (google).
+If you book one of these three hotels directly and mention the ZKM and the conference, you can get a small discount on your single or double room. The quotas mentioned are for conference participants (per day, per person) available until about three weeks before the conference.
 </p>
+
+<h3>Misc Hotels and B&amp;B</h3>
+<ul>
+	<li><a href="http://www.bed-and-breakfast.de">Bed and Breakfast</a></li>
+  <li>Also <a href="http://google.com/?q=hotels+near+zkm+karlsruhe" rel="external">see here</a> (google).</li>
+</ul>
 
 <h3>Hostels</h3>
 <p>
