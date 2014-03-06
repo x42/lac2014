@@ -1007,7 +1007,7 @@
         }
 
         if ($err) {
-    echo ' - ('.$r['id'].') <em>day</em>:'.$r['day'].', <em>start</em>:'.$r['starttime'].', <em>duration</em>:'.$r['duration'].', <em>type</em>:'.translate_type($r['type']).' <em>title</em>:'.limit_text($r['title']).'&nbsp;|&nbsp;';
+    echo ' - ('.$r['id'].') <em>day</em>:'.$r['day'].', <em>start</em>:'.$r['starttime'].', <em>duration</em>:'.$r['duration'].', <em>type</em>:'.translate_type($r['type']).'<br/>&nbsp;&nbsp;&nbsp;<em>title</em>:'.limit_text($r['title']).'&nbsp;|&nbsp;';
           echo '<td><a class="active" onclick="document.getElementById(\'param\').value='.$r['id'].';document.getElementById(\'mode\').value=\'edit\';formsubmit(\'myform\');">Edit</a>';
           if ($err==2)
             echo '&nbsp;|&nbsp;<a class="active" onclick="if (confirm(\'Really delete Entry no. '.$r['id'].'?\')) {document.getElementById(\'param\').value='.$r['id'].';document.getElementById(\'mode\').value=\'delentry\';formsubmit(\'myform\');i}">Delete</a>';
@@ -1190,7 +1190,7 @@
         }
         if ($err) {
           $grrr++;
-    echo ' - ('.$r['id'].') <em>day</em>:'.$r['day'].', <em>start</em>:'.$r['starttime'].', <em>duration</em>:'.$r['duration'].', <em>type</em>:'.translate_type($r['type']).' <em>title</em>:'.limit_text($r['title']).'&nbsp;|&nbsp;';
+    echo ' - ('.$r['id'].') <em>day</em>:'.$r['day'].', <em>start</em>:'.$r['starttime'].', <em>duration</em>:'.$r['duration'].', <em>type</em>:'.translate_type($r['type']).'<br/>&nbsp;&nbsp;&nbsp;<em>title</em>:'.limit_text($r['title']).'&nbsp;|&nbsp;';
           echo '<td><a class="active" onclick="document.getElementById(\'param\').value='.$r['id'].';document.getElementById(\'mode\').value=\'edit\';formsubmit(\'myform\');">Edit</a>';
           echo '<br/>'."\n";
         }
@@ -1222,9 +1222,9 @@
              ||($starta == $startb) ) {
             $err++;
             echo '<span class="red">Conflict: ('.$a['id'].') ends in same location AFTER ('.$b['id'].') starts there.</span><br/>';
-            echo ' - ('.$a['id'].') <em>day</em>:'.$a['day'].', <em>start</em>:'.$a['starttime'].', <em>duration</em>:'.$a['duration'].', <em>type</em>:'.translate_type($a['type']).' <em>title</em>:'.limit_text($a['title']).'&nbsp;|&nbsp;';
+            echo ' - ('.$a['id'].') <em>day</em>:'.$a['day'].', <em>start</em>:'.$a['starttime'].', <em>duration</em>:'.$a['duration'].', <em>type</em>:'.translate_type($a['type']).'<br/>&nbsp;&nbsp;&nbsp;<em>title</em>:'.limit_text($a['title']).'&nbsp;|&nbsp;';
       echo '<td><a class="active" onclick="document.getElementById(\'param\').value='.$a['id'].';document.getElementById(\'mode\').value=\'edit\';formsubmit(\'myform\');">Edit</a><br/>';
-            echo ' - ('.$b['id'].') <em>day</em>:'.$b['day'].', <em>start</em>:'.$b['starttime'].', <em>duration</em>:'.$b['duration'].', <em>type</em>:'.translate_type($b['type']).' <em>title</em>:'.limit_text($b['title']).'&nbsp;|&nbsp;';
+            echo ' - ('.$b['id'].') <em>day</em>:'.$b['day'].', <em>start</em>:'.$b['starttime'].', <em>duration</em>:'.$b['duration'].', <em>type</em>:'.translate_type($b['type']).'<br/>&nbsp;&nbsp;&nbsp;<em>title</em>:'.limit_text($b['title']).'&nbsp;|&nbsp;';
       echo '<td><a class="active" onclick="document.getElementById(\'param\').value='.$b['id'].';document.getElementById(\'mode\').value=\'edit\';formsubmit(\'myform\');">Edit</a><br/>';
             echo "\n";
           }
@@ -1254,16 +1254,16 @@
       $startb = dbadmin_unixtime($b);
       if ($starta > $startb) continue;
             echo '<span class="yellow">Notice: '.$u['name'].' has more than one presentation on day '.$a['day'].'.</span><br/>';
-        echo ' - ('.$a['id'].') <em>day</em>:'.$a['day'].', <em>start</em>:'.$a['starttime'].', <em>duration</em>:'.$a['duration'].', <em>type</em>:'.translate_type($a['type']).' <em>title</em>:'.limit_text($a['title']).'&nbsp;|&nbsp;';
+        echo ' - ('.$a['id'].') <em>day</em>:'.$a['day'].', <em>start</em>:'.$a['starttime'].', <em>duration</em>:'.$a['duration'].', <em>type</em>:'.translate_type($a['type']).'<br/>&nbsp;&nbsp;&nbsp;<em>title</em>:'.limit_text($a['title']).'&nbsp;|&nbsp;';
         echo '<td><a class="active" onclick="document.getElementById(\'param\').value='.$a['id'].';document.getElementById(\'mode\').value=\'edit\';formsubmit(\'myform\');">Edit</a><br/>';
-        echo ' - ('.$b['id'].') <em>day</em>:'.$b['day'].', <em>start</em>:'.$b['starttime'].', <em>duration</em>:'.$b['duration'].', <em>type</em>:'.translate_type($b['type']).' <em>title</em>:'.limit_text($b['title']).'&nbsp;|&nbsp;';
+        echo ' - ('.$b['id'].') <em>day</em>:'.$b['day'].', <em>start</em>:'.$b['starttime'].', <em>duration</em>:'.$b['duration'].', <em>type</em>:'.translate_type($b['type']).'<br/>&nbsp;&nbsp;&nbsp;<em>title</em>:'.limit_text($b['title']).'&nbsp;|&nbsp;';
         echo '<td><a class="active" onclick="document.getElementById(\'param\').value='.$b['id'].';document.getElementById(\'mode\').value=\'edit\';formsubmit(\'myform\');">Edit</a><br/>';
       if ($enda > $startb) {
               $err++;;
               echo '<span class="red">Conflict: '.$u['name'].' has overlapping presentations on day '.$a['day'].'!</span><br/>';
-        echo ' - ('.$a['id'].') <em>day</em>:'.$a['day'].', <em>start</em>:'.$a['starttime'].', <em>duration</em>:'.$a['duration'].', <em>type</em>:'.translate_type($a['type']).' <em>title</em>:'.limit_text($a['title']).'&nbsp;|&nbsp;';
+        echo ' - ('.$a['id'].') <em>day</em>:'.$a['day'].', <em>start</em>:'.$a['starttime'].', <em>duration</em>:'.$a['duration'].', <em>type</em>:'.translate_type($a['type']).'<br/>&nbsp;&nbsp;&nbsp;<em>title</em>:'.limit_text($a['title']).'&nbsp;|&nbsp;';
         echo '<td><a class="active" onclick="document.getElementById(\'param\').value='.$a['id'].';document.getElementById(\'mode\').value=\'edit\';formsubmit(\'myform\');">Edit</a><br/>';
-        echo ' - ('.$b['id'].') <em>day</em>:'.$b['day'].', <em>start</em>:'.$b['starttime'].', <em>duration</em>:'.$b['duration'].', <em>type</em>:'.translate_type($b['type']).' <em>title</em>:'.limit_text($b['title']).'&nbsp;|&nbsp;';
+        echo ' - ('.$b['id'].') <em>day</em>:'.$b['day'].', <em>start</em>:'.$b['starttime'].', <em>duration</em>:'.$b['duration'].', <em>type</em>:'.translate_type($b['type']).'<br/>&nbsp;&nbsp;&nbsp;<em>title</em>:'.limit_text($b['title']).'&nbsp;|&nbsp;';
         echo '<td><a class="active" onclick="document.getElementById(\'param\').value='.$b['id'].';document.getElementById(\'mode\').value=\'edit\';formsubmit(\'myform\');">Edit</a><br/>';
             }
     }
