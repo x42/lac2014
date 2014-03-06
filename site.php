@@ -18,6 +18,7 @@
   $hidden = array(
     'program'  => 'Schedule',
     'speakers'  => 'Delegates',
+    'excursion' => 'Excursion',
     #'files' => 'Download',
     #'profile' => 'Profile',
   );
