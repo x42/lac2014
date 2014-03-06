@@ -91,7 +91,7 @@
       case 'trp': return 'Poster Session';
       case 'trl': return 'Lightning Talk';
       case 'trw': return 'Workshop';
-      case 'tro': return 'Miscellanous';
+      case 'tro': return 'Miscellaneous';
       default: return '';
     }
   }
@@ -1454,7 +1454,7 @@ if (1) {
   function hardcoded_concert_and_installation_info($db, $details=true) {
 ?>
 <h2 class="ptitle pb">Concerts &amp; Installations</h2>
-<br/>
+<p></p>
 <h3>Concerts</h3>
 <p>
 At LAC'14, there are three electro-acoustic concerts a &laquo;listening session&raquo; and a club-night.
@@ -1593,6 +1593,7 @@ During the LAC it has been made available to Linux-sound artists to exhibit thei
       }
       $i++;
     }
+    $numloc=$i;
 
     echo '<table cellspacing="0" class="ptb"><tr><th class="ptb">Time</th>';
     foreach ($table as $c) {
@@ -1642,6 +1643,33 @@ During the LAC it has been made available to Linux-sound artists to exhibit thei
           $c['cskip']--;
         }
       }
+      echo '</tr>'."\n";
+    }
+
+    if ($day == 1) {
+      echo '<tr onmouseover="this.className=\'highlight\'" onmouseout="this.className=\'normal\'">';
+      echo '<th class="ptb">20:00</th>';
+      echo '<td class="ptb'.($print?'':' active').' trC" colspan="'.$numloc.'"><span>Opening Concert (&asymp;90mins) &raquo; Kubus</span></td>';
+      echo '</tr>'."\n";
+    }
+    else if ($day == 2) {
+      echo '<tr onmouseover="this.className=\'highlight\'" onmouseout="this.className=\'normal\'">';
+      echo '<th class="ptb">20:00</th>';
+      echo '<td class="ptb'.($print?'':' active').' trC" colspan="'.$numloc.'"><span>IMA Concert (&asymp;105mins) &raquo; Kubus</span></td>';
+      echo '</tr>'."\n";
+      echo '<tr onmouseover="this.className=\'highlight\'" onmouseout="this.className=\'normal\'">';
+      echo '<th class="ptb">22:00</th>';
+      echo '<td class="ptb'.($print?'':' active').' trC" colspan="'.$numloc.'"><span>Listening Session (&asymp;90mins) &raquo; Balcony/Lounge</span></td>';
+      echo '</tr>'."\n";
+    }
+    else if ($day == 3) {
+      echo '<tr onmouseover="this.className=\'highlight\'" onmouseout="this.className=\'normal\'">';
+      echo '<th class="ptb">20:00</th>';
+      echo '<td class="ptb'.($print?'':' active').' trC" colspan="'.$numloc.'"><span>LAC Concert (&asymp;105mins) &raquo; Kubus</span></td>';
+      echo '</tr>'."\n";
+      echo '<tr onmouseover="this.className=\'highlight\'" onmouseout="this.className=\'normal\'">';
+      echo '<th class="ptb">22:00</th>';
+      echo '<td class="ptb'.($print?'':' active').' trC" colspan="'.$numloc.'"><span>Sound Night (&gt;3h) &raquo; Balcony/Lounge</span></td>';
       echo '</tr>'."\n";
     }
 
