@@ -224,7 +224,7 @@
       return array(1=> 'Thursday, May/1', 2=> 'Friday, May/2', 3=> 'Saturday, May/3', 4=> 'Sunday, May/4');
 
     if ($table=='types')
-      return array('p' => 'Paper Presentation', 'l' => 'Lightning', 'v' => 'Poster', 'c' => 'Concert', 'i' => 'Installation', 'o' => 'Other');
+      return array('p' => 'Paper Presentation', 'l' => 'Lightning Talk', 'v' => 'Poster', 'c' => 'Concert', 'i' => 'Installation', 'o' => 'Other');
     if ($table=='durations')
       return array('' => '-unset-', '10' => '10 mins', '20' => '20 mins', '40' => '40 mins', '60' => '1 hour', '80' => '80 mins', '120' => '2 hours', '160' => '2 3/4 hours', '180' => '3 hours');
     if ($table=='status')
@@ -833,6 +833,7 @@
 
     foreach ($result as $r) {
       if (substr($r['title'],0,7) == 'COFFEE ') continue; # XXX
+      if (substr($r['title'],0,6) == 'LUNCH ') continue; # XXX
       if ($r['status'] == 2) continue; # hide hidden entries
       if ($day) {
         if ($r['day'] == 5) { ## every day
@@ -1435,7 +1436,7 @@ if (1) {
       $q='SELECT activity.* FROM activity WHERE 1=1';
 
     if ($filter['type'] != '0') $q.=' AND type='.$db->quote($filter['type']);
-    if ($filter['day'] > 0) $q.=' AND day='.$db->quote($filter['day']-1);
+    if ($filter['day'] > 0) $q.=' AND day='.$db->quote($filter['day']);
     if ($filter['location'] > 0) $q.=' AND location_id='.$db->quote($filter['location']);
     if ($filter['id'] > 0) $q.=' AND id='.$db->quote($filter['id']);
 
