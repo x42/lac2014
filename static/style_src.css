@@ -201,7 +201,7 @@ li {
 #content h3     { font-size: 120%; }
 #content h4     { font-size: 110%; font-style:italic; }
 
-#content form     { width:43em; margin:0 auto;}
+#content form     { width:49em; margin:0 auto;}
 #content input.button 
                   {font-size:110%;}
 #content textarea {border: 1px solid black;}

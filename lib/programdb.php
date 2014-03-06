@@ -297,7 +297,6 @@
     $res=$db->query($q);
     if (!$res) { say_db_error(); return $rv;}
     $result=$res->fetchAll();
-    echo '<input name="pdb_filterauthor" type="hidden" value="0" id="pdb_filterauthor"/>';
     echo '<table class="adminlist" cellspacing="0">'."\n";
     echo '<tr><th></th><th>Username</th><th>#talks</td><th>Email</th><th>Short Bio</th><th>&nbsp;</th>';
     $alt=0;
@@ -1346,6 +1345,7 @@
       echo '<legend>Filter:</legend>';
     else
       echo '<legend style="color:red">Filter:</legend>';
+    echo '<div style="margin:0 auto; text-align:center;">';
     echo '<label for="pdb_filterday">Day:</label>';
     echo '<select id="pdb_filterday" name="pdb_filterday" size="1"'.$ocs.'>';
     gen_options(array_merge(array('0' => '-all-'), $a_days) , $filter['day']);
@@ -1378,6 +1378,7 @@ if (1) {
       if (!($filter['day']==0 && $filter['type']=='0' && $filter['user']==0))
         echo '&nbsp;<input class="smbutton small" type="button" title="Clear" value="Clear" onclick="document.getElementById(\'pdb_filterday\').value=0;document.getElementById(\'pdb_filtertype\').value=0;document.getElementById(\'pdb_filterauthor\').value=0;formsubmit(\'myform\');"/>';
     }
+    echo '</div>';
   }
 
   function print_filter($db) {

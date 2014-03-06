@@ -157,9 +157,9 @@ if (!defined('REGLOGDIR')) die();
     if (isset($_REQUEST['pdb_filterday'])) $filter['day'] = intval(rawurldecode($_REQUEST['pdb_filterday']));
     if (isset($_REQUEST['pdb_filtertype'])) $filter['type'] = substr(rawurldecode($_REQUEST['pdb_filtertype']),0,1);
     if (isset($_REQUEST['pdb_filterauthor'])) $filter['user'] = intval(rawurldecode($_REQUEST['pdb_filterauthor']));
-    echo '<input name="pdb_filterday" type="hidden" value="'.rawurldecode($filter['day']).'"/>'."\n";
-    echo '<input name="pdb_filtertype" type="hidden" value="'.rawurldecode($filter['type']).'"/>'."\n";
-    echo '<input name="pdb_filterauthor" type="hidden" value="'.rawurldecode($filter['user']).'"/>'."\n";
+    echo '<input id="pdb_filterday" name="pdb_filterday" type="hidden" value="'.rawurldecode($filter['day']).'"/>'."\n";
+    echo '<input id="pdb_filtertype" name="pdb_filtertype" type="hidden" value="'.rawurldecode($filter['type']).'"/>'."\n";
+    echo '<input id="pdb_filterauthor" name="pdb_filterauthor" type="hidden" value="'.rawurldecode($filter['user']).'"/>'."\n";
   }
 
 ?>
