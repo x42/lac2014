@@ -1607,6 +1607,8 @@ During the LAC it has been made available to Linux-sound artists to exhibit thei
             $c['cskip']=1;
           else if (substr($d['title'],0,6) == 'LUNCH ')
             $c['cskip']=3;
+          else if ($d['starttime'] == '11:30' && $day==2 && $d['type'] == 'w')
+            $c['cskip']=6;
           else
             $c['cskip']=ceil($d['duration']/15);
 
