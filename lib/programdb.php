@@ -927,7 +927,7 @@
 
   function dbadmin_unixtime($e, $start=true) {
     date_default_timezone_set('UTC');
-    $time= strtotime((8+intval($e['day'])).' May 2014 '.$e['starttime'].':00 CEST');
+    $time= strtotime((0+intval($e['day'])).' May 2014 '.$e['starttime'].':00 CEST');
     if (!$start && !strstr($e['duration'], ':'))
       $time = strtotime('+'.$e['duration'].'minutes', $time);
     return $time;
