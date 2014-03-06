@@ -256,6 +256,7 @@ div.user div.portrait {
 div.portrait img {
   max-height:200px;
   max-width:200px;
+  border-radius:11px;
 }
 div.user div.userinfo {
   position:relative;
