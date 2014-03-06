@@ -97,11 +97,15 @@
   }
   function track_color($d) {
     # XXX - hardcoded session/track XXX
-    if (substr($d['title'],0,7) == 'COFFEE ') return 'trc';
-    if (substr($d['title'],0,6) == 'LUNCH ') return 'trc';
+    if (substr($d['title'],0,7) == 'COFFEE ') return 'trz';
+    if (substr($d['title'],0,6) == 'LUNCH ') return 'trz';
     if ($d['title'] == 'Poster Session') return 'trp';
     if ($d['day'] == 2 && $d['type'] == 'l') return 'trl';
+    if ($d['day'] == 4) return 'trz';
     if ($d['type'] == 'w') return 'trw';
+    if ($d['type'] == 'c') return 'trm';
+    if ($d['type'] == 'i') return 'tri';
+    if ($d['type'] == 'v') return 'trp';
     if ($d['type'] != 'p') return 'tro';
     switch ($d['track']) {
       case 1: return 'tr1';
