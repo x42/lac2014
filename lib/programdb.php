@@ -64,11 +64,15 @@
     $rv.='</tr><tr>';
     $rv.='<td class="tr4">'.track_name('tr4').'</td>';
     $rv.='<td class="tr5">'.track_name('tr5').'</td>';
-    $rv.='<td class="trl">Lightning Talk</td>';
+    $rv.='<td class="trl">'.track_name('trl').'</td>';
     $rv.='</tr><tr>';
     $rv.='<td class="tr7">'.track_name('tr7').'</td>';
     $rv.='<td class="tr3">'.track_name('tr3').'</td>';
-    $rv.='<td class="trp">Poster Session</td>';
+    $rv.='<td class="trp">'.track_name('trp').'</td>';
+    $rv.='</tr><tr>';
+    $rv.='<td></td>';
+    $rv.='<td class="trw">'.track_name('trw').'</td>';
+    $rv.='<td class="tro">'.track_name('tro').'</td>';
     $rv.='</tr>';
     $rv.='</table></div>';
     return $rv;
@@ -86,6 +90,8 @@
       case 'tr7': return 'Licensing';
       case 'trp': return 'Poster Session';
       case 'trl': return 'Lightning Talk';
+      case 'trw': return 'Workshop';
+      case 'tro': return 'Misc';
       default: return '';
     }
   }
@@ -95,6 +101,7 @@
     if (substr($d['title'],0,6) == 'LUNCH ') return 'trc';
     if ($d['title'] == 'Poster Session') return 'trp';
     if ($d['day'] == 2 && $d['type'] == 'l') return 'trl';
+    if ($d['type'] == 'w') return 'trw';
     if ($d['type'] != 'p') return 'tro';
     switch ($d['track']) {
       case 1: return 'tr1';
@@ -1443,11 +1450,20 @@ if (1) {
   function hardcoded_concert_and_installation_info($db, $details=true) {
 ?>
 <h2 class="ptitle pb">Concerts &amp; Installations</h2>
+<br/>
 <h3>Concerts</h3>
 <p>
 At LAC'14, there are three electro-acoustic concerts a 'listening session' and a club-night.
 The electro-acoustic concerts take place in the ZKM Kubus, the listening session and club-night on the Balcony in the ZKM.
 </p>
+<ul>
+<li>The opening concert features novel electro-acoustic compositions presented in the Kubus on Thursday 20h-21h</li>
+<li>On Friday there's a special IMA concert presenting works dedicated to the 3D Sound system &laquo;Zirkonium&raquo; in the Kubus 20h-21:40h</li>
+<li>Later on Friday night there's a &laquo;Listening Session&raquo; of predominantly pre-produced material in the upstairs Lounge, 22h-24h</li>
+<li>Saturday brings more electro-acoustic music with emphasis on Improvisation and Surround Sound in the Kubus, 20h-21:20h</li>
+<li>and last but not least the grand finale with danceable live-music at &laquo;Linux Sound Night&raquo; 22h - open-end at the upstairs Balcony</li>
+</ul>
+<h3>Concert Line up</h3>
 <div style="padding:.5em 1em; 0em 1em">
 <?php
     $q='SELECT activity.* FROM activity WHERE type='.$db->quote('c');
@@ -1456,12 +1472,13 @@ The electro-acoustic concerts take place in the ZKM Kubus, the listening session
     $q.=' ORDER BY day, strftime(\'%H:%M\',starttime), typesort(type), location_id, serial;';
     query_out($db, $q, $details, false,  true, true, false);
 ?>
+<br/>
 <h3>Installations</h3>
 <p>
-Art installations are exhibited at the media art space...
+Art installations are exhibited at the media art space.
 </p>
 <p>
-The exhibition will be open from 14:00 to 19:00 (and on demand).
+The exhibition will be open from 10:00 to 18:00 every day of the conference.
 </p>
 <br/>
 <?php
@@ -1469,6 +1486,7 @@ The exhibition will be open from 14:00 to 19:00 (and on demand).
     $q.=' ORDER BY day, strftime(\'%H:%M\',starttime), typesort(type), location_id, serial;';
     query_out($db, $q, $details, false,  true, true, true);
 ?>
+<br/>
 <h3>The Morning Line</h3>
 <p>
 The Morning Line is a large outdoor mixed media art work, sculpture, pavilion, and audiovisual performance system by Matthew Ritchie, Aranda
@@ -1620,7 +1638,9 @@ During the LAC it has been made available to Linux-sound artists to exhibit thei
 
     echo '</table>';
 
-    echo track_legend();
+    if (!$print || $day == 1) {
+      echo track_legend();
+    }
 
     if (!$print) {
       programlightbox();

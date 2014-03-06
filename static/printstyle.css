@@ -75,37 +75,22 @@ table.legend td{
 	border-right:1px solid black;
 }
 
-.trl {background-color: #eeee00;}
+.trl {background-color: #ddf45e;}
 .trp {background-color: #eebb11;}
 .tro {background-color: #cccccc;}
+.trw {background-color: #7ea4c0;}
 .tr0 {background-color: transparent;}
 td.trX	{
 	background:black; color:white; line-height:120%; font-weight:bold;
 }
-td.tr0	{
-	background:#ffbfbf;
-}
-td.tr1	{
-	background:#fff480;
-}
-td.tr2	{
-	background:#dfffbf;
-}
-td.tr3	{
-	background:#80ffaa;
-}
-td.tr4	{
-	background:#bfffff;
-}
-td.tr5	{
-	background:#80a0ff;
-}
-td.tr6	{
-	background:#dfbfff;
-}
-td.tr7	{
-	background:#ff99e6;
-}
+td.tr0	{ background:#ffbfbf; }
+td.tr1	{ background:#c099ff; }
+td.tr2	{ background:#ff99e6; }
+td.tr3	{ background:#80ff92; }
+td.tr4	{ background:#bfffff; }
+td.tr5	{ background:#fff480; }
+td.tr6	{ background:#e7c0ff; }
+td.tr7	{ background:#d3ffc0; }
 
 div.flright {display: none;}
 

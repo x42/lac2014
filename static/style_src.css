@@ -229,7 +229,8 @@ div.user a {
   height:128px;
   overflow:hidden;
   text-align:center;
-  display: table-cell; vertical-align: middle;
+	vertical-align: middle;
+	margin:0 auto;
 }
 
 .speakers div.tagline {
@@ -349,10 +350,11 @@ td.ptb, th.ptb {
 
 /*** program track ***/
 
+.tr0 {background-color: transparent;}
+/*
 .trl {background-color: #eeee00;}
 .trp {background-color: #eebb11;}
 .tro {background-color: #cccccc;}
-.tr0 {background-color: transparent;}
 
 .tr1 {background-color: #0044ff;}
 .tr2 {background-color: #66ff00;}
@@ -361,9 +363,24 @@ td.ptb, th.ptb {
 .tr5 {background-color: #9944cc;}
 .tr6 {background-color: #bb8844;}
 .tr7 {background-color: #aa8899;}
+*/
 td.trX	{
 	background:black; color:white; line-height:120%; font-weight:bold;
 }
+
+
+.trl	{ background:transparent url(../img/transl.png) repeat scroll 0 0; }
+.trp	{ background:transparent url(../img/transp.png) repeat scroll 0 0; }
+.tro	{ background:transparent url(../img/transo.png) repeat scroll 0 0; }
+.trw	{ background:transparent url(../img/transw.png) repeat scroll 0 0; }
+.tr0	{ background:transparent url(../img/trans0.png) repeat scroll 0 0; }
+.tr1	{ background:transparent url(../img/trans5.png) repeat scroll 0 0; }
+.tr2	{ background:transparent url(../img/trans7.png) repeat scroll 0 0; }
+.tr3	{ background:transparent url(../img/trans3.png) repeat scroll 0 0; }
+.tr4	{ background:transparent url(../img/trans4.png) repeat scroll 0 0; }
+.tr5	{ background:transparent url(../img/trans1.png) repeat scroll 0 0; }
+.tr6	{ background:transparent url(../img/trans6.png) repeat scroll 0 0; }
+.tr7	{ background:transparent url(../img/trans2.png) repeat scroll 0 0; }
 
 table.legend td{
 	border-top:1px solid black;
