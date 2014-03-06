@@ -1283,7 +1283,7 @@
            WHERE day='.$num.'
            AND ( type=\'p\' OR location_id=\'1\')') > 0) {
 
-        echo '<h3 class="ptitle">Main Track<br/>(Hall i7)</h3>';
+        echo '<h3 class="ptitle">Main Track</h3>';
         query_out($db,
          'SELECT * FROM activity
           WHERE day='.$num.'

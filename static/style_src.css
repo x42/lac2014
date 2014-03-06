@@ -311,8 +311,8 @@ table.adminlist {width:99%;}
 .adminlist  {font-size:90%;}
 .abstract   {font-size:80%;text-align:justify; margin-top:.75em;line-height:125%;}
 p.ptitle    {margin:0px 0px 2em 0px !important;}
-h2.ptitle   {margin:1em 0px 2px 0px !important;}
-h3.ptitle   {margin:1.0em 0px 0em 0px !important; text-align:center;}
+h2.ptitle   {margin:1.5em 0px 2px 0px !important;}
+h3.ptitle   {margin:1.5em 0px 0em 0px !important; text-align:center;}
 div.ptitle  {margin:.1em 0px 1.0em 0px !important; text-align:center;}
 hr.psep     {margin:.5em auto .5em auto; width:50%; color:#CCDDCC; background-color:#202020; border:0px; height:1px; clear:both;}
 div.aimg    {margin:.25em .5em .25em 0px; float:left;}
