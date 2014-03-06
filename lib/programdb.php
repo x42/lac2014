@@ -91,7 +91,7 @@
       case 'trp': return 'Poster Session';
       case 'trl': return 'Lightning Talk';
       case 'trw': return 'Workshop';
-      case 'tro': return 'Misc';
+      case 'tro': return 'Miscellanous';
       default: return '';
     }
   }
@@ -1461,11 +1461,11 @@ At LAC'14, there are three electro-acoustic concerts a 'listening session' and a
 The electro-acoustic concerts take place in the ZKM Kubus, the listening session and club-night on the Balcony in the ZKM.
 </p>
 <ul>
-<li>The opening concert features novel electro-acoustic compositions presented in the Kubus on Thursday 20h-21h</li>
-<li>On Friday there's a special IMA concert presenting works dedicated to the 3D Sound system &laquo;Zirkonium&raquo; in the Kubus 20h-21:40h</li>
-<li>Later on Friday night there's a &laquo;Listening Session&raquo; of predominantly pre-produced material in the upstairs Lounge, 22h-24h</li>
-<li>Saturday brings more electro-acoustic music with emphasis on Improvisation and Surround Sound in the Kubus, 20h-21:20h</li>
-<li>and last but not least the grand finale with danceable live-music at &laquo;Linux Sound Night&raquo; 22h - open-end at the upstairs Balcony</li>
+<li>The opening concert features novel electro-acoustic compositions presented in the Kubus on Thursday 20:00h-21:00h</li>
+<li>On Friday there's a special IMA concert presenting works dedicated to the 3D Sound system &laquo;Zirkonium&raquo; in the Kubus 20:00h-21:40h</li>
+<li>Later on Friday night there's a &laquo;Listening Session&raquo; of predominantly pre-produced material in the upstairs Lounge, 22:00h-24:00h</li>
+<li>Saturday brings more electro-acoustic music with emphasis on Improvisation and Surround Sound in the Kubus, 20:00h-21:40h</li>
+<li>and last but not least the grand finale with danceable live-music at &laquo;Linux Sound Night&raquo; 22:00h - open-end at the upstairs Balcony</li>
 </ul>
 <h3>Concert Line up</h3>
 <div style="padding:.5em 1em; 0em 1em">
