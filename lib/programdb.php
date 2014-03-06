@@ -1457,15 +1457,18 @@ if (1) {
 <br/>
 <h3>Concerts</h3>
 <p>
-At LAC'14, there are three electro-acoustic concerts a 'listening session' and a club-night.
+At LAC'14, there are three electro-acoustic concerts a &laquo;listening session&raquo; and a club-night.
 The electro-acoustic concerts take place in the ZKM Kubus, the listening session and club-night on the Balcony in the ZKM.
+</p>
+<p>
+All convert venues are in the ZKM building complex.
 </p>
 <ul>
 <li>The opening concert features novel electro-acoustic compositions presented in the Kubus on Thursday 20:00h-21:00h</li>
-<li>On Friday there's a special IMA concert presenting works dedicated to the 3D Sound system &laquo;Zirkonium&raquo; in the Kubus 20:00h-21:40h</li>
-<li>Later on Friday night there's a &laquo;Listening Session&raquo; of predominantly pre-produced material in the upstairs Lounge, 22:00h-24:00h</li>
+<li>On Friday there's a special IMA (Institute for Music and Acoustics) concert presenting works dedicated to the 3D Sound system &laquo;Zirkonium&raquo; in the Kubus 20:00h-21:40h</li>
+<li>Later on Friday night there's the &laquo;Listening Session&raquo; of predominantly pre-produced material in the upstairs Lounge, 22:00h-24:00h</li>
 <li>Saturday brings more electro-acoustic music with emphasis on Improvisation and Surround Sound in the Kubus, 20:00h-21:40h</li>
-<li>and last but not least the grand finale with danceable live-music at &laquo;Linux Sound Night&raquo; 22:00h - open-end at the upstairs Balcony</li>
+<li>We'll go down in style with danceable live-music at the &laquo;Linux Sound Night&raquo;, Saturday 22:00h - open-end on the upstairs Balcony.</li>
 </ul>
 <h3>Concert Line up</h3>
 <div style="padding:.5em 1em; 0em 1em">
