@@ -46,6 +46,8 @@
       case 'w': $col='#CC8833'; break;
       case 'i': $col='#00AA88'; break;
       case 'c': $col='#00FF00'; break;
+      case 'l': $col='#dddd00'; break;
+      case 'v': $col='#997744'; break;
       default:  $col='#0000FF'; break;
     }
     return '<span style="color:'.$col.';">'.$t.'</span>';
@@ -224,7 +226,7 @@
       return array(1=> 'Thursday, May/1', 2=> 'Friday, May/2', 3=> 'Saturday, May/3', 4=> 'Sunday, May/4');
 
     if ($table=='types')
-      return array('p' => 'Paper Presentation', 'l' => 'Lightning Talk', 'v' => 'Poster', 'c' => 'Concert', 'i' => 'Installation', 'o' => 'Other');
+      return array('p' => 'Paper Presentation', 'w' => 'Workshop', 'l' => 'Lightning Talk', 'w' => 'Workshop', 'v' => 'Poster', 'c' => 'Concert', 'i' => 'Installation', 'o' => 'Other');
     if ($table=='durations')
       return array('' => '-unset-', '10' => '10 mins', '20' => '20 mins', '40' => '40 mins', '60' => '1 hour', '80' => '80 mins', '120' => '2 hours', '160' => '2 3/4 hours', '180' => '3 hours');
     if ($table=='status')
@@ -331,6 +333,21 @@
       echo '</td></tr>'."\n";
     }
     echo '</table>'."\n";
+    echo '<fieldset style="width:45%; float:right; clear:none;"><legend>Keys for #talks:</legend>';
+    echo '<p><br/>Keys for #talks:<br/>';
+    echo '<tt><b>-S</b></tt>: No <b>S</b>peaker<br/>';
+    echo '<tt><b>+A</b></tt>: <b>A</b>rtist (musician, composer)<br/>';
+    echo '<tt><b>+C</b></tt>: Review <b>C</b>ommitte Member<br/>';
+    echo '<tt><b>+O</b></tt>: Conference <b>O</b>rganizer<br/>';
+    echo '</fieldset>';
+    echo '<fieldset style="width:45%; float:left; clear:none;"><legend>ID Color Key</legend>';
+    echo '<span style="color:'.$profilecolours[0].'">Hidden Profile - user not yet invited</span><br/>';
+    echo '<span style="color:'.$profilecolours[1].'">Hidden Profile - User Notified</span><br/>';
+    echo '<span style="color:'.$profilecolours[2].'">Public (default) Profile - no invite sent</span><br/>';
+    echo '<span style="color:'.$profilecolours[3].'">Public Profile - Invitation sent</span><br/>';
+    echo '</fieldset>';
+    echo '<div class="clearer"></div>';
+
     echo '<hr/>'."\n Speakers/Artists email:";
     echo '<pre style="font-size:9px; background:#ccc; line-height:1.3em;margin-top:2em;">';
     echo wordwrap($emaillist,100);
@@ -412,6 +429,13 @@
       echo '</td></tr>'."\n";
     }
     echo '</table>'."\n";
+
+    echo '<fieldset><legend>Keys for type:</legend>';
+    $a_types = fetch_selectlist(0, 'types');
+    foreach ($a_types as $k => $v) {
+      echo '&nbsp;&nbsp;<tt><b>'.color_type($k).'</b></tt>: '.$v.'<br/>';
+    }
+    echo '</fieldset>';
   }
 
   function dbadmin_locationform($db, $id) {
@@ -1021,6 +1045,7 @@
 
 
     echo "<b>Pass 2: Persons</b><br/>";
+    $showkey = false;
     $q='SELECT id, name, vip from user ORDER BY name;';
     $res=$db->query($q);
     if ($res) {
@@ -1029,13 +1054,21 @@
         $aids=fetch_activity_by_author($db,$r['id']);
         if (count($aids)!=0) continue;
         echo '('.$r['id'].') "'.$r['name'].'" has no assignment.&nbsp;';
-        if ($r['vip']&6)  echo '&hellip;but is marked as VIP ('.$r['vip'].').';
+        if ($r['vip']&6)  { echo '&hellip;but is marked as VIP ('.$r['vip'].').'; $showkey=true; }
         else
           echo '<a class="active" onclick="if (confirm(\'Really delete User no. '.$r['id'].'?\')) {document.getElementById(\'param\').value='.$r['id'].';document.getElementById(\'mode\').value=\'deluser\';formsubmit(\'myform\');}">Delete</a>';
         echo '<br/>'."\n";
       }
     } else {
       echo '&nbsp;*&nbsp;Database query failed<br/>'."\n";
+    }
+    if ($showkey) {
+      echo '<fieldset style="width:50%; margin:0 auto;"><legend>VIP bitwise numeric key:</legend>';
+      echo '<tt><b>1</b></tt>: Speaker<br/>';
+      echo '<tt><b>2</b></tt>: Organizer<br/>';
+      echo '<tt><b>4</b></tt>: Committee Member<br/>';
+      echo '<tt><b>8</b></tt>: Artist (musician, composer)<br/>';
+      echo '</fieldset>'."\n";
     }
 
 
