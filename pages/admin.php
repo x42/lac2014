@@ -278,7 +278,7 @@ function gen_badges_pdf($f) {
   $handle = fopen(TMPDIR.'lac2014badges.tex', "w");
   fwrite($handle, gen_badges_source($f));
   fclose($handle);
-  @copy (DOCROOTDIR.'img/lac2014.png', TMPDIR.'badge_zkm.png');
+  @copy (DOCROOTDIR.'img/zkm_logo.png', TMPDIR.'badge_zkm.png');
   @copy (DOCROOTDIR.'img/badgelogo.png', TMPDIR.'badgelogo.png');
   @copy (DOCROOTDIR.'img/fonts/ttfonts.map', TMPDIR.'ttfonts.map'); 
   @copy (DOCROOTDIR.'img/fonts/T1-WGL4x.enc', TMPDIR.'T1-WGL4x.enc'); 
@@ -338,6 +338,7 @@ function gen_badges_source($f) {
   $rv=badge_tex_header();
   $rv.='%
 \begin{picture}(180,270)%
+\cuts
 ';
   $end = 10 * ceil(.1 * count($f));
 	for ($i=0; $i < $end; $i++) {
@@ -460,6 +461,7 @@ function gen_badges_source($f) {
 \pagebreak
 
 \begin{picture}(180,270)%
+\cuts
 ';
     }
 	}
@@ -502,14 +504,14 @@ function badge_tex_header() {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% CARD MACRO [\card] %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\card#1#2#3#4#5{
-  \parbox[c][4.5cm]{8.2cm}{
+  \parbox[c][4.5cm]{9.0cm}{
     \vspace*{-3.0cm}
-    \hspace*{2.40cm}\image{height=1.25cm,width=5.50cm}{badgelogo}
+    \hspace*{3.30cm}\image{height=1.25cm}{badgelogo}
   }
   \hspace*{-9.0cm}\\\\
   \parbox[c][4.5cm]{8.8cm}{
-    \vspace*{-2.8cm}
-    \hspace*{0.8cm}\image{height=1.70cm,width=2.15cm}{badge_zkm}
+    \vspace*{-2.7cm}
+    \hspace*{0.8cm}\image{height=0.6cm}{badge_zkm}
   }
   \hspace*{-8.8cm}\\\\
   \parbox[c][1.5cm]{9.8cm}{
@@ -547,6 +549,30 @@ function badge_tex_header() {
   \end{tabular*}%
  }
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUT MARKS [\cuts] %%% %%%%%%%%%%%%%%%%%%%%%%%%%
+\def\cuts{
+%  \put(-0.1,10.0){\rule{0.2cm}{0.5pt}}\\\\%
+%  \put(-0.1,8.0){\rule{0.2cm}{0.5pt}}\\\\%
+%  \put(-0.1,6.0){\rule{0.2cm}{0.5pt}}\\\\%
+%  \put(-0.1,4.0){\rule{0.2cm}{0.5pt}}\\\\%
+%  \put(-0.1,2.0){\rule{0.2cm}{0.5pt}}\\\\%
+%  \put(-0.1,0.0){\rule{0.2cm}{0.5pt}}\\\\%
+%  \put(7.1,10.0){\rule{0.2cm}{0.5pt}}\\\\%
+%  \put(07.1,8.0){\rule{0.2cm}{0.5pt}}\\\\%
+%  \put(07.1,6.0){\rule{0.2cm}{0.5pt}}\\\\%
+%  \put(07.1,4.0){\rule{0.2cm}{0.5pt}}\\\\%
+%  \put(07.1,2.0){\rule{0.2cm}{0.5pt}}\\\\%
+%  \put(07.1,0.0){\rule{0.2cm}{0.5pt}}\\\\%
+%%
+%  \put(0.2,-0.2){\line(0,1){0.1}}%
+%  \put(3.6,-0.2){\line(0,1){0.1}}%
+%  \put(7.0,-0.2){\line(0,1){0.1}}%
+%  \put(0.2,10.1){\line(0,1){0.1}}%
+%  \put(3.6,10.1){\line(0,1){0.1}}%
+%  \put(7.0,10.1){\line(0,1){0.1}}%
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{empty}
