@@ -372,7 +372,13 @@ td.trX	{
 	background:black; color:white; line-height:120%; font-weight:bold;
 }
 
-.trm {background-color: #ee2222;}
+div.spacerDay  { margin: 4em; }
+div.spacerTime { margin: 3em; }
+
+.trm  {background-color: #ee2222;}
+.trmK {background-color: #ee0000;}
+.trmL {background-color: #ee1166;}
+.trmS {background-color: #ee6611;}
 
 .trC	{ text-align:center; }
 .trl	{ background:transparent url(../img/transl.png) repeat scroll 0 0; }

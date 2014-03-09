@@ -75,7 +75,8 @@ table.legend td{
 	border-right:1px solid black;
 }
 
-.trm {display:none;}
+.trm, .trmL, .trmK, .trmS {display:none;}
+
 .trC { text-align:center; }
 .trl {background-color: #ddf45e;}
 .trp {background-color: #eebb11;}
@@ -96,4 +97,5 @@ td.tr7	{ background:#d3ffc0; }
 
 div.flright {display: none;}
 
-div.spacer { margin: .5em; }
+div.spacerDay  { margin: 1.5em; }
+div.spacerTime { margin: 1.0em; }

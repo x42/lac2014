@@ -95,6 +95,9 @@
       case 'trw': return 'Workshop';
       case 'tro': return 'Miscellaneous';
       case 'trm': return 'Concert';
+      case 'trmK': return 'Kubus Concert';
+      case 'trmL': return 'Lounge Concert';
+      case 'trmS': return 'Sound Night';
       default: return '';
     }
   }
@@ -106,6 +109,9 @@
     if ($d['day'] == 2 && $d['type'] == 'l') return 'trl';
     if ($d['day'] == 4) return 'trz';
     if ($d['type'] == 'w') return 'trw';
+    if ($d['type'] == 'c' && $d['starttime'] == '20:00') return 'trmK';
+    if ($d['type'] == 'c' && $d['starttime'] == '22:00' && $d['day'] == 2) return 'trmL';
+    if ($d['type'] == 'c' && $d['starttime'] == '22:00' && $d['day'] == 3) return 'trmS';
     if ($d['type'] == 'c') return 'trm';
     if ($d['type'] == 'i') return 'tri';
     if ($d['type'] == 'v') return 'trp';
@@ -856,15 +862,26 @@
     }
 
     $curday = -10;
+    $curtme = -10;
     foreach ($result as $r) {
       if (substr($r['title'],0,7) == 'COFFEE ') continue; # XXX
       if (substr($r['title'],0,6) == 'LUNCH ') continue; # XXX
       if ($r['status'] == 2) continue; # hide hidden entries
+
       if ($curday == -10) $curday = $r['day'];
       else if ($curday != $r['day']) {
         $curday = $r['day'];
-        echo '<div class="spacer"></div>'."\n";
+        $curtme = -10;
+        echo '<div class="spacerDay"></div>'."\n";
       }
+      if ($r['type'] == 'c') {
+        if ($curtme == -10 ) $curtme = $r['starttime'];
+        else if ($curtme != $r['starttime']) {
+          $curtme = -10;
+          echo '<div class="spacerTime"></div>'."\n";
+        }
+      }
+
       if ($day) {
         if ($r['day'] == 5) { ## every day
           if (!$print) {echo 'every day - all day &nbsp;';}
