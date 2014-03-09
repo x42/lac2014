@@ -372,6 +372,7 @@ td.trX	{
 	background:black; color:white; line-height:120%; font-weight:bold;
 }
 
+.trm {background-color: #ee2222;}
 
 .trC	{ text-align:center; }
 .trl	{ background:transparent url(../img/transl.png) repeat scroll 0 0; }
@@ -411,7 +412,7 @@ div.right   {text-align:right;}
 .green      {color:#11EE11;}
 span.tme    {color:#331111; border-bottom:1px dotted black;}
 div.flright {margin:0px 0px .25em .5em; float:right;}
-div.righttr {margin:.4em 0px 0em .5em; float:right; font-size:75%;line-height:110%; font-variant:small-caps;}
+div.righttr {margin:.4em 0px 0em .5em; float:right; padding: 0 .25em 0 .25em; font-size:75%; line-height:130%; font-variant:small-caps;}
 div.clearer {clear:both; height:0px;} 
 
 #content ul {padding-left:.5em;}

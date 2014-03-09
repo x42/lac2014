@@ -94,6 +94,7 @@
       case 'trl': return 'Lightning Talk';
       case 'trw': return 'Workshop';
       case 'tro': return 'Miscellaneous';
+      case 'trm': return 'Concert';
       default: return '';
     }
   }
@@ -854,10 +855,16 @@
       echo '<div class="center red">No matching entries found!</div>';
     }
 
+    $curday = -10;
     foreach ($result as $r) {
       if (substr($r['title'],0,7) == 'COFFEE ') continue; # XXX
       if (substr($r['title'],0,6) == 'LUNCH ') continue; # XXX
       if ($r['status'] == 2) continue; # hide hidden entries
+      if ($curday == -10) $curday = $r['day'];
+      else if ($curday != $r['day']) {
+        $curday = $r['day'];
+        echo '<div class="spacer"></div>'."\n";
+      }
       if ($day) {
         if ($r['day'] == 5) { ## every day
           if (!$print) {echo 'every day - all day &nbsp;';}
@@ -877,7 +884,7 @@
       echo '<br style="clear:right;"/>';
       #echo '<div style="clear:right;"/></div>';
       #if (!empty($r['url_stream'])) $r['url_image']='img/authors/nando_jason.png'; # XXX
-      if (!empty($r['url_image'])) {
+      if (!$print && !empty($r['url_image'])) {
         $thumb=$r['url_image'];
         if (strncmp($thumb,'img/authors/',12) == 0) {
           $thumb='img/authors/small/'.basename($r['url_image']);
@@ -917,7 +924,7 @@
         if ($r['type']=='i') echo ' - loop';
         echo ')';
       }
-      echo '&nbsp;<em>'; $i=0;
+      echo '&nbsp;&nbsp;<em>'; $i=0;
       foreach (fetch_authorids($db, $r['id']) as $user_id) {
         if ($i++>0) echo ', ';
         if ((usr_has_profile($db, $user_id) & 2) ==0)
@@ -1285,7 +1292,7 @@
             $enda   = dbadmin_unixtime($a, false);
             $startb = dbadmin_unixtime($b);
             if ($starta <= $startb &&
-              /*note: concerts w/duration -1 are OK, -- TODO check serial..*/
+              /*note: concerts w/duration -1 are OK, -- maybe todo: check serial..*/
                ($enda > $startb || ($enda > $starta && $enda >= $startb))
             ) {
               $err++;;
