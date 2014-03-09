@@ -1537,24 +1537,7 @@ The exhibition will be open from 10:00 to 18:00 every day of the conference.
     $q='SELECT activity.* FROM activity WHERE type='.$db->quote('i');
     $q.=' ORDER BY day, strftime(\'%H:%M\',starttime), typesort(type), location_id, serial;';
     query_out($db, $q, $details, false,  true, true, true);
-?>
-<br/>
-<h3>The Morning Line</h3>
-<p>
-The Morning Line is a large outdoor mixed media art work, sculpture, pavilion, and audiovisual performance system by Matthew Ritchie, Aranda
-\ Lasch and Arup AGU (Advanced Geometry Unit), commissioned by Thyssen-Bornemisza Art Contemporary TBA21.
-</p>
-<p>
-Since 2013 it is located at the ZKM Forecourt. A central aspect of The Morning Line is the more than 30 specifically commissioned compositions by artists such as Lee Ranaldo, Carl Michael von Hausswol, Christian Fennesz, Florian Hecker, Chris Watson, and Batuhan Bozkurt.
-</p>
-<p>
-During the LAC it has been made available to Linux-sound artists to exhibit their works:
-</p>
-<br/>
-<?php
-    $q='SELECT activity.* FROM activity WHERE location_id=8';
-    $q.=' ORDER BY day, strftime(\'%H:%M\',starttime), typesort(type), location_id, serial;';
-    query_out($db, $q, $details, false,  true, true, true);
+
     echo '</div>'."\n";
   } ## END hardcoded_concert_and_installation_info ##
 
