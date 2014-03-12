@@ -16,9 +16,9 @@
   table_program($db,1,true);
   table_program($db,2,true);
   table_program($db,3,true);
-  # table_program($db,4,true);
 
   echo '<h2 class="ptitle">Day 4 -  Sunday, May/4</h2>';
+  # TODO extract from pages/excursion.php (include it and use print CSS?)
 ?>
 <p>
 The final event of the conference will be a trip to the countryside to a small village in the &laquo;Kranichgau&raquo;, a hilly region in between the Black Forest and Odenwald about 40 minutes east of Karlsruhe.
