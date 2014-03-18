@@ -235,7 +235,7 @@
     if ($table=='types')
       return array('p' => 'Paper Presentation', 'w' => 'Workshop', 'l' => 'Lightning Talk', 'w' => 'Workshop', 'v' => 'Poster', 'c' => 'Concert', 'i' => 'Installation', 'o' => 'Other');
     if ($table=='durations')
-      return array('' => '-unset-', '10' => '10 mins', '20' => '20 mins', '40' => '40 mins', '60' => '1 hour', '80' => '80 mins', '120' => '2 hours', '160' => '2 3/4 hours', '180' => '3 hours');
+      return array('' => '-unset-', '10' => '10 mins', '20' => '20 mins', '45' => '45 mins', '60' => '1 hour', '90' => '90 mins', '120' => '2 hours', '160' => '2 3/4 hours', '180' => '3 hours');
     if ($table=='status')
       return array('2' => 'hidden', '1' => 'confirmed', '0' => 'cancelled');
 
