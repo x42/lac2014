@@ -21,10 +21,7 @@
   # TODO extract from pages/excursion.php (include it and use print CSS?)
 ?>
 <p>
-The final event of the conference will be a trip to the countryside to a small village in the &laquo;Kranichgau&raquo;, a hilly region in between the Black Forest and Odenwald about 40 minutes east of Karlsruhe.
-</p>
-<p>
-We'll visit the Kloster Maulbronn which is the best-preserved medieval Cistercian monastery complex in Europe. Apart from its architectural diversity (Romanesque art to late Gothic) it features a unique acoustic, not to mention a brewery with refreshing Kloster-bier.
+The final event of the conference will be a trip to the countryside. Full day excursion. More information will be made available soon.
 </p>
 <p><br/></p>
 <?php
