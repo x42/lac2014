@@ -20,7 +20,7 @@
     'speakers'  => 'Delegates',
     'excursion' => 'Excursion',
     #'files' => 'Download',
-    #'profile' => 'Profile',
+    'profile' => 'Profile',
   );
 
 #pages that require authentication
