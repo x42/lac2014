@@ -413,6 +413,7 @@ function gen_badges_source($f) {
 			$prename='\Huge {~}';
 			$famname='\Huge {~}';
 			$md5name='blank';
+			$badgebg='';
 		}
 
 	if (strlen($what) > 56) $what='\scriptsize '.$what; 
