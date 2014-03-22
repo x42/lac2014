@@ -1860,13 +1860,14 @@ The exhibition will be open from 10:00 to 18:00 every day of the conference.
   }
 
   function pdb_html_title($db, $id) {
-    $q='SELECT activity.* FROM activity WHERE activity.id='.$db->quote($pdbid).';';
+    $q='SELECT * FROM activity WHERE activity.id='.$db->quote($id).';';
     $res=$db->query($q);
     if (!$res) { return ''; }
     $result=$res->fetchAll();
     if (count($result) != 1 ) { return ''; }
-    $title=SHORTTITLE .' -- "'.xhtmlify($result[0]['title']).'"';
-    #$i=0; foreach (fetch_authorids($db, $rresult[0]['id']) as $user_id) {if ($i++>0) $title.=', '; else $title.=' -- '; $title.=xhtmlify($a_users[$user_id]); }
+    $title='"'.xhtmlify($result[0]['title']).'"';
+    $a_users = fetch_selectlist($db);
+    $i=0; foreach (fetch_authorids($db, $result[0]['id']) as $user_id) {if ($i++>0) $title.=', '; else $title.=' by '; $title.=xhtmlify($a_users[$user_id]); }
     return $title;
   }
 

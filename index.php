@@ -52,6 +52,7 @@
 
 ### BEGIN OUTPUT ###
   if (empty($title)) { $title = $pages[$page]; }
+  if (empty($title)) { $title = $hidden[$page]; }
   $title.=' [Linux Audio Conference]';
   xhtmlhead($title);
   if (defined("TESTANDDEVEL")) {
