@@ -4,14 +4,14 @@
 <p>
 <em>Will you still be around Sunday afternoon?</em>
 <br/>
-The final event of the conference will be a trip to the countryside to &laquo;<a rel="external" href="https://en.wikipedia.org/wiki/Bruchsal">Bruchsal</a>&raquo;, a village in the &laquo;Kranichgau&raquo;, a hilly region in between the Black Forest and Odenwald about 30 minutes from Karlsruhe.
+The final event of the conference will be a trip to to &laquo;<a rel="external" href="https://en.wikipedia.org/wiki/Bruchsal">Bruchsal</a>&raquo;, a village in the &laquo;Kranichgau&raquo;, the hilly region in between the Black Forest and Odenwald about 30 minutes from Karlsruhe.
 </p>
 
 <ul>
-<li>At <strong>12:00</strong> we will visit the Museum For Music Automatons: <a rel="external" href="http://www.dmm-bruchsal.de/">Deutsches Musikautomten-Museum</a> located in the Château of Bruchsal (Visiting the museum is volunarily, you can stay as long as you wish until the museum closes).
+<li>At <strong>12:00</strong> we will visit the Museum For Music Automata: <a rel="external" href="http://www.dmm-bruchsal.de/">Deutsches Musikautomten-Museum</a> located in the Château of Bruchsal (Visiting the museum is voluntary, and you can stay as long as you wish until the museum closes at 17h).
 <br/>
-The German Museum of Music Automatons houses the most important collection of music machines worldwide. The 500 exhibits of the museum include developments from early handicraft production of the 17th and 18th Century until its golden age in the industrial age of the late 19th Century and finally to the demise of the mechanical automata during the time of the Great Depression in the late twenties in the 20th Century.</li>
-<li>Around <strong>15:00</strong> we'll meet in a tavern closeby (<a href="http://www.brauhaus-wallhall-bruchsal.de/">Brauhaus Wallhall</a> - to be confirmed)</li>
+The Museum houses the most important collection of music machines worldwide. The around 500 exhibits of the museum include developments from early handicraft production of the 17th and 18th Century until its golden age in the industrial age of the late 19th Century and finally to the demise of the mechanical automata during the time of the Great Depression in the late twenties in the 20th Century.</li>
+<li>Around <strong>15:00</strong> we'll meet in a tavern close-by (<a href="http://www.brauhaus-wallhall-bruchsal.de/">Brauhaus Wallhall</a> - to be confirmed) to close the conference in style. Participation is voluntary but highly recommended :)</li>
 </ul>
 
 <p>&nbsp;</p>
@@ -31,7 +31,7 @@ We will leave Bruchsal at 18h and the scheduled arrival back in Karlsruhe is aro
 
 <h3>How much is the trip?</h3>
 <p>
-The trip is sponsored by LAC, but the drinks and muesum entrace fee are on you.
+The trip (bus and/or train) is sponsored by the LAC, but the museum entrance fee and drinks are on you.
 </p>
 
 <h3>Where do I sign up?</h3>
