@@ -1974,7 +1974,7 @@ The exhibition will be open from 10:00 to 18:00 every day of the conference.
     $result[] = array('id'=> 1000, 'day' => '1', 'starttime' => '20:00', 'duration' => '90',  'type' => 'c', 'title' => 'Opening Concert', 'abstract' => '', 'location_id' => 3, 'status' => '1');
     $result[] = array('id'=> 1001, 'day' => '2', 'starttime' => '20:00', 'duration' => '90',  'type' => 'c', 'title' => 'IMA Concert', 'abstract' => '', 'location_id' => 3, 'status' => '1');
     $result[] = array('id'=> 1001, 'day' => '2', 'starttime' => '22:00', 'duration' => '90',  'type' => 'c', 'title' => 'Launge / Playnight', 'abstract' => '', 'location_id' => 4, 'status' => '1');
-    $result[] = array('id'=> 1003, 'day' => '2', 'starttime' => '20;00', 'duration' => '90', 'type' => 'c', 'title' => 'LAC Concert', 'abstract' => '', 'location_id' => 3, 'status' => '1');
+    $result[] = array('id'=> 1003, 'day' => '3', 'starttime' => '20;00', 'duration' => '90', 'type' => 'c', 'title' => 'LAC Concert', 'abstract' => '', 'location_id' => 3, 'status' => '1');
     $result[] = array('id'=> 1004, 'day' => '3', 'starttime' => '22:00', 'duration' => '180',  'type' => 'c', 'title' => 'Sound Night', 'abstract' => '', 'location_id' => 4, 'status' => '1');
 
     foreach ($result as $r) {
