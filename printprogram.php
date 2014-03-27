@@ -21,7 +21,7 @@
   # TODO extract from pages/excursion.php (include it and use print CSS?)
 ?>
 <p>
-The final event of the conference will be a trip to the countryside. Full day excursion. More information will be made available soon.
+The final event of the conference will be a trip to the countryside to visit the Museum For Music Automatons in Bruchsal. Departure 11h in front of the ZKM, return around 19h.
 </p>
 <p><br/></p>
 <?php
