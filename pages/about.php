@@ -55,7 +55,7 @@ organized by
 <a href="http://icem-www.folkwang-hochschule.de/~ludi/" rel="external">Ludger Br&uuml;mmer</a>,
 <a href="http://www02.zkm.de/car-culture/index.php/de/werke/59-goetz-dipper" rel="external">G&ouml;tz Dipper</a>,
 <a href="http://gareus.org" rel="external"> Robin Gareus</a>,
-Michael Hohendorf, Yana Il, Till Kniola, Frank Neumann and Jochen Arne Otto.</p>
+Michael Hohendorf, Yana Il, Frank Neumann and Jochen Arne Otto.</p>
 
 <?php
 /*
