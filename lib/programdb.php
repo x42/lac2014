@@ -1384,6 +1384,12 @@
 ?>
 <h2 class="ptitle">Daily Events / Exhibitions</h2>
 <div class="ptitle"></div>
+<p>
+Art installations are exhibited at the media art space on the ZKM_Music Balcony.
+</p>
+<p>
+The exhibition is open from 14:00 to 18:00 every day of the conference.
+</p>
 <?php
     query_out($db,
      'SELECT * FROM activity
@@ -1544,10 +1550,10 @@ All convert venues are in the ZKM building complex.
 <br/>
 <h3>Installations</h3>
 <p>
-Art installations are exhibited at the media art space.
+Art installations are exhibited at the media art space on the ZKM_Music Balcony.
 </p>
 <p>
-The exhibition will be open from 10:00 to 18:00 every day of the conference.
+The exhibition is open from 14:00 to 18:00 every day of the conference.
 </p>
 <br/>
 <?php
