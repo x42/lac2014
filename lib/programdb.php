@@ -1342,7 +1342,8 @@
            WHERE day='.$num.'
            AND ( type=\'p\' OR location_id=\'1\')') > 0) {
 
-        echo '<h3 class="ptitle">Main Track</h3>';
+             if ($num != 4)
+               echo '<h3 class="ptitle">Main Track (ZKM_Media Theater)</h3>';
         query_out($db,
          'SELECT * FROM activity
           WHERE day='.$num.'
