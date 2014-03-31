@@ -7,6 +7,10 @@
 The final event of the conference will be a trip to to &laquo;<a rel="external" href="https://en.wikipedia.org/wiki/Bruchsal">Bruchsal</a>&raquo;, a village in the &laquo;Kranichgau&raquo;, the hilly region in between the Black Forest and Odenwald about 30 minutes from Karlsruhe.
 </p>
 
+<p class="red center">
+The specifics regarding the excursion are yet to be confirmed (ETA 7/April/2014). The general outline is as follows:
+</p>
+
 <ul>
 <li>At <strong>12:00</strong> we will visit the Museum For Music Automata: <a rel="external" href="http://www.dmm-bruchsal.de/">Deutsches Musikautomten-Museum</a> located in the Château of Bruchsal. (Visiting the museum is voluntary, and you can stay as long as you wish until the museum closes at 17h.)
 <br/>
@@ -37,5 +41,8 @@ The trip (bus and/or train) is sponsored by the LAC, but the museum entrance fee
 
 <h3>Where do I sign up?</h3>
 <p>
-At the registration desk at the conference venue.
+At the registration desk at the conference venue on a  first come, first serve basis.
+</p>
+<p class="red center">
+We may contact all registered attendees prior to the conference regarding pre-reservation (mid April) regarding the number of buses or train tickets for pre-sale. Please stay tuned.
 </p>
