@@ -6,9 +6,10 @@
 #pages listed as 'tabs' on the site
   $pages = array(
     'about' => 'About',
-    'participation' => 'CFP',
+    'program'  => 'Schedule',
     'registration' => 'Registration',
     'participants' => 'Attendees',
+    'speakers'  => 'Delegates',
     'travel' => 'Travel &amp; Stay',
     'contact' => 'Contact',
     'sponsors' => 'Supporters',
@@ -16,9 +17,8 @@
 
 # other available pages - not shown as 'tabs'
   $hidden = array(
-    'program'  => 'Schedule',
-    'speakers'  => 'Delegates',
     'excursion' => 'Excursion',
+    'participation' => 'CFP',
     #'files' => 'Download',
     'profile' => 'Profile',
   );

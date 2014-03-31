@@ -1530,7 +1530,7 @@ At LAC'14, there are three electro-acoustic concerts a &laquo;listening session&
 The electro-acoustic concerts take place in the ZKM Kubus, the listening session and club-night on the Balcony in the ZKM.
 </p>
 <p>
-All convert venues are in the ZKM building complex.
+All concert venues are in the ZKM building complex.
 </p>
 <ul>
 <li>The opening concert features novel electro-acoustic compositions presented in the Kubus on Thursday 20:00h-21:00h</li>
