@@ -314,6 +314,7 @@ $adminfieldsetonce=false;
     $v=str_replace("\xc3\xa3",'\\~{a}',$v);
     $v=str_replace("\xc3\x98",'{\\O}',$v);
     $v=str_replace("\xc3\xa6",'{\\ae}',$v);
+    $v=str_replace("\xc5\xa1",'\\v{s}',$v);
     $v=str_replace("&",'\&',$v);
     $v=str_replace("#",'\#',$v);
     return $v;
