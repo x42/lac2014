@@ -1,7 +1,7 @@
 <h1>Latest News</h1>
 
 <p>
-We're closing in, to count down than 2 weeks to the LAC, zthmusic is conducing a series of interviews with prominent delegates, long-time LAC attendees and community managers. First up is <a href="<?=BASEURL?>speakers?uid=110">Miller Puckette</a> The MSP of Max/MSP, author of Pure Data and regular contributor to the LAC.
+We're closing in, to count down than two weeks to the LAC, zthmusic is conducing a series of interviews with prominent delegates, long-time LAC attendees and community managers. First up is <a href="<?=BASEURL?>speakers?uid=110">Miller Puckette</a>, the MSP of Max/MSP, author of Pure Data and regular contributor to the LAC.
 </p>
 <p>
 Read the full interviews at <a href="http://www.zthmusic.com/lac14-interview-series/" rel="external">zthmusic</a>.
