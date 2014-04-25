@@ -16,7 +16,7 @@ The specifics regarding the excursion are yet to be confirmed (ETA 7/April/2014)
 <br/>
 <em>
 The Museum houses the most important collection of music machines worldwide. The around 500 exhibits of the museum include developments from early handicraft production of the 17th and 18th Century until its golden age in the industrial age of the late 19th Century and finally to the demise of the mechanical automata during the time of the Great Depression in the late twenties in the 20th Century.</em></li>
-<li>Around <strong>15:00</strong> we'll meet in a tavern close-by (<a href="http://www.brauhaus-wallhall-bruchsal.de/">Brauhaus Wallhall</a> - to be confirmed) to close the conference in style. Participation is voluntary but highly recommended :)</li>
+<li>Around <strong>15:00</strong> we'll meet in a tavern close-by (<a href="http://www.brauhaus-wallhall-bruchsal.de/">Brauhaus Wallhall</a> - Am Ku&uml;belmarkt 8) to close the conference in style. Participation is voluntary but highly recommended :)</li>
 </ul>
 
 <p>&nbsp;</p>
@@ -30,18 +30,19 @@ The Museum houses the most important collection of music machines worldwide. The
 
 <h3>When and how long?</h3>
 <ul>
-<li>We will leave at <strong>11:00</strong> in front of the ZKM just outside the main venue.</li>
+<li>We will leave at <strong>10:35</strong> in front of the <strong>main stattion</strong> (north entrance) and leave via tram at 10:50.</li>
 <li>We will leave Bruchsal at 18h and the scheduled arrival back in Karlsruhe is around <strong>19:00</strong>.</li>
 </ul>
 
 <h3>How much is the trip?</h3>
 <p>
-The trip (bus and/or train) is sponsored by the LAC, but the museum entrance fee and drinks are on you.
+The transport and the guided tours in the museum are sponsored by the ZKM.
+The museum entry ticket and food/drinks are on you. The museum offers a special reduction for the LAC, so one ticket is 2.50 EUR (instead of 4.50 EUR).
 </p>
 
 <h3>Where do I sign up?</h3>
 <p>
-At the registration desk at the conference venue on a  first come, first serve basis.
+At the registration desk at the conference venue on a first come, first serve basis.
 </p>
 <p class="red center">
 We may contact all registered attendees prior to the conference regarding pre-reservation (mid April) regarding the number of buses or train tickets for pre-sale. Please stay tuned.
