@@ -16,7 +16,7 @@ The specifics regarding the excursion are yet to be confirmed (ETA 7/April/2014)
 <br/>
 <em>
 The Museum houses the most important collection of music machines worldwide. The around 500 exhibits of the museum include developments from early handicraft production of the 17th and 18th Century until its golden age in the industrial age of the late 19th Century and finally to the demise of the mechanical automata during the time of the Great Depression in the late twenties in the 20th Century.</em></li>
-<li>Around <strong>15:00</strong> we'll meet in a tavern close-by (<a href="http://www.brauhaus-wallhall-bruchsal.de/">Brauhaus Wallhall</a> - Am Ku&uml;belmarkt 8) to close the conference in style. Participation is voluntary but highly recommended :)</li>
+<li>Around <strong>15:00</strong> we'll meet in a tavern close-by (<a href="http://www.brauhaus-wallhall-bruchsal.de/">Brauhaus Wallhall</a> - Am K&uuml;belmarkt 8) to close the conference in style. Participation is voluntary but highly recommended :)</li>
 </ul>
 
 <p>&nbsp;</p>
