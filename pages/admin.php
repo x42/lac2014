@@ -333,8 +333,9 @@ function read_wifi_keys() {
 }
 
 function gen_badges_source($f) {
+  global $config;
 	usort($f, 'mytimesort');
-	$wifikeys= array('user' => '', 'pass' => ''); // TODO read from file
+	$wifikeys= array('user' => '', 'pass' => $config['WIFIKEY']);
   $cnt=0;
   $rv=badge_tex_header();
   $rv.='%
@@ -400,29 +401,29 @@ function gen_badges_source($f) {
 #\Huge 24 24.88
 	$cmp=preg_replace('@[^a-zA-Z ]@','', $prename.' '.$famname);
 	if (strlen($cmp) > 25) {
-		$prename='\UniversTO '.$prename;
-		$famname='\UniversTO '.$famname;
+		$prename='\\UniversTO '.$prename;
+		$famname='\\UniversTO '.$famname;
 	}
 	else {
-		$prename='\UniversTT '.$prename;
-		$famname='\UniversTT '.$famname;
+		$prename='\\UniversTT '.$prename;
+		$famname='\\UniversTT '.$famname;
 	}
 
 		} else {
 			$what = '';
-			$prename='\UniversTT {~}';
-			$famname='\UniversTT {~}';
+			$prename='\\UniversTT {~}';
+			$famname='\\UniversTT {~}';
 			$md5name='blank';
 			$badgebg='';
 		}
 
-	if (strlen($what) > 56) $what='\UniversEight '.$what;
-	elseif (strlen($what) > 40) $what='\UniversNine '.$what;
-	elseif (strlen($what) > 0)  $what='\UniversTen '.$what;
+	if (strlen($what) > 56) $what='\\UniversEight '.$what;
+	elseif (strlen($what) > 40) $what='\\UniversNine '.$what;
+	elseif (strlen($what) > 0)  $what='\\UniversTen '.$what;
 	else $what='';
 	if (!empty($what)) $what.="\\\\";
 
-	if (!empty($badgebg)) $badgebg='\UniversTen '.$badgebg."\\\\";
+	if (!empty($badgebg)) $badgebg='\\UniversTen '.$badgebg."\\\\";
 
 
     $x=($cnt%2)?"90":"0.0";
@@ -430,121 +431,118 @@ function gen_badges_source($f) {
 
     #$y+=0.1; ## vertical offset
 
-    $rv.='\put('.$x.','.$y.'){\frame{\makebox(90,54)[t]{\card{'.$prename.'}{'.$famname.'}{'.$what.'}{'.$badgebg.'}}}}'."\n";
-    #$rv.='\put('.$x.','.$y.'){\frame{\makebox(90,54){TEST '.$cnt.'}}}'."\n";
+    $rv.='\\put('.$x.','.$y.'){\\makebox(90,54)[t]{\\card{'.$prename.'}{'.$famname.'}{'.$what.'}{'.$badgebg.'}}}'."\n";
     $cnt++;
     if ($cnt%10 == 0) {
       $rv.='%
-\end{picture}
+\\end{picture}
 
-%\pagebreak
+\\pagebreak
 
-%\begin{picture}(180,270)%
+\\begin{picture}(180,270)%
 
 %backside
 ';
-#      $rv.='\put(0.0,280.1){\makebox(90,54){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-#      $rv.='\put(90,280.1){\makebox(90,54){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-#      $rv.='\put(0.0,226.1){\makebox(90,54){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-#      $rv.='\put(90,226.1){\makebox(90,54){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-#      $rv.='\put(0.0,172.1){\makebox(90,54){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-#      $rv.='\put(90,172.1){\makebox(90,54){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-#      $rv.='\put(0.0,118.1){\makebox(90,54){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-#      $rv.='\put(90,118.1){\makebox(90,54){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-#      $rv.='\put(0.0,64.1){\makebox(90,54){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-#			$rv.='\put(90,64.1){\makebox(90,54){\bside{'.  $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-#
-#      $rv.='%
-#\end{picture}
-#';
+      $rv.='\\put(0.0,270){\\makebox(90,54)[b]{\\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+      $rv.='\\put(90, 270){\\makebox(90,54)[b]{\\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+      $rv.='\\put(0.0,216){\\makebox(90,54)[b]{\\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+      $rv.='\\put(90, 216){\\makebox(90,54)[b]{\\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+      $rv.='\\put(0.0,162){\\makebox(90,54)[b]{\\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+      $rv.='\\put(90, 162){\\makebox(90,54)[b]{\\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+      $rv.='\\put(0.0,108){\\makebox(90,54)[b]{\\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+      $rv.='\\put(90, 108){\\makebox(90,54)[b]{\\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+      $rv.='\\put(0.0, 54){\\makebox(90,54)[b]{\\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+			$rv.='\\put(90,  54){\\makebox(90,54)[b]{\\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+
+      $rv.='%
+\\end{picture}
+';
 			if ($cnt != $end) $rv.='%
 
-\pagebreak
+\\pagebreak
 
-\begin{picture}(180,270)%
+\\begin{picture}(180,270)%
 ';
     }
 	}
 
       $rv.='%
 
-\end{document}
+\\end{document}
 ';
  return $rv;
 }
 
 function badge_tex_header() {
   return '
-\documentclass[a4paper]{article}
-\usepackage{array}
+\\documentclass[a4paper]{article}
+\\usepackage{array}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MARGINS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textwidth       180mm
-\textheight      270mm
-\oddsidemargin    -10.25mm
-\evensidemargin   -10.25mm
-\topmargin        28mm
-\itemindent      0.00in
-\parindent       0.00in
+\\textwidth       180mm
+\\textheight      270mm
+\\oddsidemargin    -10.25mm
+\\evensidemargin   -10.25mm
+\\topmargin        28mm
+\\itemindent      0.00in
+\\parindent       0.00in
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  FONTS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\encodingdefault}{T1}
-\usepackage{fontenc}
-\font\UniversEight Univers at 8pt
-\font\UniversNine Univers at 9pt
+\\renewcommand{\\encodingdefault}{T1}
+\\usepackage{fontenc}
+\\font\\UniversEight Univers at 8pt
+\\font\\UniversNine Univers at 9pt
 
-\font\UniversTen Univers at 10pt
-\font\UniversTO Univers at 20pt
-\font\UniversTT Univers at 22pt
+\\font\\UniversTen Univers at 10pt
+\\font\\UniversTO Univers at 20pt
+\\font\\UniversTT Univers at 22pt
 
 %%%%%%%%%%%%%%%%%%%%%%% IMAGES FOR LATEX AND PDFLATEX %%%%%%%%%%%%%%%%%%%%%%%
-\ifnum \pdfoutput=0
-  \usepackage[dvips]{graphicx}
-  \usepackage{epsfig}
-\else
-  \usepackage[pdftex]{graphicx}
-\fi
-\newcommand{\image}[2]{
-  \ifnum \pdfoutput=0
-    \includegraphics[#1]{#2.eps}
-  \else
-    \includegraphics[#1]{#2.png}
-  \fi
+\\ifnum \\pdfoutput=0
+  \\usepackage[dvips]{graphicx}
+  \\usepackage{epsfig}
+\\else
+  \\usepackage[pdftex]{graphicx}
+\\fi
+\\newcommand{\\image}[2]{
+  \\ifnum \\pdfoutput=0
+    \\includegraphics[#1]{#2.eps}
+  \\else
+    \\includegraphics[#1]{#2.png}
+  \\fi
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% CARD MACRO [\card] %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \def\card#1#2#3#4{
-\begin{tabular}{>{\centering\hspace{0pt}}m{8.5cm}}
-  \vspace*{-1mm}\\\\%
-  \image{height=11mm}{badgelogo}
-  \vspace*{2mm}\\\\%
+\\def\\card#1#2#3#4{
+  \\begin{tabular}{>{\\centering\\hspace{0pt}}m{8.5cm}}
+  \\vspace*{-1mm}\\\\%
+  \\image{height=11mm}{badgelogo}
+  \\vspace*{0mm}\\\\%
   {\UniversTen Linux Audio Conference 2014}
-  \vspace*{5mm}\\\\%
+  \\vspace*{5mm}\\\\%
   {#1}
-  \vspace*{2mm}\\\\%
+  \\vspace*{2mm}\\\\%
   {#2}
-  \vspace*{2mm}\\\\%
+  \\vspace*{2mm}\\\\%
   #4
   #3
- \end{tabular}%
+ \\end{tabular}%
 }
 
-\def\bside#1#2{
-  \parbox[c][4.5cm]{9.8cm}{\Large
-  \vspace*{3.3cm}
-  \hspace{3.5cm}\begin{tabular*}{9cm}{rl}
-   ESSID:& {\tt zkm}\\\\
-   Username:& {\tt #1}\\\\
-   Password:& {\tt #2}\\\\
-  \end{tabular*}%
- }
+\\def\\bside#1#2{
+  \\begin{tabular}{rl}
+  {\\tt ESSID}:& {\\tt zkm}\\\\
+%  Username:& {\\tt #1}\\\\
+   Password:& {\\tt #2}\\\\
+  \\vspace*{0mm}\\\\%
+  \\end{tabular}
 }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{empty}
-\begin{document}
-\setlength{\unitlength}{1mm}%
+\\pagestyle{empty}
+\\begin{document}
+\\setlength{\\unitlength}{1mm}%
 ';
 }
