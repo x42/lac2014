@@ -278,11 +278,9 @@ function gen_badges_pdf($f) {
   $handle = fopen(TMPDIR.'lac2014badges.tex', "w");
   fwrite($handle, gen_badges_source($f));
   fclose($handle);
-  @copy (DOCROOTDIR.'img/zkm_logo.png', TMPDIR.'badge_zkm.png');
-  @copy (DOCROOTDIR.'img/badgelogo.png', TMPDIR.'badgelogo.png');
+  @copy (DOCROOTDIR.'img/lac14badgebanner.png', TMPDIR.'badgelogo.png');
   @copy (DOCROOTDIR.'img/fonts/ttfonts.map', TMPDIR.'ttfonts.map'); 
   @copy (DOCROOTDIR.'img/fonts/T1-WGL4x.enc', TMPDIR.'T1-WGL4x.enc'); 
-  @copy (DOCROOTDIR.'img/badgeback.pdf', TMPDIR.'badgeback.pdf');
 
   @unlink (TMPDIR.'lac2014badges.pdf');
   echo '<pre style="font-size:70%; line-height:1.2em;">';
@@ -338,7 +336,6 @@ function gen_badges_source($f) {
   $rv=badge_tex_header();
   $rv.='%
 \begin{picture}(180,270)%
-\cuts
 ';
   $end = 10 * ceil(.1 * count($f));
 	for ($i=0; $i < $end; $i++) {
@@ -376,10 +373,10 @@ function gen_badges_source($f) {
     if (isset($v['reg_vip'])) {
       switch(strtolower($v['reg_vip'])) {
         case 'author':
-          $badgebg='AUTHOR';
+          $badgebg='Author';
           break;
         case 'organizer':
-          $badgebg='ORGANIZER';
+          $badgebg='Organizer';
           break;
         default:
           $badgebg='';
@@ -426,43 +423,42 @@ function gen_badges_source($f) {
 
 
     $x=($cnt%2)?"90":"0.0";
-    $y=280-54*floor(($cnt%10)/2);
+    $y=270 - 54*floor(($cnt%10)/2);
 
-    $y+=0.1; ## vertical offset
+    #$y+=0.1; ## vertical offset
 
-    $rv.='\put('.$x.','.$y.'){\makebox(3.5,2.0){\card{'.$prename.'}{'.$famname.'}{'.$what.'}{'.$badgebg.'}{'.$md5name.'}}}'."\n";
+    $rv.='\put('.$x.','.$y.'){\frame{\makebox(90,54)[t]{\card{'.$prename.'}{'.$famname.'}{'.$what.'}{'.$badgebg.'}}}}'."\n";
+    #$rv.='\put('.$x.','.$y.'){\frame{\makebox(90,54){TEST '.$cnt.'}}}'."\n";
     $cnt++;
     if ($cnt%10 == 0) {
       $rv.='%
 \end{picture}
 
-\pagebreak
+%\pagebreak
 
-\begin{picture}(180,270)%
+%\begin{picture}(180,270)%
 
 %backside
 ';
-      $rv.='\put(0.0,280.1){\makebox(3.5,2.0){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-      $rv.='\put(90,280.1){\makebox(3.5,2.0){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-      $rv.='\put(0.0,226.1){\makebox(3.5,2.0){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-      $rv.='\put(90,226.1){\makebox(3.5,2.0){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-      $rv.='\put(0.0,172.1){\makebox(3.5,2.0){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-      $rv.='\put(90,172.1){\makebox(3.5,2.0){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-      $rv.='\put(0.0,118.1){\makebox(3.5,2.0){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-      $rv.='\put(90,118.1){\makebox(3.5,2.0){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-      $rv.='\put(0.0,64.1){\makebox(3.5,2.0){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-			$rv.='\put(90,64.1){\makebox(3.5,2.0){\bside{'.  $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
-
-      $rv.='%
-
-\end{picture}
-';
+#      $rv.='\put(0.0,280.1){\makebox(90,54){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+#      $rv.='\put(90,280.1){\makebox(90,54){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+#      $rv.='\put(0.0,226.1){\makebox(90,54){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+#      $rv.='\put(90,226.1){\makebox(90,54){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+#      $rv.='\put(0.0,172.1){\makebox(90,54){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+#      $rv.='\put(90,172.1){\makebox(90,54){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+#      $rv.='\put(0.0,118.1){\makebox(90,54){\bside{'.$wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+#      $rv.='\put(90,118.1){\makebox(90,54){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+#      $rv.='\put(0.0,64.1){\makebox(90,54){\bside{'. $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+#			$rv.='\put(90,64.1){\makebox(90,54){\bside{'.  $wifikeys['user'].'}{'.$wifikeys['pass'].'}}}'."\n";
+#
+#      $rv.='%
+#\end{picture}
+#';
 			if ($cnt != $end) $rv.='%
 
 \pagebreak
 
 \begin{picture}(180,270)%
-\cuts
 ';
     }
 	}
@@ -482,9 +478,9 @@ function badge_tex_header() {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MARGINS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textwidth       180mm
 \textheight      270mm
-\oddsidemargin    30mm
-\evensidemargin   30mm
-\topmargin        9mm
+\oddsidemargin    -10.5mm
+\evensidemargin   -10.5mm
+\topmargin        28mm
 \itemindent      0.00in
 \parindent       0.00in
 
@@ -504,40 +500,20 @@ function badge_tex_header() {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% CARD MACRO [\card] %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\card#1#2#3#4#5{
-  \parbox[c][4.5cm]{9.0cm}{
-    \vspace*{-3.0cm}
-    \hspace*{3.30cm}\image{height=1.25cm}{badgelogo}
-  }
-  \hspace*{-9.0cm}\\\\
-  \parbox[c][4.5cm]{8.8cm}{
-    \vspace*{-2.7cm}
-    \hspace*{0.8cm}\image{height=0.6cm}{badge_zkm}
-  }
-  \hspace*{-8.8cm}\\\\
-  \parbox[c][1.5cm]{9.8cm}{
-    \vspace*{-1.6cm}
-    \hspace*{3.8cm}
-    \small Conference - May 2014, Karlsruhe
-  }
-  \hspace*{-9cm}\\\\
-  \parbox[4.5cm]{9cm}{
-    \begin{tabular}{>{\centering\hspace{0pt}}m{6.1cm}}
-      \small%
-      \vspace{2.4cm}\\\\%
-      {#1}
-      \vspace*{0.2cm}\\\\%
-      {#2}
-      \vspace*{0.4cm}\\\\%
-      #4
-      #3
-    \end{tabular}%
-  }
-  \hspace*{-9cm}\\\\
-  \parbox[4.5cm]{9cm}{
-    \vspace{3.5cm}
-    \hspace*{6.1cm}\image{height=2.2cm,width=2.2cm}{qr/#5}
-  }
+  \def\card#1#2#3#4{
+\begin{tabular}{>{\centering\hspace{0pt}}m{8.5cm}}
+  \vspace*{-1mm}\\\\%
+  \image{height=11mm}{badgelogo}
+  \vspace*{2mm}\\\\%
+  Linux Audio Conference 2014
+  \vspace*{5mm}\\\\%
+  {#1}
+  \vspace*{2mm}\\\\%
+  {#2}
+  \vspace*{0.4cm}\\\\%
+  #4
+  #3
+ \end{tabular}%
 }
 
 \def\bside#1#2{
@@ -549,29 +525,6 @@ function badge_tex_header() {
    Password:& {\tt #2}\\\\
   \end{tabular*}%
  }
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CUT MARKS [\cuts] %%% %%%%%%%%%%%%%%%%%%%%%%%%%
-\def\cuts{
-%  \put(-0.1,10.0){\rule{0.2cm}{0.5pt}}\\\\%
-%  \put(-0.1,8.0){\rule{0.2cm}{0.5pt}}\\\\%
-%  \put(-0.1,6.0){\rule{0.2cm}{0.5pt}}\\\\%
-%  \put(-0.1,4.0){\rule{0.2cm}{0.5pt}}\\\\%
-%  \put(-0.1,2.0){\rule{0.2cm}{0.5pt}}\\\\%
-%  \put(-0.1,0.0){\rule{0.2cm}{0.5pt}}\\\\%
-%  \put(7.1,10.0){\rule{0.2cm}{0.5pt}}\\\\%
-%  \put(07.1,8.0){\rule{0.2cm}{0.5pt}}\\\\%
-%  \put(07.1,6.0){\rule{0.2cm}{0.5pt}}\\\\%
-%  \put(07.1,4.0){\rule{0.2cm}{0.5pt}}\\\\%
-%  \put(07.1,2.0){\rule{0.2cm}{0.5pt}}\\\\%
-%  \put(07.1,0.0){\rule{0.2cm}{0.5pt}}\\\\%
-%%
-%  \put(0.2,-0.2){\line(0,1){0.1}}%
-%  \put(3.6,-0.2){\line(0,1){0.1}}%
-%  \put(7.0,-0.2){\line(0,1){0.1}}%
-%  \put(0.2,10.1){\line(0,1){0.1}}%
-%  \put(3.6,10.1){\line(0,1){0.1}}%
-%  \put(7.0,10.1){\line(0,1){0.1}}%
 }
 
 
