@@ -35,7 +35,7 @@ switch ($mode) {
     echo 'Email copy/paste:<br/>';
     echo '<pre style="font-size:9px; background:#ccc; line-height:1.3em;">'."\n";
     echo wordwrap(list_emails($r),100)."\n";
-    echo '</pre><br/>'."\n"; 
+    echo '</pre><br/>'."\n";
     echo 'List of Participants:<br/>';
     show_fields($r,'reg_email');
     break;
@@ -49,7 +49,7 @@ switch ($mode) {
     $r=scan_registrations();
     echo '<pre style="font-size:9px; background:#ccc; line-height:1em;">';
     echo gen_badges_source($r);
-    echo '</pre>'; 
+    echo '</pre>';
     break;
   case 'remarks':
     $r=scan_registrations();
@@ -115,9 +115,9 @@ switch ($mode) {
 
 
 function scan_registrations() {
-  $dir = opendir(REGLOGDIR); 
-  $filearray = array(); 
-  while ($file_name = readdir($dir)) 
+  $dir = opendir(REGLOGDIR);
+  $filearray = array();
+  while ($file_name = readdir($dir))
     if($file_name[0] != '.' && is_file(REGLOGDIR.$file_name))
       $filearray[] = preg_replace('/\.ini$/','',$file_name);
   return $filearray;
@@ -204,7 +204,7 @@ function list_emails($f) {
 #export SV escape
 function exes($text, $sep="\t") {
   # replace $sep with /space/; replace '"' with "''"
-  if ($sep != ' ') 
+  if ($sep != ' ')
     $text=str_replace($sep,' ',$text);
   $text=str_replace('"',"''",$text);
   return $text;
@@ -279,8 +279,11 @@ function gen_badges_pdf($f) {
   fwrite($handle, gen_badges_source($f));
   fclose($handle);
   @copy (DOCROOTDIR.'img/lac14badgebanner.png', TMPDIR.'badgelogo.png');
-  @copy (DOCROOTDIR.'img/fonts/ttfonts.map', TMPDIR.'ttfonts.map'); 
-  @copy (DOCROOTDIR.'img/fonts/T1-WGL4x.enc', TMPDIR.'T1-WGL4x.enc'); 
+  @copy (DOCROOTDIR.'img/fonts/T1-WGL4x.enc', TMPDIR.'T1-WGL4x.enc');
+  @copy (DOCROOTDIR.'img/fonts/ttfonts.map', TMPDIR.'ttfonts.map');
+  @copy (DOCROOTDIR.'img/fonts/Univers.afm', TMPDIR.'Univers.afm');
+  @copy (DOCROOTDIR.'img/fonts/Univers.tfm', TMPDIR.'Univers.tfm');
+  @copy (DOCROOTDIR.'img/fonts/Univers.ttf', TMPDIR.'Univers.ttf');
 
   @unlink (TMPDIR.'lac2014badges.pdf');
   echo '<pre style="font-size:70%; line-height:1.2em;">';
@@ -397,29 +400,29 @@ function gen_badges_source($f) {
 #\Huge 24 24.88
 	$cmp=preg_replace('@[^a-zA-Z ]@','', $prename.' '.$famname);
 	if (strlen($cmp) > 25) {
-		$prename='\LARGE '.$prename;
-		$famname='\LARGE '.$famname;
+		$prename='\UniversTO '.$prename;
+		$famname='\UniversTO '.$famname;
 	}
 	else {
-		$prename='\Huge '.$prename;
-		$famname='\Huge '.$famname;
+		$prename='\UniversTT '.$prename;
+		$famname='\UniversTT '.$famname;
 	}
 
 		} else {
 			$what = '';
-			$prename='\Huge {~}';
-			$famname='\Huge {~}';
+			$prename='\UniversTT {~}';
+			$famname='\UniversTT {~}';
 			$md5name='blank';
 			$badgebg='';
 		}
 
-	if (strlen($what) > 56) $what='\scriptsize '.$what; 
-	elseif (strlen($what) > 40) $what='\footnotesize '.$what; 
-	elseif (strlen($what) > 0)  $what='\normalsize '.$what;
+	if (strlen($what) > 56) $what='\UniversEight '.$what;
+	elseif (strlen($what) > 40) $what='\UniversNine '.$what;
+	elseif (strlen($what) > 0)  $what='\UniversTen '.$what;
 	else $what='';
 	if (!empty($what)) $what.="\\\\";
 
-	if (!empty($badgebg)) $badgebg='\normalsize '.$badgebg."\\\\";
+	if (!empty($badgebg)) $badgebg='\UniversTen '.$badgebg."\\\\";
 
 
     $x=($cnt%2)?"90":"0.0";
@@ -478,11 +481,22 @@ function badge_tex_header() {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MARGINS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textwidth       180mm
 \textheight      270mm
-\oddsidemargin    -10.5mm
-\evensidemargin   -10.5mm
+\oddsidemargin    -10.25mm
+\evensidemargin   -10.25mm
 \topmargin        28mm
 \itemindent      0.00in
 \parindent       0.00in
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  FONTS  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\encodingdefault}{T1}
+\usepackage{fontenc}
+\font\UniversEight Univers at 8pt
+\font\UniversNine Univers at 9pt
+
+\font\UniversTen Univers at 10pt
+\font\UniversTO Univers at 20pt
+\font\UniversTT Univers at 22pt
 
 %%%%%%%%%%%%%%%%%%%%%%% IMAGES FOR LATEX AND PDFLATEX %%%%%%%%%%%%%%%%%%%%%%%
 \ifnum \pdfoutput=0
@@ -505,12 +519,12 @@ function badge_tex_header() {
   \vspace*{-1mm}\\\\%
   \image{height=11mm}{badgelogo}
   \vspace*{2mm}\\\\%
-  Linux Audio Conference 2014
+  {\UniversTen Linux Audio Conference 2014}
   \vspace*{5mm}\\\\%
   {#1}
   \vspace*{2mm}\\\\%
   {#2}
-  \vspace*{0.4cm}\\\\%
+  \vspace*{2mm}\\\\%
   #4
   #3
  \end{tabular}%
