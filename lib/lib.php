@@ -289,7 +289,7 @@ $adminfieldsetonce=false;
   }
 
   function texify_umlauts($v) {
-    $v=str_replace("\xc3\x9f",'\\"{s}',$v);
+    $v=str_replace("\xc3\x9f",'{\\ss}',$v);
     $v=str_replace("\xc3\xa0",'\\`{a}',$v);
     $v=str_replace("\xc3\xa1",'\\\'{a}',$v);
     $v=str_replace("\xc3\xa2",'\\\^{a}',$v);
