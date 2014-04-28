@@ -532,7 +532,7 @@ function badge_tex_header() {
 
 \\def\\bside#1#2{
   \\begin{tabular}{rl}
-  {\\tt ESSID}:& {\\tt zkm}\\\\
+  {\\tt ESSID}:& {\\tt lac2014}\\\\
 %  Username:& {\\tt #1}\\\\
    Password:& {\\tt #2}\\\\
   \\vspace*{0mm}\\\\%
