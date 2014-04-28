@@ -30,7 +30,7 @@ The Museum houses the most important collection of music machines worldwide. The
 
 <h3>When and how long?</h3>
 <ul>
-<li>We will leave at <strong>10:35</strong> in front of the <strong>main stattion</strong> (north entrance) and leave via tram at 10:50.</li>
+<li>We will meet around <strong>10:35</strong> in front of the <strong>main station</strong> (north entrance) and leave via tram at 10:50.</li>
 <li>We will leave Bruchsal at 18h and the scheduled arrival back in Karlsruhe is around <strong>19:00</strong>.</li>
 </ul>
 
