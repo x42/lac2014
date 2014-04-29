@@ -3,9 +3,10 @@
   function program_header($mode,$details) {
     echo '<h1>Conference Schedule</h1>'."\n";
 ### Note during conference about streaming and IRC ###
-#    echo '<div class="center" style="margin-top:.5em; margin-bottom:.-5em;"><p>During the conference, live A/V streams are available for the main track: <a href="'.local_url('stream').'">Stream Page</a></p><p>Remote participants are invited to join <a href="http://webchat.freenode.net/?channels=lac2013" rel="external">#lac2013 on irc.freenode.net</a>, to be able to take part in the discussions, ask questions, and get technical assistance in case of stream problems.</p><p>Conference Material can be found on the <a href="'.local_url('files').'">Download Page</a>.</p><br/></div>';
+    echo '<div class="center" style="margin-top:.5em; margin-bottom:.-5em;"><p>During the conference, live A/V streams are available for the main track: <a href="http://lacstreamer.stackingdwarves.net/standard.ogg" rel="external">View Video in Browser</a></p><p>Remote participants are invited to join <a href="http://webchat.freenode.net/?channels=lac2014" rel="external">#lac2014 on irc.freenode.net</a>, to be able to take part in the discussions, ask questions, and get technical assistance in case of stream problems.</p><p>Conference Material can be found on the <a href="'.local_url('files').'">Download Page</a>.</p><br/></div>';
+    echo '<div>Direct link to video stream: <a href="http://lacstreamer.stackingdwarves.net/standard.ogg" rel="external">http://lacstreamer.stackingdwarves.net/standard.ogg</a>. The A/V is provided in Ogg/Theora/Vorbis (plays in firefox, chrom[e|ium]). Should you have problems playing these, consult Wikipedia\'s <a href="http://en.wikipedia.org/wiki/Wikipedia:Media_help_%28Ogg%29" rel="external">OGG media help.</a></div>';
 ##    echo '<div class="center red" style="margin-top:.5em; margin-bottom:.-5em; font-size:110%; font-weight: bold;">The schedule is still being worked on. The information below is not yet valid.<br/></div>';
-#    echo '<hr/><br/>'."\n";
+    echo '<hr/><br/>'."\n";
 
     echo '<p class="ptitle">Timetable Format: ';
     if ($mode!='list' || $details)

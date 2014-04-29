@@ -19,7 +19,7 @@
   $hidden = array(
     'excursion' => 'Excursion',
     'participation' => 'CFP',
-    #'files' => 'Download',
+    'files' => 'Download',
     'profile' => 'Profile',
   );
 
