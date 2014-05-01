@@ -1,4 +1,9 @@
 <h1>Latest News</h1>
+<p><strong>LAC is booted!</strong></p>
+<p>During the conference, live A/V streams are available for the main track: <a href="http://lacstreamer.stackingdwarves.net/lac2014.ogg" rel="external">View Video in Browser</a></p><p>Remote participants are invited to join <a href="http://webchat.freenode.net/?channels=lac2014" rel="external">#lac2014 on irc.freenode.net</a>, to be able to take part in the discussions, ask questions, and get technical assistance in case of stream problems.</p><p>Conference Material can be found on the <a href="'.local_url('files').'">Download Page</a>.</p>
+<br/>
+<hr/>
+<br/>
 
 <p>
 We're closing in, to count down than two weeks to the LAC, zthmusic is conducing a series of interviews with prominent delegates, long-time LAC attendees and community managers. First up is <a href="<?=BASEURL?>speakers?uid=110">Miller Puckette</a>, the MSP of Max/MSP, author of Pure Data and regular contributor to the LAC.

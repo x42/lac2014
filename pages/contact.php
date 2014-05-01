@@ -11,6 +11,15 @@
 <a href="http://webchat.freenode.net/?channels=lac2014" rel="external">Web-chat</a> provided by freenode.net.
 </p>
 
+<h3>Video</h3>
+<p>Direct link to video stream:</p>
+<ul>
+<li><a href="http://lacstreamer.stackingdwarves.net/lac2014.ogg" rel="external">http://lacstreamer.stackingdwarves.net/lac2014.ogg</a> (Europe)</li>
+<li><a href="http://radio.linuxaudio.org/lac2014.ogg" rel="external">http://radio.linuxaudio.org/lac2014.ogg</a> (US)</li>
+</ul>
+<p>
+The A/V is provided in Ogg/Theora/Vorbis (plays in firefox, chrom[e|ium]). Should you have problems playing these, consult Wikipedia\'s <a href="http://en.wikipedia.org/wiki/Wikipedia:Media_help_%28Ogg%29" rel="external">OGG media help.</a></p>
+
 <h3>Street and Mailing address:</h3>
 <p style="margin-left:2em;">
 Linux Audio Conference<br/>
