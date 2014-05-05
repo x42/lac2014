@@ -1,4 +1,11 @@
 <h1>Latest News</h1>
+<p><strong>LAC is history!</strong></p>
+<p>
+A big thank you to all contributors and participants for making the LAC an awesome event.
+Please stay tuned while we are preparing the documentation (on-demand streams of the presentations, photos, slides,...)
+</p>
+<?php
+/*
 <p><strong>LAC is booted!</strong></p>
 <p>During the conference, live A/V streams are available for the main track: <a href="http://lacstreamer.stackingdwarves.net/lac2014.ogg" rel="external">View Video in Browser</a></p><p>Remote participants are invited to join <a href="http://webchat.freenode.net/?channels=lac2014" rel="external">#lac2014 on irc.freenode.net</a>, to be able to take part in the discussions, ask questions, and get technical assistance in case of stream problems.</p><p>Conference Material can be found on the <a href="'.local_url('files').'">Download Page</a>.</p>
 <br/>
@@ -11,6 +18,8 @@ We're closing in, to count down than two weeks to the LAC, zthmusic is conducing
 <p>
 Read the full interviews at <a href="http://www.zthmusic.com/lac14-interview-series/" rel="external">zthmusic</a>.
 </p>
+ */
+?>
 
 <h1>About</h1>
 <p>
