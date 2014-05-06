@@ -24,6 +24,15 @@ Read the full interviews at <a href="http://www.zthmusic.com/lac14-interview-ser
 </p>
  */
 ?>
+<p><br/></p>
+<p><strong>Galleries, Blogs, ...</strong></p>
+<p>
+<ul>
+<li>Rui's <a href="http://www.rncbc.org/lac2014/">Image Gallery</a> and <a href="http://lists.linuxaudio.org/pipermail/linux-audio-user/2014-May/097487.html">Video index</a></li>
+<li>..(more to come soon)..</li>
+</ul>
+</p>
+
 
 <h1>About</h1>
 <p>
