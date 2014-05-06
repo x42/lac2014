@@ -4,6 +4,10 @@
 A big thank you to all contributors and participants for making the LAC an awesome event.
 Please stay tuned while we are preparing the documentation (on-demand streams of the presentations, photos, slides,...)
 </p>
+
+<div class="center">
+<a href="img/LACLAC_Hooray.jpg"><img src="img/LACLAC_Hooray_small.jpg" alt="group picture"/></a>
+</div>
 <?php
 /*
 <p><strong>LAC is booted!</strong></p>
