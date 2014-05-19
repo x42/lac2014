@@ -28,7 +28,8 @@ Read the full interviews at <a href="http://www.zthmusic.com/lac14-interview-ser
 <p><strong>Galleries, Blogs, ...</strong></p>
 <p>
 <ul>
-<li>Rui's <a href="http://www.rncbc.org/lac2014/">Image Gallery</a> and <a href="http://lists.linuxaudio.org/pipermail/linux-audio-user/2014-May/097487.html">Video index</a></li>
+<li>Rui's <a href="http://www.rncbc.org/lac2014/" rel="external">Image Gallery</a> and <a href="http://lists.linuxaudio.org/pipermail/linux-audio-user/2014-May/097487.html" rel="external">Video index</a></li>
+<li>Marc's <a href="https://www.youtube.com/channel/UCz8l3D1VvppYY6RRQ461g1w/videos" rel="external">LAC'14 YouTube Video Channel</a></li>
 <li>..(more to come soon)..</li>
 </ul>
 </p>
