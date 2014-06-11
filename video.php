@@ -65,7 +65,7 @@ $pagetitle=pdb_html_title($db, $id);
 if (empty($pagetitle)) {
   $pagetitle = "Video Player";
 } else {
-  $pagetitle = "Video: ".xhtmlify($pagetitle);
+  $pagetitle = "Video: ".$pagetitle;
 }
 
 html5head($pagetitle, 'vstyle.css');
