@@ -2,13 +2,14 @@
 # vim: ts=2 et
 require_once('lib/lib.php');
 require_once('lib/programdb.php');
-html5head('Video Player', 'vstyle.css');
 ?>
 <body>
 <div class="container">
 <?php
 function printerror($msg) {
-  echo '<div class="error">ERROR: '.$msg.'</div></div></body></html>';
+  html5head('Video Player', 'vstyle.css');
+  echo '<body>';
+  echo '<div class="error">ERROR: '.$msg.'</div>';
   echo '<div class="footer">Back to <a href="'.local_url('program').'">conference site</a>.</div>';
   echo '</body></html>';
   exit;
@@ -60,6 +61,7 @@ $url=preg_replace('@\.mp4$@', '', $url);
 $url=preg_replace('@_720p$@', '', $url);
 $url=preg_replace('@_360p$@', '', $url);
 
+html5head('Video: '.xhtmlify($v['title']), 'vstyle.css');
 echo '<div class="header">Linux Audio Conference '.LACY.'</div>';
 echo '<div class="title">';
 echo '<b>'.xhtmlify($v['title']).'</b><br/>';
