@@ -61,7 +61,14 @@ $url=preg_replace('@\.mp4$@', '', $url);
 $url=preg_replace('@_720p$@', '', $url);
 $url=preg_replace('@_360p$@', '', $url);
 
-html5head('Video: '.xhtmlify($v['title']), 'vstyle.css');
+$pagetitle=pdb_html_title($db, $id);
+if (empty($pagetitle)) {
+  $pagetitle = "Video Player";
+} else {
+  $pagetitle = "Video: ".xhtmlify($pagetitle);
+}
+
+html5head($pagetitle, 'vstyle.css');
 echo '<div class="header">Linux Audio Conference '.LACY.'</div>';
 echo '<div class="title">';
 echo '<b>'.xhtmlify($v['title']).'</b><br/>';
