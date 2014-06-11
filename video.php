@@ -15,8 +15,8 @@ function printerror($msg) {
 }
 
 $id=0;
-$height=480;
-$width=854;
+$height=360;
+$width=640;
 
 if (!isset($_REQUEST['id'])) {
   printerror('invalid request - no id specified.');
@@ -26,9 +26,7 @@ if (!isset($_REQUEST['id'])) {
 if (isset($_REQUEST['h'])) {
   $h=intval(rawurldecode($_REQUEST['h']));
   if ($h == 720) { $height=720; $width=1280; }
-  else if ($h == 480) { $height=480; $width=854; }
   else if ($h == 360) { $height=360; $width=640; }
-  else if ($h == 240) { $height=240; $width=428; }
 }
 
 if ($id > 0) {
@@ -59,10 +57,8 @@ $url=$v['url_stream'];
 # TODO use strreplace or sth faster (or update database)
 $url=preg_replace('@\.webm$@', '', $url);
 $url=preg_replace('@\.mp4$@', '', $url);
-$url=preg_replace('@-720p$@', '', $url);
-$url=preg_replace('@-480p$@', '', $url);
-$url=preg_replace('@-360p$@', '', $url);
-$url=preg_replace('@-240p$@', '', $url);
+$url=preg_replace('@_720p$@', '', $url);
+$url=preg_replace('@_360p$@', '', $url);
 
 echo '<div class="header">Linux Audio Conference '.LACY.'</div>';
 echo '<div class="title">';
@@ -81,13 +77,13 @@ if (!empty($url)) {
   echo '</div>'; # container
   echo '<div class="player" style="width:'.$width.'px;">';
   echo '<video width="'.$width.'" height="'.$height.'" autoplay controls tabindex="0">'
-    .'<source type="video/webm" src="'.$url.'-'.$height.'p.webm" />'
-    .'<source type="video/mp4" src="'.$url.'-'.$height.'p.mp4" />'
+    .'<source type="video/webm" src="'.$url.'_'.$height.'p.webm" />'
+  # .'<source type="video/mp4" src="'.$url.'_'.$height.'p.mp4" />'
   .'</video>';
   echo '</div>';
   echo '<div class="container">';
   echo '<div id="sizebar">';
-  foreach (array(240, 360, 480, 720) as $s) {
+  foreach (array(360, 720) as $s) {
     if ($s == $height)
       echo '&nbsp;<b>'.$s.'p</b>&nbsp;';
     else
@@ -108,9 +104,9 @@ if (!empty($v['url_misc']))
   echo '<li>Site: <a href="'.$v['url_misc'].'" rel="external">'.$v['url_misc'].'</a></li>';
 if (!empty($url)) {
   echo '<li>Video URL: ';
-  foreach (array(240, 360, 480, 720) as $s) {
-    echo '<a href="'.$url.'-'.$s.'p.mp4">'.$s.'p mp4</a>&nbsp;';
-    echo '<a href="'.$url.'-'.$s.'p.webm">'.$s.'p webm</a>&nbsp;';
+  foreach (array(360, 720) as $s) {
+    #echo '<a href="'.$url.'_'.$s.'p.mp4">'.$s.'p mp4</a>&nbsp;';
+    echo '<a href="'.$url.'_'.$s.'p.webm">'.$s.'p webm</a>&nbsp;';
   }
   echo '</li>';
 }
